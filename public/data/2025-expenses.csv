@@ -1,0 +1,565 @@
+Entry Number,Date,Company,Category,Comment,Amount,Currency,Exchange Rate,Country,Tax Name,Tax %,Tax Incl.,Added,Receipt
+1,2025-01-01,AlphaTheta Corporation,Production Expenses,Rekordbox Core Plan,19.01,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-01_€unknown_anwb.pdf
+2,2025-01-01,ANWB,Company Car,Roadside Insurance,12.78,EUR,1.00,Netherlands,VAT: Standard Rate,0,TRUE,,receipts/2025/2025-01-01_€unknown_anwb.pdf
+3,2025-01-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-01_€unknown_apple-icloud.pdf
+4,2025-01-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-01_€unknown_bunq-bank-subscription.pdf
+5,2025-01-01,FBTO,Company Car,Car Insurance,15.71,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-01_€unknown_fbto-car-insurance.pdf
+6,2025-01-01,FBTO,Travel and accommodation (other),Motorbike Insurance,45.82,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-01_€unknown_fbto-car-insurance.pdf
+7,2025-01-01,Kees de Boekhouder,Office Expenses,Monthly invoice: January,80.57,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-01_€unknown_kees-de-boekhouder.pdf
+8,2025-01-01,ODIDO,Office Expenses,Mobile Subscription - Odido,38.88,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-01_€unknown_mobile-subscription-odido.pdf
+9,2025-01-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-01_€unknown_anwb.pdf
+10,2025-01-02,bol,Office Expenses,Decksaver,42.89,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-02_€unknown_business-lunch.pdf
+11,2025-01-02,Gym Royale,Consumption Expenses,Business Lunch,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-02_€unknown_business-lunch.pdf
+12,2025-01-03,BP,Company Car,Car Fuel,63.31,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-03_€unknown_company-car-fuel.pdf
+13,2025-01-07,Bangkok Bank,Consumption Expenses,Business Lunch,6.02,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-07_€unknown_consumption-expenses.pdf
+14,2025-01-07,Booking,Travel and accommodation (other),Overnight Stay,13.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-07_€unknown_consumption-expenses.pdf
+15,2025-01-07,Coffee Club Zone,Consumption Expenses,Dinner,6.02,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-07_€unknown_consumption-expenses.pdf
+16,2025-01-07,mytrip,Travel and accommodation (other),Flights,119.98,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-07_€unknown_consumption-expenses.pdf
+17,2025-01-08,japhagan,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Food,17.05,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-08_€unknown_consumption-expenses.pdf
+18,2025-01-09,megatix,Travel and accommodation (other),Trip to Thailaind for Ecstatic Dance Performance - Tickets,15.10,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-09_€unknown_consumption-expenses.pdf
+19,2025-01-09,megatix,Travel and accommodation (other),Trip to Thailaind for Ecstatic Dance Performance - Tickets,15.25,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-09_€unknown_consumption-expenses.pdf
+20,2025-01-10,Afrin Tee,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Dinner,10.22,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-10_€unknown_consumption-expenses.pdf
+21,2025-01-14,NS,Travel and accommodation (other),Train Travel,20.80,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-01-14_€unknown_ns.pdf
+22,2025-01-25,megatix,Travel and accommodation (other),Trip to Thailaind for Ecstatic Dance Performance - Tickets,18.48,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-01-25_€unknown_consumption-expenses.pdf
+23,2025-02-01,AlphaTheta Corporation,Production Expenses,Rekordbox Core Plan,19.01,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-01_€unknown_anwb.pdf
+24,2025-02-01,ANWB,Company Car,Roadside Insurance,12.78,EUR,1.00,Netherlands,VAT: Standard Rate,0,TRUE,,receipts/2025/2025-02-01_€unknown_anwb.pdf
+25,2025-02-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-01_€unknown_apple-icloud.pdf
+26,2025-02-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-01_€unknown_bunq-bank-subscription.pdf
+27,2025-02-01,FBTO,Company Car,Car Insurance,15.71,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-01_€unknown_fbto-car-insurance.pdf
+28,2025-02-01,FBTO,Travel and accommodation (other),Motorbike Insurance,45.82,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-01_€unknown_fbto-car-insurance.pdf
+29,2025-02-01,Kees de Boekhouder,Office Expenses,Monthly invoice: February,80.57,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-01_€unknown_kees-de-boekhouder.pdf
+30,2025-02-01,ODIDO,Office Expenses,Mobile Subscription - Odido,38.88,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-01_€unknown_mobile-subscription-odido.pdf
+31,2025-02-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-01_€unknown_anwb.pdf
+32,2025-02-02,Seatran,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Travel,11.92,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,
+33,2025-02-03,Booking,Travel and accommodation (other),Trip to Thailaind for Ecstatic Dance Performance - Tickets,22.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-03_€unknown_consumption-expenses.pdf
+34,2025-02-03,Grab,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Travel,4.39,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-03_€unknown_consumption-expenses.pdf
+35,2025-02-03,Seatran,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Travel,10.90,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-03_€unknown_consumption-expenses.pdf
+36,2025-02-04,Dilli Sreet Food,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Food,6.57,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-04_€unknown_consumption-expenses.pdf
+37,2025-02-04,Grab,Consumption Expenses,Trip to Thailaind for Ecstatic Dance Performance - Travel,5.72,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-04_€unknown_consumption-expenses.pdf
+38,2025-02-07,Piaelle di North Beach,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,14.53,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-02-07_€unknown_consumption-expenses.pdf
+39,2025-02-07,Whole Foods,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,47.94,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-07_€unknown_consumption-expenses.pdf
+40,2025-02-08,Chase,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,197.96,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-08_€unknown_consumption-expenses.pdf
+41,2025-02-08,Whole Foods,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,36.40,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-08_€unknown_consumption-expenses.pdf
+42,2025-02-09,Burning Man Netherlands,Other Expenses,Events Tickets for Performance,5.54,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-09_€unknown_burning-man.pdf
+43,2025-02-09,Burning Man Netherlands,Other Expenses,Events Tickets for Performance,205.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-09_€unknown_burning-man.pdf
+44,2025-02-09,Creightons,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,9.63,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-09_€unknown_burning-man.pdf
+45,2025-02-09,ED Bay Area,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,24.32,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-09_€unknown_burning-man.pdf
+46,2025-02-10,Chowme n Express,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,15.30,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-10_€unknown_consumption-expenses.pdf
+47,2025-02-10,Flywheel Coffee Roasters,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,4.23,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-10_€unknown_consumption-expenses.pdf
+48,2025-02-10,Flywheel Coffee Roasters,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,5.85,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-10_€unknown_consumption-expenses.pdf
+49,2025-02-10,Uber,Travel and accommodation (other),Trip to Hawaii for Ecstatic Dance Performance - Food,39.84,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-10_€unknown_consumption-expenses.pdf
+50,2025-02-11,Bananarama,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,6.58,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-11_€unknown_consumption-expenses.pdf
+51,2025-02-11,Coffee Girl,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,11.65,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-11_€unknown_consumption-expenses.pdf
+52,2025-02-11,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,30.46,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-11_€unknown_consumption-expenses.pdf
+53,2025-02-12,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,4.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-12_€unknown_consumption-expenses.pdf
+54,2025-02-13,Bananarama,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,19.87,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-13_€unknown_consumption-expenses.pdf
+55,2025-02-13,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,3.30,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-13_€unknown_consumption-expenses.pdf
+56,2025-02-14,Bandcamp,Production Expenses,Music Downloads,1.21,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-14_€unknown_consumption-expenses.pdf
+57,2025-02-14,Malama Market,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,48.10,EUR,1.00,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-14_€unknown_consumption-expenses.pdf
+58,2025-02-14,NS,Travel and accommodation (other),Train Travel,11.26,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-14_€unknown_ns.pdf
+59,2025-02-14,Sundari Farm and Gardens,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,109.47,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-14_€unknown_ns.pdf
+60,2025-02-16,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,11.01,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-16_€unknown_consumption-expenses.pdf
+61,2025-02-17,Bananarama,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,8.26,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-17_€unknown_consumption-expenses.pdf
+62,2025-02-17,First Hawaiian Bank,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,199.36,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-17_€unknown_consumption-expenses.pdf
+63,2025-02-17,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,9.51,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-17_€unknown_consumption-expenses.pdf
+64,2025-02-18,Big Island Guitars,Production Expenses,Trip to Hawaii for Ecstatic Dance Performance - cable,10.07,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-18_€unknown_consumption-expenses.pdf
+65,2025-02-18,KTA,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,81.93,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-18_€unknown_consumption-expenses.pdf
+66,2025-02-18,KTA,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,98.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-18_€unknown_consumption-expenses.pdf
+67,2025-02-19,Verifone Payments BV dba 2Checkout,Production Expenses,Muisc Software,29.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-19_€unknown_music-software.pdf
+68,2025-02-20,Bananarama,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,22.04,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-20_€unknown_consumption-expenses.pdf
+69,2025-02-20,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,14.43,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-20_€unknown_consumption-expenses.pdf
+70,2025-02-22,Safeway,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,66.84,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-22_€unknown_consumption-expenses.pdf
+71,2025-02-23,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,16.51,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-02-23_€unknown_consumption-expenses.pdf
+72,2025-02-25,Apple,Production Expenses,Music Downloads,0.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-02-25_€unknown_music-downloads.pdf
+73,2025-03-01,Aloha Malama,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,59.09,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-01_€unknown_anwb.pdf
+74,2025-03-01,AlphaTheta Corporation,Production Expenses,Rekordbox Core Plan,19.01,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-01_€unknown_anwb.pdf
+75,2025-03-01,ANWB,Company Car,Roadside Insurance,12.78,EUR,1.00,Netherlands,VAT: Standard Rate,0,TRUE,,receipts/2025/2025-03-01_€unknown_anwb.pdf
+76,2025-03-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-01_€unknown_apple-icloud.pdf
+77,2025-03-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-01_€unknown_bunq-bank-subscription.pdf
+78,2025-03-01,FBTO,Company Car,Car Insurance,15.71,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-01_€unknown_fbto-car-insurance.pdf
+79,2025-03-01,FBTO,Travel and accommodation (other),Motorbike Insurance,45.82,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-01_€unknown_fbto-car-insurance.pdf
+80,2025-03-01,Kees de Boekhouder,Office Expenses,Monthly invoice: March,80.57,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-01_€unknown_kees-de-boekhouder.pdf
+81,2025-03-01,ODIDO,Office Expenses,Mobile Subscription - Odido,38.88,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-01_€unknown_mobile-subscription-odido.pdf
+82,2025-03-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-01_€unknown_anwb.pdf
+83,2025-03-02,Island Naturals,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,18.23,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-02_€unknown_consumption-expenses.pdf
+84,2025-03-10,Van Vietnameses,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,48.80,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-10_€unknown_consumption-expenses-copy.pdf
+85,2025-03-11,Bananarama,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,11.14,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,
+86,2025-03-11,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,4.84,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,
+87,2025-03-12,First Hawaiian Bank,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,188.72,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-12_€unknown_consumption-expenses.pdf
+88,2025-03-12,Kohala Coffee Co,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,6.29,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-12_€unknown_consumption-expenses.pdf
+89,2025-03-12,minit shop,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,5.57,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-12_€unknown_consumption-expenses.pdf
+90,2025-03-13,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,12.19,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-13_€unknown_consumption-expenses.pdf
+91,2025-03-14,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,18.55,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-14_€unknown_beatport-music-downloads.pdf
+92,2025-03-14,NS,Travel and accommodation (other),Train Travel,17.68,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-14_€unknown_ns.pdf
+93,2025-03-14,the veli,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,40.75,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-14_€unknown_beatport-music-downloads.pdf
+94,2025-03-15,Apple,Production Expenses,Music Downloads,0.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-15_€unknown_music-downloads.pdf
+95,2025-03-15,Beatport,Production Expenses,Music Downloads,4.14,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-14_€unknown_beatport-music-downloads.pdf
+96,2025-03-16,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,3.87,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-16_€unknown_consumption-expenses-copy.pdf
+97,2025-03-17,Nautic Jachthavens,Housing Expenses,Electricity,310.36,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-14_€unknown_ns.pdf
+98,2025-03-18,Kalani Honua,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance,16.93,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-18_€unknown_consumption-expenses.pdf
+99,2025-03-20,REI Co-op,Production Expenses,Backpack,176.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-20_€unknown_production-expense.pdf
+100,2025-03-21,Schipol,Company Car,Parking,5.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-21_€unknown_travel-expense.pdf
+101,2025-03-22,Delicious Food,Consumption Expenses,Business Lunch,11.86,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-22_€unknown_s.pdf
+102,2025-03-23,Burritos Anonymous,Consumption Expenses,Business Lunch,30.50,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-03-23_€unknown_business-dinner.pdf
+103,2025-03-24,Amazon,Office Expenses,Office Supply,6.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-24_€unknown_bose-soundlink-speaker.pdf
+104,2025-03-24,Amazon,Office Expenses,Office Supply,10.44,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-24_€unknown_bose-soundlink-speaker.pdf
+105,2025-03-24,Amazon,Office Expenses,Office Supply,13.79,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-24_€unknown_bose-soundlink-speaker.pdf
+106,2025-03-24,bol,Other Expenses,Reading,7.95,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-24_€unknown_bose-soundlink-speaker.pdf
+107,2025-03-24,Media Markt,Office Expenses,Bose Speaker,229.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-24_€unknown_bose-soundlink-speaker.pdf
+108,2025-03-25,ClassPass,Other Expenses,Movement Education -50% personal/business,57.50,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-25_€unknown_movement-education-copy.pdf
+109,2025-03-25,Sixt,Travel and accommodation (other),Car Rental,10.68,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-25_€unknown_movement-education-copy.pdf
+110,2025-03-25,Sixt,Travel and accommodation (other),Car Rental,15.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-25_€unknown_movement-education-copy.pdf
+111,2025-03-25,Sixt,Travel and accommodation (other),Car Rental,26.08,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-25_€unknown_movement-education-copy.pdf
+112,2025-03-25,The Coffee Alchemist,Office Expenses,Coffee for Office,19.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-25_€unknown_movement-education-copy.pdf
+113,2025-03-26,Sixt,Travel and accommodation (other),Car Rental,2.96,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-26_€unknown_business-dinnerpdf.pdf
+114,2025-03-26,Sixt,Travel and accommodation (other),Car Rental,12.04,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-26_€unknown_business-dinnerpdf.pdf
+115,2025-03-26,Sixt,Travel and accommodation (other),Car Rental,12.76,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-26_€unknown_business-dinnerpdf.pdf
+116,2025-03-26,Spirit,Consumption Expenses,Business Dinner,8.20,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-26_€unknown_business-dinnerpdf.pdf
+117,2025-03-27,Burritos Anonymous,Consumption Expenses,Business Lunch,31.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-03-27_€unknown_business-dinner.pdf
+118,2025-03-27,Gamma,Production Expenses,DIY,61.66,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-27_€unknown_business-dinner.pdf
+119,2025-03-28,Beatport,Production Expenses,Music Downloads,2.59,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-28_€unknown_music-downloads.pdf
+120,2025-03-28,Beatport,Production Expenses,Music Downloads,2.59,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-28_€unknown_music-downloads.pdf
+121,2025-03-29,Community Farm,Office Expenses,Office Supplies,22.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-29_€unknown_office-expenses.pdf
+122,2025-03-29,Delicious Food,Consumption Expenses,Business Lunch,7.75,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-29_€unknown_office-expenses.pdf
+123,2025-03-29,Delicious Food,Consumption Expenses,Business Lunch,39.60,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-03-29_€unknown_office-expenses.pdf
+124,2025-03-30,Liever Hier,Consumption Expenses,Business Lunch,9.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-03-30_€unknown_business-dinner.pdf
+125,2025-03-31,Esso,Travel and accommodation (other),Fuel,23.71,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-31_€unknown_company-car-fuel.pdf
+126,2025-03-31,Esso,Company Car,Fuel,31.20,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-31_€unknown_company-car-fuel.pdf
+127,2025-03-31,Qpark,Company Car,Parking,25.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-03-31_€unknown_company-car-fuel.pdf
+128,2025-04-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_anwb-b-v.pdf
+129,2025-04-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Ireland,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_apple.pdf
+130,2025-04-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_bunq.pdf
+131,2025-04-01,Distributed Creation,Production Expenses,Splice,24.19,USD,0.93,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_distributed-creation-inc.pdf
+132,2025-04-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_fbto.pdf
+133,2025-04-01,FBTO,Travel and accommodation (other),Motorbike Insurance,45.82,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_fbto.pdf
+134,2025-04-01,Warung Noord,Consumption Expenses,Business Lunch,17.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-04-01_€unknown_warungnoord.pdf
+135,2025-04-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-04-01_€unknown_anwb-b-v.pdf
+136,2025-04-01,Kees de Boekhouder,Office Expenses,Monthly invoice: April,80.57,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_kees-de-boekhouder.pdf
+137,2025-04-02,EG Services,Company Car,Fuel,24.79,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-02_€unknown_eg-services-netherlands-b-v.pdf
+138,2025-04-02,Jordys Bakery,Consumption Expenses,Business Lunch,23.90,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-04-02_€unknown_jordys-bakery.pdf
+139,2025-04-03,Jordys Bakery,Consumption Expenses,Business Lunch,5.95,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-04-03_€unknown_jordys-bakery.pdf
+140,2025-04-03,Tandoori Delight Amsterdam,Consumption Expenses,Business Dinner,20.49,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-04-03_€unknown_tandooridelight.pdf
+141,2025-04-04,Esso,Company Car,Fuel,21.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-04_€unknown_esso-rotterdam.pdf
+142,2025-04-07,Vitamin Advice Shop,Production Expenses,Supplies,83.80,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-07_€unknown_vitamin-advice-shop.pdf
+143,2025-04-14,NS,Travel & Accommodation,Train Tavel,5.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-14_€unknown_ns.pdf
+144,2025-04-15,Gaiyo,Travel & Accommodation,Parking,5.47,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-15_€unknown_gaiyo.pdf
+477,2025-04-15,Check Netherlands,Consumption Expenses,,5.57,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-04-15_€unknown_check-netherlands-b-v.pdf
+145,2025-04-24,Coolblue,Miscellaneous Expenses,Office Gear,91.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-24_€unknown_coolblue.pdf
+146,2025-04-29,ODIDO,Office Expenses,Mobile Subscription - Odido,22.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-29_€unknown_odido-netherlands-b-v.pdf
+482,2025-04-30,De Motorzaak,Company Car,Service,961.32,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-04-30_€unknown_de-motorzaak-b-v.pdf
+147,2025-05-01,ANWB,Company Car,Roadside Insurance,12.78,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_anwb-b-v.pdf
+148,2025-05-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Ireland,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_apple.pdf
+149,2025-05-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_bunq.pdf
+150,2025-05-01,Distributed Creation,Production Expenses,Splice,24.19,USD,0.89,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_distributed-creation-inc.pdf
+151,2025-05-01,FBTO,Company Car,Car Insurance,15.27,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_fbto.pdf
+152,2025-05-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_fbto.pdf
+153,2025-05-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-01_€unknown_anwb-b-v.pdf
+154,2025-05-01,Kees de Boekhouder,Office Expenses,Monthly invoice: May,80.56,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-01_€unknown_kees-de-boekhouder.pdf
+155,2025-05-02,Costa,Consumption Expenses,Trip to UK for ED Gig,7.00,GBP,1.17,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-02_€unknown_costa.jpg
+156,2025-05-02,Costa,Consumption Expenses,Trip to UK for ED Gig,8.22,GBP,1.17,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-02_€unknown_costa.jpg
+157,2025-05-02,Pimplis Empameinondas,Travel & Accommodation,Trip to Greece for Ecstatic Dance Job,30.00,EUR,1.00,Greece,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-02_€unknown_pimplis-empameinondas.jpg
+158,2025-05-02,Tpaneza Eurobank,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,101.80,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-02_€unknown_tpaneza-eurobank.jpg
+159,2025-05-03,Soynep Market,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,17.95,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-03_€unknown_soynep-market.jpg
+160,2025-05-03,VAKAKIS FAMILY,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,6.80,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-03_€unknown_vakakis-family.jpg
+161,2025-05-06,Kpiaphe,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,17.00,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-06_€unknown_kpiaphe.jpg
+162,2025-05-07,Bosch Simone,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,17.00,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-07_€unknown_bosch-simone.jpg
+163,2025-05-07,Mini Market,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,57.80,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-07_€unknown_mini-market.jpg
+164,2025-05-08,everest,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,6.50,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-08_€unknown_everest.jpg
+165,2025-05-08,Greek Restaurant,Consumption Expenses,Trip to Greece for Ecstatic Dance gig,5.10,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-08_€unknown_everest.jpg
+166,2025-05-08,Pearl Cavo,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,10.00,EUR,1.00,Greece,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-08_€unknown_pearl-cavo.jpg
+167,2025-05-08,VAKAKIS FAMILY,Consumption Expenses,Trip to Greece for Ecstatic Dance Job,3.70,EUR,1.00,Greece,VAT: Shifted,0,FALSE,,receipts/2025/2025-05-08_€unknown_vakakis-family.jpg
+168,2025-05-09,Burritos Anonymous,Consumption Expenses,Business Lunch,16.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-09_€unknown_burritos-anonymou.jpg
+502,2025-05-09,Felyx,Travel & Accommodation,,5.25,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-05-09_€unknown_felyx.pdf
+169,2025-05-10,Delicious Food,Marketing / Sales Expenses,Gifts for client,26.56,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-10_€unknown_delicious-food.jpg
+170,2025-05-10,Esso,Company Car,Fuel,24.22,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-10_€unknown_esso-amsterdam.jpg
+171,2025-05-11,North Side Ribs,Consumption Expenses,Business Lunch,27.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-11_€unknown_north-side-ribs.jpg
+172,2025-05-14,Burritos Anonymous,Consumption Expenses,Business Lunch,18.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-14_€unknown_burritos.jpg
+173,2025-05-15,EG Services,Company Car,Fuel,22.56,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-15_€unknown_eg-services-netherlands-b-v.jpg
+174,2025-05-15,Kees de Boekhouder,Office Expenses,Monthly invoice: June,80.56,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-15_€unknown_keesdeboekhouder-office-b-v.pdf
+175,2025-05-15,Tandoori Delight Amsterdam,Consumption Expenses,Business Dinner,16.40,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-15_€unknown_www-tandooridelight-nl.jpg
+478,2025-05-15,Check Netherlands,Consumption Expenses,,2.25,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-05-15_€unknown_check-netherlands-b-v.pdf
+176,2025-05-17,Kringloopbedrijf De Lokatie,Marketing / Sales Expenses,Gifts,20.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-17_€unknown_kringloopbedrijf-de-lokatie.jpg
+177,2025-05-19,EG Services,Company Car,Fuel,46.50,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-19_€unknown_eg-services-netherlands-b-v.jpg
+178,2025-05-19,Star Automaterialen,Company Car,Maintenance,85.16,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-19_€unknown_star-automaterialen.jpg
+179,2025-05-20,BP,Company Car,Fuel,21.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-20_€unknown_bp.jpg
+180,2025-05-20,KFC,Consumption Expenses,Business Lunch,12.64,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-20_€unknown_kfc.jpg
+181,2025-05-21,Action,Office Expenses,Gifts for client,12.67,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-21_€unknown_action-nederland-b-v.jpg
+182,2025-05-21,Jacky,Consumption Expenses,Business Lunch,16.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-21_€unknown_jacky.jpg
+183,2025-05-21,Total,Company Car,Fuel,17.83,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-21_€unknown_total.jpg
+184,2025-05-23,Burritos Anonymous,Consumption Expenses,Business Lunch,18.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-05-23_€unknown_burritos-anonymous.jpg
+185,2025-05-23,EG Services,Company Car,Fuel,22.59,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-23_€unknown_eg-services-netherlands-b-v.jpg
+186,2025-05-26,AVA,Company Car,Fuel,26.33,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-26_€unknown_avia.jpg
+187,2025-05-29,Mullvad VPN AB,Production Expenses,VPN,60.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-29_€unknown_mullvad-vpn-ab.pdf
+188,2025-05-29,ODIDO,Office Expenses,Mobile Subscription - Odido,30.64,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-29_€unknown_odido-netherlands-b-v.pdf
+189,2025-05-30,Goemans,Marketing / Sales Expenses,Gifts,10.27,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-30_€unknown_goemans.jpg
+190,2025-05-30,Kuwait Petroleum,Company Car,Fuel,24.11,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-05-30_€unknown_kuwait-petroleum-nederland-b-v.jpg
+191,2025-06-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_anwb-b-v.pdf
+192,2025-06-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Ireland,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_apple.pdf
+193,2025-06-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_bunq.pdf
+194,2025-06-01,Distributed Creation,Production Expenses,Splice,15.72,USD,0.88,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_distributed-creation-inc.pdf
+195,2025-06-01,Etos,Marketing / Sales Expenses,Gifts for client,25.36,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_etos.jpg
+196,2025-06-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_fbto.pdf
+197,2025-06-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_fbto.pdf
+198,2025-06-01,Praxis,Office Expenses,,12.07,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_praxis.jpg
+199,2025-06-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-06-01_€unknown_anwb-b-v.pdf
+200,2025-06-02,Bio Roz Cranb Koek,Marketing / Sales Expenses,,20.64,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-02_€unknown_bio-roz-cranb-koek.jpg
+201,2025-06-02,EG Services,Company Car,Fuel,24.54,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-02_€unknown_eg-services-netherlands-b-v.jpg
+202,2025-06-02,Mo,Company Car,,786.02,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-01_€unknown_fbto-motorcycle-insurance.pdf
+203,2025-06-04,Burritos Anonymous,Consumption Expenses,Business Lunch,16.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-04_€unknown_burritos.jpg
+204,2025-06-04,Deka Supermarkten,Consumption Expenses,Business Dinner,6.47,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-04_€unknown_deka-supermarkten-b-v.jpg
+205,2025-06-05,Kuwait Petroleum,Company Car,,55.39,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-05_€unknown_kuwait-petroleum-nederland-b-v.jpg
+206,2025-06-06,Gunters en Meuser,Production Expenses,DIY,55.74,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-06_€unknown_gunters-en-meuser.pdf
+207,2025-06-07,Albert Heijn,Marketing / Sales Expenses,Gifts,10.97,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-07_€unknown_albert-heijn-8702.jpg
+208,2025-06-08,Chocolateclub,Other Expenses,Research,350.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-08_€unknown_chocolateclub-b-v.pdf
+209,2025-06-08,De Koffie Broeder,Consumption Expenses,Business Dinner,5.75,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-08_€unknown_de-koffie-broeder.pdf
+210,2025-06-09,engels,Office Expenses,Paint,46.08,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-09_€unknown_engels.jpg
+211,2025-06-10,ASR,Other Expenses,Other,68.15,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-06-10_€unknown_a-s-r.pdf
+212,2025-06-10,Skillsource,Office Expenses,,17.55,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-10_€unknown_skillsource.pdf
+213,2025-06-11,Burritos Anonymous,Consumption Expenses,Business Lunch,16.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-11_€unknown_burrit.jpg
+214,2025-06-11,Rien de Wolf,Production Expenses,Equipment,63.35,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-11_€unknown_rien-de-wolf-b-v.jpg
+215,2025-06-12,ASR,Other Expenses,Other,204.09,EUR,1.00,Netherlands,VAT: Shifted,21,TRUE,,receipts/2025/2025-06-12_€unknown_a-s-r.pdf
+216,2025-06-12,IAS Blue,Production Expenses,Rope Access Gear,1921.29,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-12_€unknown_ias-blue-b-v.pdf
+217,2025-06-12,Schipol,Company Car,Parking,15.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-12_€unknown_a-s-r.pdf
+218,2025-06-13,BP,Company Car,Fuel,30.26,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-13_€unknown_2069-bp.jpg
+219,2025-06-14,NS,Travel & Accommodation,Trains,7.41,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-14_€unknown_ns.pdf
+220,2025-06-15,Burritos Anonymous,Consumption Expenses,Business Lunch,16.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-15_€unknown_burritos.jpg
+221,2025-06-16,Aldi Süd,Consumption Expenses,Business Dinner,45.56,EUR,1.00,Germany,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-16_€unknown_aldi-sud.jpg
+222,2025-06-16,EG Services,Company Car,Fuel,29.11,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-16_€unknown_eg-services-netherlands-b-v.jpg
+223,2025-06-17,Esso,Company Car,Trip to Slovenia for ED Gig,51.62,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-17_€unknown_esso-deutschland-gmbh.jpg
+224,2025-06-17,La Rue04,Consumption Expenses,Business Dinner,8.00,EUR,1.00,Germany,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-17_€unknown_la-rue04.jpg
+225,2025-06-17,Lavazza,Consumption Expenses,Business Dinner,8.10,EUR,1.00,Germany,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-17_€unknown_lavazza.jpg
+226,2025-06-17,McDonalds,Consumption Expenses,Business Dinner,3.00,EUR,1.00,Germany,VAT: Shifted,0,FALSE,,receipts/2025/2025-06-17_€unknown_mcdonalds.jpg
+227,2025-06-17,Wuerzburger,Travel & Accommodation,Business Dinner,4.00,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-17_€unknown_wuerzburger.jpg
+228,2025-06-18,Herzlich Willkommen,Company Car,Trip to Slovenia for ED Gig,9.00,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-18_€unknown_herzlich-willkommen.jpg
+229,2025-06-18,IGB,Company Car,Trip to Slovenia for ED Gig,6.00,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-18_€unknown_igb-d-o-o.jpg
+230,2025-06-18,Rosenberger,Consumption Expenses,Trip to Slovenia for ED Gig,6.10,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-18_€unknown_rosenberger.jpg
+231,2025-06-19,Decathlon,Marketing / Sales Expenses,Trip to Slovenia for ED Gig,7.48,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-19_€unknown_decathlon-ljubljana-d-o-o.jpg
+232,2025-06-19,Euronet,Consumption Expenses,Trip to Slovenia for ED Gig,105.95,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-19_€unknown_euronet.jpg
+233,2025-06-19,Trg Komandanta Staneta 8,Marketing / Sales Expenses,Trip to Slovenia for ED Gig,9.00,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-19_€unknown_trg-komandanta-staneta-8.jpg
+234,2025-06-21,Lekarna Koevje,Travel & Accommodation,Trip to Slovenia for ED Gig,26.89,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-21_€unknown_lekarna-kocevje.jpg
+235,2025-06-23,Avantura Trade,Marketing / Sales Expenses,Trip to Slovenia for ED Gig,46.70,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-23_€unknown_avantura-trade-d-o-o.jpg
+236,2025-06-23,EHA,Consumption Expenses,Trip to Slovenia for ED Gig,6.40,EUR,1.00,Slovenia,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-23_€unknown_ceha-d-o-o.jpg
+237,2025-06-23,Toji Doo,Consumption Expenses,Trip to Slovenia for ED Gig,23.18,EUR,1.00,Slovenia,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-23_€unknown_toji-d-o-o.jpg
+238,2025-06-25,Cvetek,Consumption Expenses,Trip to Slovenia for ED Gig,40.70,EUR,1.00,Slovenia,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-25_€unknown_cvetek-d-o-o.jpg
+239,2025-06-25,Metropolitana,Company Car,Trip to Slovenia for ED Gig,10.00,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-25_€unknown_metropolitana-d-o-o.jpg
+240,2025-06-25,Planinsko Drustvo Ljubljana,Company Car,Trip to Slovenia for ED Gig,21.80,EUR,1.00,Slovenia,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-25_€unknown_planinsko-drustvo-ljubljana-matica.jpg
+241,2025-06-26,Eclair Pasticceria,Consumption Expenses,Trip to Slovenia for ED Gig,12.20,EUR,1.00,Italy,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-26_€unknown_eclair-pasticceria.jpg
+242,2025-06-26,Gotthard Raststatte,Consumption Expenses,Trip to Slovenia for ED Gig,7.90,CHF,1.07,Germany,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-26_€unknown_gotthard-raststatte-a2-uri-ag.jpg
+243,2025-06-26,Petrol Point SAS,Company Car,Trip to Slovenia for ED Gig,55.40,EUR,1.00,Italy,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-26_€unknown_petrol-point-sas-di-p.jpg
+244,2025-06-27,Westfalen Tankstelle Julia Kahn,Travel & Accommodation,Trip to Slovenia for ED Gig - Fuel,49.28,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-27_€unknown_westfalen-tankstelle-julia-kahn.jpg
+245,2025-06-28,Albert Heijn,Marketing / Sales Expenses,Gifts,21.85,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-28_€unknown_albert-heijn-8760.jpg
+246,2025-06-28,Amazing Oriental,Consumption Expenses,Business Dinner,6.40,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-06-28_€unknown_amazing-oriental-amsterdam-noord-b-v.jpg
+247,2025-06-28,Kringloopbedrijf De Lokatie,Marketing / Sales Expenses,,14.25,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-28_€unknown_kringloopbedrijf-de-lokatie.jpg
+248,2025-06-28,Media Markt,Production Expenses,,42.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-28_€unknown_media-markt.jpg
+249,2025-06-29,Burritos Anonymous,Consumption Expenses,Business Lunch,18.10,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-29_€unknown_burritos.jpg
+250,2025-06-29,ODIDO,Office Expenses,Mobile Subscription - Odido,30.38,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-29_€unknown_odido-netherlands-b-v.pdf
+251,2025-06-29,Stichting Cineville,Other Expenses,,1.61,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-29_€unknown_stichting-cineville.pdf
+252,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+253,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+254,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+255,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+256,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+257,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+258,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+259,2025-06-30,Distributed Creation,Production Expenses,Splice,24.19,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_distributed-creation-inc-1.pdf
+260,2025-06-30,EasyPark,Company Car,Parking,1.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_easypark-b-v.pdf
+261,2025-06-30,namecheap,Office Expenses,,70.16,USD,0.85,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-06-30_€unknown_namecheap.pdf
+262,2025-06-30,Rollstars,Marketing / Sales Expenses,,325.00,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-06-30_€unknown_rollstars.pdf
+263,2025-07-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-01_€unknown_anwb-b-v.pdf
+264,2025-07-01,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Ireland,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-01_€unknown_apple.pdf
+265,2025-07-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-01_€unknown_bunq.pdf
+266,2025-07-01,Distributed Creation,Production Expenses,Splice,15.72,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-01_€unknown_distributed-creation-inc.pdf
+267,2025-07-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-01_€unknown_fbto.pdf
+268,2025-07-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-01_€unknown_fbto.pdf
+269,2025-07-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-01_€unknown_anwb-b-v.pdf
+270,2025-07-02,Stena Line,Travel & Accommodation,Trip to UK for ED Gig,217.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-02_€unknown_stenaline-ferry.pdf
+271,2025-07-03,bol,Production Expenses,,229.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-03_€unknown_bol.pdf
+272,2025-07-03,Varo Energy,Company Car,,53.10,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-03_€unknown_varo-energy-retail-b-v-argos-service-stations-argos-amsterda.jpg
+273,2025-07-04,ASR,Other Expenses,Other,31.82,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-04_€unknown_a-s-r.pdf
+274,2025-07-05,geldmaat,Miscellaneous Expenses,,100.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-05_€unknown_geldmaat.jpg
+275,2025-07-05,IJ Hallen,Other Expenses,,6.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-05_€unknown_ij-hallen.pdf
+276,2025-07-05,Stichting Cineville,Other Expenses,,24.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-05_€unknown_stichting-cineville.pdf
+277,2025-07-06,Amazon,Office Expenses,Office Supply,5.47,EUR,1.00,Luxembourg,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-06_€unknown_amazon-eu-sarl.pdf
+278,2025-07-06,Burritos Anonymous,Consumption Expenses,Business Lunch,18.10,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-07-06_€unknown_burritos.jpg
+279,2025-07-07,Amazing Oriental,Consumption Expenses,Business Dinner,6.40,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-07-07_€unknown_amazing-oriental-amsterdam-noord-b-v.jpg
+280,2025-07-07,Decathlon,Marketing / Sales Expenses,Work Equipment,8.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-07_€unknown_decathlon.jpg
+281,2025-07-07,Esso,Marketing / Sales Expenses,Gifts for client,9.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-07_€unknown_esso-amsterdam-1.jpg
+282,2025-07-07,Warung Noord,Consumption Expenses,Business Lunch,14.75,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-07-07_€unknown_warung-noord.pdf
+283,2025-07-08,ASR,Other Expenses,Other,50.57,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-08_€unknown_a-s-r.pdf
+284,2025-07-08,ASFINAG,Company Car,Trip to Slovenia for ED Gig,120.00,EUR,1.00,Austria,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-08_€unknown_asfinag.jpg
+285,2025-07-10,Skillsource,Office Expenses,,17.55,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-10_€unknown_skillsource.pdf
+286,2025-07-13,Replit,Production Expenses,,30.25,USD,0.86,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-13_€unknown_replit.pdf
+287,2025-07-14,Flootes,Consumption Expenses,Trip to UK for ED Gig,25.09,GBP,1.15,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-14_€unknown_flootes.jpg
+288,2025-07-14,Milton Keynes Council,Company Car,Trip to UK for ED Gig,2.30,GBP,1.15,United Kingdom,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-14_€unknown_milton-keynes-council.jpg
+289,2025-07-14,NS,Travel & Accommodation,,5.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-14_€unknown_ns.pdf
+290,2025-07-14,Welcome Break Group,Travel & Accommodation,Trip to UK for ED Gig,53.03,GBP,1.15,United Kingdom,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-14_€unknown_welcome-break-group.jpg
+291,2025-07-15,Kees de Boekhouder,Office Expenses,,80.56,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-15_€unknown_keesdeboekhouder-office-b-v.pdf
+292,2025-07-16,Replit,Production Expenses,,60.52,USD,0.86,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-16_€unknown_replit.pdf
+293,2025-07-17,Shell Coop Edge Lane,Company Car,Trip to UK for ED Gig,49.78,GBP,1.16,United Kingdom,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-17_€unknown_shell-co-op-edge-lane.jpg
+294,2025-07-18,gaynorsports,Marketing / Sales Expenses,Trip to UK for ED Gig,130.88,GBP,1.15,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-18_€unknown_gaynorsports.jpg
+295,2025-07-18,Replit,Production Expenses,,60.63,USD,0.86,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-18_€unknown_replit.pdf
+296,2025-07-19,Replit,Production Expenses,,60.77,USD,0.86,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-19_€unknown_replit.pdf
+297,2025-07-20,ASAP Coffee,Consumption Expenses,Trip to UK for ED Gig,16.50,GBP,1.15,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-20_€unknown_asap-coffee.jpg
+298,2025-07-20,namecheap,Office Expenses,,11.48,USD,0.86,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-20_€unknown_namecheap.pdf
+299,2025-07-20,Stena Line,Travel & Accommodation,Trip to UK for ED Gig,290.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-20_€unknown_stena-line.pdf
+300,2025-07-21,Toast,Consumption Expenses,Trip to UK for ED Gig,11.60,GBP,1.15,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-21_€unknown_toast.pdf
+301,2025-07-24,alpkit,Marketing / Sales Expenses,Trip to UK for ED Gig,39.99,GBP,1.15,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-24_€unknown_alpkit.pdf
+302,2025-07-24,J F Martin and Co,Marketing / Sales Expenses,Trip to UK for ED Gig,13.00,GBP,1.15,United Kingdom,VAT: Shifted,0,FALSE,,receipts/2025/2025-07-24_€unknown_j-f-martin-and-co.pdf
+303,2025-07-24,SPAR,Company Car,Trip to UK for ED Gig,39.72,GBP,1.15,United Kingdom,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-24_€unknown_spar.jpg
+304,2025-07-25,Apple,Travel & Accommodation,,5.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-25_€unknown_apple.pdf
+305,2025-07-25,nTrakker AB,Office Expenses,,4.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-25_€unknown_ntrakker-ab.pdf
+306,2025-07-25,Sawtry Fuel Express,Company Car,,32.23,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-25_€unknown_sawtry-fuel-express.jpg
+307,2025-07-26,Apple,Travel & Accommodation,,22.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-26_€unknown_apple.pdf
+308,2025-07-27,Bandcamp,Production Expenses,Music Downloads,1.21,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-27_€unknown_bandcamp.pdf
+309,2025-07-27,Bandcamp,Production Expenses,Music Downloads,1.21,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-27_€unknown_bandcamp.pdf
+310,2025-07-27,Bandcamp,Production Expenses,Music Downloads,2.42,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-27_€unknown_bandcamp.pdf
+311,2025-07-29,EG Services,Company Car,Fuel,25.33,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-29_€unknown_eg-services-netherlands-b-v.jpg
+312,2025-07-30,Kafenion,Consumption Expenses,Business Dinner,13.20,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-30_€unknown_kafenion.jpg
+313,2025-07-30,ODIDO,Office Expenses,Mobile Subscription - Odido,29.14,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-07-30_€unknown_odido-netherlands-b-v.pdf
+314,2025-08-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-01_€unknown_anwb-b-v.pdf
+315,2025-08-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-01_€unknown_anwb-b-v.pdf
+316,2025-08-01,EG Services,Company Car,Fuel,29.19,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-01_€unknown_eg-services-netherlands-b-v.jpg
+317,2025-08-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-01_€unknown_fbto.pdf
+318,2025-08-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-01_€unknown_fbto.pdf
+319,2025-08-02,Stichting Cineville,Other Expenses,,24.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-02_€unknown_stichting-cineville.pdf
+320,2025-08-04,xAI,Office Expenses,XAI,30.00,USD,0.86,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-08-04_€unknown_xai.pdf
+446,2025-08-04,"Anysphere, Inc.",Office Expenses,,20,USD,0.86,United States,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-08-04_€unknown_anysphere-inc.pdf
+321,2025-08-05,Amazing Oriental,Consumption Expenses,Business Dinner,7.34,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-05_€unknown_amazing-oriental-amsterdam-noord-b-v.jpg
+322,2025-08-06,Kafenion,Consumption Expenses,Business Dinner,9.20,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-06_€unknown_kafenion.jpg
+323,2025-08-07,BP,Company Car,Fuel,21.96,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-07_€unknown_bp-retail-netherlands-gmbh-copy.jpg
+325,2025-08-13,BP,Company Car,Fuel,20.36,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-13_€unknown_bp-express.jpg
+326,2025-08-13,Replit,Production Expenses,,49.55,EUR,1.00,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-13_€unknown_replit.pdf
+327,2025-08-14,NS,Travel & Accommodation,,5.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2024/2024-04-01_€unknown_ns.pdf
+328,2025-08-17,Burritos Anonymous,Consumption Expenses,Business Lunch,18.10,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-17_€unknown_burritos-anonymous.jpg
+329,2025-08-17,Tankstation van Langen,Company Car,,23.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-17_€unknown_tankstation-van-langen.jpg
+330,2025-08-20,Apple,Production Expenses,,25.80,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-20_€unknown_apple-distribution-international-ltd.pdf
+331,2025-08-20,Soho House Amsterdam,Consumption Expenses,Business Dinner,80.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-20_€unknown_soho-house-amsterdam.jpg
+332,2025-08-22,BP,Company Car,Fuel,50.98,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-22_€unknown_bp-retail-netherlands-gmbh.jpg
+333,2025-08-22,Toko Bandoeng,Consumption Expenses,Business Dinner,15.75,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-22_€unknown_toko-bandoeng.jpg
+334,2025-08-23,Anthropic,Production Expenses,AI,18.00,USD,0.85,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-08-23_€unknown_anthropic-pbc.pdf
+335,2025-08-23,Liever Hier,Consumption Expenses,Business Dinner,6.50,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-23_€unknown_liever-hier.jpg
+336,2025-08-24,Distributed Creation,Production Expenses,Splice,15.72,USD,0.85,United States,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-24_€unknown_hds.jpg
+337,2025-08-24,HDS,Miscellaneous Expenses,,21.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-24_€unknown_hds.jpg
+338,2025-08-25,Lukoil,Company Car,,34.29,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-25_€unknown_lukoil.jpg
+339,2025-08-26,Parnassia,Consumption Expenses,,7.50,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-26_€unknown_parnassia.jpg
+340,2025-08-27,Burritos Anonymous,Consumption Expenses,Business Lunch,16.60,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-27_€unknown_burritos-anonymous.jpg
+341,2025-08-27,ODIDO,Office Expenses,Mobile Subscription - Odido,31.63,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-27_€unknown_odido-netherlands-b-v.pdf
+501,2025-08-27,Felyx,Travel & Accommodation,,2.05,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-08-27_€unknown_felyx-netherlands-b-v.pdf
+342,2025-08-28,namecheap,Office Expenses,,10.56,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-08-28_€unknown_namecheap.pdf
+343,2025-08-28,Spirit,Consumption Expenses,Business Dinner,8.90,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-28_€unknown_spirit.jpg
+344,2025-08-28,Tabakshop Java,Office Expenses,,13.10,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-28_€unknown_tabakshop-java.jpg
+345,2025-08-29,EG Services,Company Car,Fuel,21.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-08-29_€unknown_eg-services-netherlands-b-v.jpg
+346,2025-08-29,Koffie op Lokatie,Consumption Expenses,Business Dinner,8.25,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-29_€unknown_koffie-op-lokatie.jpg
+347,2025-08-30,De Koffie Broeder,Consumption Expenses,Business Dinner,12.40,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-31_€unknown_de-koffie-broeder.pdf
+348,2025-08-30,Roti Queen,Consumption Expenses,Business Dinner,13.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-01_€unknown_roti-queen.jpg
+349,2025-08-31,De Koffie Broeder,Consumption Expenses,Business Dinner,12.40,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-08-31_€unknown_de-koffie-broeder.pdf
+350,2025-09-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-01_€unknown_2025-09-01tavel-expenses-edreams-flight.pdf
+351,2025-09-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-04_€unknown_anwb-retail-b-v.pdf
+352,2025-09-01,eDreams 25 04 27,Travel & Accommodation,Flights,75.43,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-01_€unknown_2025-09-01tavel-expenses-edreams-flight.pdf
+353,2025-09-01,eDreams 25 05 12,Travel & Accommodation,Flights,89.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-01_€unknown_2025-09-01tavel-expenses-edreams-flight.pdf
+354,2025-09-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-01_€unknown_fbto-car-insurance.pdf
+355,2025-09-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-01_€unknown_fbto-car-insurance.pdf
+356,2025-09-01,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-09-01_€unknown_x-twitter-international-ulc.pdf
+357,2025-09-02,BBrood,Consumption Expenses,Business Lunch,6.50,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-02_€unknown_bbrood.jpg
+358,2025-09-02,EG Services,Company Car,Fuel,54.07,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-02_€unknown_eg-services-netherlands-b-v.jpg
+359,2025-09-03,Media Markt,Office Expenses,,21.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-03_€unknown_media-markt.jpg
+360,2025-09-03,Roti Queen,Consumption Expenses,Business Lunch,18.30,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-01_€unknown_roti-queen.jpg
+361,2025-09-04,ANWB,Other Expenses,Education,35.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-04_€unknown_anwb-retail-b-v.pdf
+362,2025-09-04,Bagels Beans,Consumption Expenses,Trip to Hawaii for Ecstatic Dance Performance - Food,8.95,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-04_€unknown_bagels-beans.jpg
+363,2025-09-04,Hubo,Production Expenses,,37.39,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-04_€unknown_hubo.jpg
+364,2025-09-04,xAI,Office Expenses,XAI,30.00,USD,0.86,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-09-04_€unknown_xai-llc.pdf
+365,2025-09-05,Anthropic,Production Expenses,AI,79.74,USD,0.85,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-09-05_€unknown_anthropic-pbc.pdf
+366,2025-09-05,Anthropic,Office Expenses,,79.74,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-09-05_€unknown_anthropic-pbc.pdf
+367,2025-09-07,Albert Heijn,Marketing / Sales Expenses,Gifts,6.99,EUR,1.00,Netherlands,VAT: Reduced Rate,21,TRUE,,receipts/2025/2025-09-07_€unknown_albert-heijn.jpg
+368,2025-09-08,Bever,Production Expenses,Work Equipment,34.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-08_€unknown_bever-b-v.jpg
+369,2025-09-09,mr Fillet,Consumption Expenses,Fillet,12.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-09_€unknown_mr-fillet.jpg
+370,2025-09-11,Kringloopbedrijf De Lokatie,Marketing / Sales Expenses,,11.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-11_€unknown_kringloopbedrijf-de-lokatie.jpg
+371,2025-09-11,Muni Tribe,Marketing / Sales Expenses,,48.25,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-11_€unknown_muni-tribe.jpg
+372,2025-09-12,Esso,Company Car,Fuel,53.23,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-12_€unknown_esso.jpg
+373,2025-09-12,Winparts,Office Expenses,,41.87,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-12_€unknown_winparts.pdf
+374,2025-09-13,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-13_€unknown_anwb-b-v.pdf
+375,2025-09-13,Karwei,Office Expenses,DIY,70.77,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-13_€unknown_karwei.jpg
+376,2025-09-13,So Lyn,Consumption Expenses,Business Dinner,11.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-13_€unknown_so-lyn.pdf
+377,2025-09-13,Thuisbezorgd,Consumption Expenses,Business Dinner,13.99,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-13_€unknown_thuisbezorgd.pdf
+378,2025-09-14,Drinkwaard Motoren,Office Expenses,Office Equipment,289.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-14_€unknown_drinkwaard-motoren-b-v.pdf
+379,2025-09-14,Gunters en Meuser,Production Expenses,DIY,14.62,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-14_€unknown_gunters-en-meuser.pdf
+380,2025-09-14,Nuraghe Italiaanse delicatessen,Consumption Expenses,,12.50,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-14_€unknown_nuraghe-italiaanse-delicatessen.jpg
+381,2025-09-15,BP,Company Car,Fuel,36.15,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-15_€unknown_bp-zuiderzeeweg.jpg
+382,2025-09-16,Jumbo,Consumption Expenses,Business Lunch,14.87,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-16_€unknown_jumbo.jpg
+383,2025-09-16,Tandoori Delight Amsterdam,Consumption Expenses,Business Dinner,14.96,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-16_€unknown_tandoori-delight-amsterdam.pdf
+384,2025-09-17,Action,Marketing / Sales Expenses,Gifts for client,3.87,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-17_€unknown_action.jpg
+385,2025-09-18,findacrew,Travel & Accommodation,Subscription,10.00,AUD,0.56,Australia,VAT: Shifted,0,FALSE,,receipts/2025/2025-09-18_€unknown_findacrew.pdf
+386,2025-09-18,Tandoori Delight Amsterdam,Consumption Expenses,Business Dinner,13.99,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-18_€unknown_tandoori-delight-amsterdam.pdf
+387,2025-09-20,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Ireland,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-20_€unknown_apple-distribution-international-ltd.pdf
+388,2025-09-20,Kringloopbedrijf De Lokatie,Marketing / Sales Expenses,,10.80,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-20_€unknown_kringloopbedrijf-de-lokatie.jpg
+389,2025-09-20,Liever Hier,Consumption Expenses,,7.75,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-20_€unknown_liever-hier.jpg
+390,2025-09-20,So Lyn,Consumption Expenses,Business Dinner,13.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-20_€unknown_so-lyn.pdf
+391,2025-09-21,IJ Hallen,Production Expenses,,6.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-21_€unknown_ij-hallen.pdf
+392,2025-09-21,Little Saigon,Consumption Expenses,,16.00,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-21_€unknown_little-saigon-vof.jpg
+393,2025-09-22,Gamma,Office Expenses,DIY,21.28,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-22_€unknown_gamma.jpg
+394,2025-09-22,Industrieel Klimmen,Production Expenses,IRATA Course L2,1633.50,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-22_€unknown_industrieel-klimmen-b-v.pdf
+395,2025-09-22,Tandoori Delight Amsterdam,Consumption Expenses,Business Dinner,27.96,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-22_€unknown_tandoori-delight-amsterdam.pdf
+396,2025-09-23,Albert Heijn,Consumption Expenses,Business Dinner,6.99,EUR,1.00,Netherlands,VAT: Reduced Rate,21,TRUE,,receipts/2025/2025-09-23_€unknown_albert-heijn.jpg
+397,2025-09-24,Birkenstock,Production Expenses,,150.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-24_€unknown_birkenstock-europe-gmbh.pdf
+398,2025-09-24,NS,Travel & Accommodation,,16.92,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-24_€unknown_birkenstock-europe-gmbh.pdf
+399,2025-09-24,Sam Koffie,Consumption Expenses,,7.70,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-24_€unknown_sam-koffie.jpg
+400,2025-09-24,Schindelhaur,Production Expenses,,119.90,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-24_€unknown_schindelhaur.pdf
+401,2025-09-25,Burritos Anonymous,Consumption Expenses,Business Lunch,34.80,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-25_€unknown_burrito.jpg
+402,2025-09-26,Chi Ling,Consumption Expenses,Business Lunch,22.10,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-26_€unknown_chi-ling.jpg
+403,2025-09-27,BP,Company Car,Fuel,49.68,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-27_€unknown_bp-express.jpg
+404,2025-09-27,ODIDO,Office Expenses,Mobile Subscription - Odido,29.14,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-27_€unknown_odido-netherlands-b-v.pdf
+405,2025-09-28,Toko Bandoeng,Consumption Expenses,Business Dinner,15.75,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-09-28_€unknown_toko-bandoeng.jpg
+406,2025-09-28,X Twitter International ULC,Marketing / Sales Expenses,X Premium,8.00,EUR,1.00,Netherlands,VAT: Shifted,0,FALSE,,receipts/2025/2025-09-28_€unknown_toko-bandoeng.jpg
+407,2025-09-29,Decathlon,Marketing / Sales Expenses,Work Equipment,54.97,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-29_€unknown_decathlon.jpg
+408,2025-09-30,Anthropic,Production Expenses,AI,20.00,USD,0.85,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-09-30_€unknown_anysphere-inc.pdf
+409,2025-09-30,bol,Miscellaneous Expenses,,14.49,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-09-30_€unknown_bol-com-b-v.pdf
+410,2025-10-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_bunq.pdf
+411,2025-10-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2024/2024-07-10_€unknown_anwb.pdf
+412,2025-10-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_fbto.pdf
+413,2025-10-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_fbto.pdf
+414,2025-10-03,Bandcamp,Production Expenses,Music Downloads,1.21,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-03_€unknown_bandcamp.pdf
+415,2025-10-03,Bandcamp,Production Expenses,Music Downloads,2.42,GBP,1.15,United Kingdom,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-03_€unknown_bandcamp.pdf
+416,2025-10-03,BP,Company Car,Fuel,40.92,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-03_€unknown_bp-retail-netherlands-gmbh.jpg
+417,2025-10-04,Poppies,Consumption Expenses,,7.25,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-10-04_€unknown_poppies.jpg
+418,2025-10-04,xAI,Office Expenses,XAI,30.00,USD,0.85,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-10-04_€unknown_xai-llc.pdf
+419,2025-10-05,bol,Production Expenses,,16.58,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-05_€unknown_bol-com-b-v.pdf
+420,2025-10-05,Warung Noord,Consumption Expenses,Business Lunch,12.75,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-10-05_€unknown_warung-noord.pdf
+421,2025-10-05,Anthropic,Office Expenses,,90,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-05_€unknown_anthropic-pbc.pdf
+422,2025-10-05,Bol,Production Expenses,,35,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-05_€unknown_bol-com-b-v.pdf
+423,2025-10-06,BBrood,Consumption Expenses,Business Lunch,6.70,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-10-06_€unknown_bbrood.jpg
+424,2025-10-06,Kringloopbedrijf De Lokatie,Marketing / Sales Expenses,,7.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-06_€unknown_kringloopbedrijf-de-lokatie.jpg
+425,2025-10-06,bol,Marketing / Sales Expenses,,35,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-06_€unknown_bol-com-b-v.pdf
+426,2025-10-06,Vomar,Production Expenses,,12.22,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-06_€unknown_vomar.jpg
+427,2025-10-07,Deka Supermarkten,Consumption Expenses,Business Dinner,19.54,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,,receipts/2025/2025-10-07_€unknown_deka-supermarkten-b-v.jpg
+428,2025-10-07,Google Domains,Production Expenses,2023-02-03,12.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-07_€unknown_google-domains.pdf
+429,2025-10-07,Google Domains,Production Expenses,2023-05-18,14.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-07_€unknown_google-domains.pdf
+430,2025-10-07,Google Domains,Production Expenses,2023-02-01 Domain Expense,14.00,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-07_€unknown_google-domains.pdf
+431,2025-10-07,engels,Production Expenses,,141.3,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-07_€unknown_engels.jpg
+432,2025-10-08,Anthropic,Production Expenses,AI,90.00,USD,0.86,United States,VAT: Shifted,0,FALSE,,receipts/2025/2025-10-08_€unknown_anthropic-pbc.pdf
+433,2025-10-08,Bandcamp,Production Expenses,Music Downloads,1.82,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-10-08_€unknown_bandcamp.pdf
+434,2025-10-08,Layers_bakery_bv,Consumption Expenses,,14.5,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-08_€unknown_layers-bakery-bv.pdf
+435,2025-10-09,Vue Alkmaar,Consumption Expenses,,14.12,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-09_€unknown_vue-alkmaar.jpg
+436,2025-10-10,Nautic Jachthavens,Office Expenses,,500,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-10_€unknown_nautic-jachthavens-bv.pdf
+437,2025-10-11,ANWB,Production Expenses,,12.95,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-11_€unknown_anwb-b-v.pdf
+438,2025-10-13,Amazon,Office Expenses,,8.13,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-13_€unknown_amazon-eu-sarl.pdf
+439,2025-10-14,Hornbach,Office Expenses,,17.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-14_€unknown_hornbach.jpg
+440,2025-10-14,NS,Travel & Accommodation,,5.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-14_€unknown_ns-reizigers-b-v.pdf
+441,2025-10-15,Check Netherlands,Consumption Expenses,,8.85,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-15_€unknown_check-netherlands-b-v.pdf
+442,2025-10-16,Gentle Place Coffee,Consumption Expenses,,7.8,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-16_€unknown_gentle-place-coffee.pdf
+443,2025-10-16,Gunters en Meuser,Production Expenses,DIY,115.42,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-16_€unknown_gunters-en-meuser.pdf
+444,2025-10-17,Esso,Company Car,Fuel,54.88,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-17_€unknown_esso.jpg
+445,2025-10-17,Haven Hot Yoga & Pilates,Marketing / Sales Expenses,,25,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-17_€unknown_haven-hot-yoga-pilates.pdf
+446,2025-10-18,Dankjewellness B.V.,Marketing / Sales Expenses,,105,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-18_€unknown_dankjewellness-b-v.pdf
+447,2025-10-18,De Tuin van de Smid,Consumption Expenses,,50,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-18_€unknown_de-tuin-van-de-smid-b-v.jpg
+448,2025-10-19,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-19_€unknown_apple.pdf
+449,2025-10-20,Ikea,Office Expenses,,365.33,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-20_€unknown_ikea-b-v.jpg
+450,2025-10-21,Fast Motors B.V.,Company Car,Bought into Q4,1735.1,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-21_€unknown_fast-motors-b-v.pdf
+451,2025-10-22,Cafe 't Sluisje,Consumption Expenses,,65.5,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-22_€unknown_cafe-t-sluisje.jpg
+452,2025-10-23,BP,Company Car,Fuel,20.34,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-23_€unknown_bp.jpg
+453,2025-10-24,EG Services,Company Car,,23.37,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-24_€unknown_eg-services-netherlands-b-v.jpg
+454,2025-10-25,Burrito Boys,Consumption Expenses,,17.4,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-25_€unknown_burrito-boys.jpg
+455,2025-10-27,Karwei,Production Expenses,DIY,17.78,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-27_€unknown_karwai.jpg
+456,2025-10-27,Klaas Mulder,Production Expenses,,295.44,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-27_€unknown_klaas-mulder.jpg
+457,2025-10-27,Steve's Maintenance and Services,Office Expenses,,970.42,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-27_€unknown_steve-s-maintenance-and-services.pdf
+458,2025-10-27,V.O.F. SAM??S KOFFIE,Consumption Expenses,,7.5,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-27_€unknown_v-o-f-sam-s-koffie.jpg
+459,2025-10-28,Action,Miscellaneous Expenses,,32.09,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-28_€unknown_action-nederland-b-v.jpg
+460,2025-10-28,Twitter International ULC,Office Expenses,,8,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-28_€unknown_twitter-international-ulc.pdf
+461,2025-10-29,De Dieseldokter,Production Expenses,,328.53,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-29_€unknown_de-dieseldokter.jpg
+462,2025-10-29,Tinq Beverwijk,Company Car,,27,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-29_€unknown_tinq-beverwijk.jpg
+463,2025-10-30,EG Services,Company Car,,19.15,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-30_€unknown_eg-services-netherlands-b-v.jpg
+464,2025-10-30,Gunters en Meuser,Production Expenses,DIY,17.61,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-30_€unknown_gunters-en-meuser.pdf
+465,2025-10-30,Little Saigon,Consumption Expenses,,15,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-10-30_€unknown_little-saigon-noord.jpg
+466,2025-10-31,Action,Production Expenses,,44.34,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-31_€unknown_action.jpg
+467,2025-10-31,Europarts,Production Expenses,,73.09,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-10-31_€unknown_europarts-b-v.jpg
+468,2025-11-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_bunq.pdf
+469,2025-11-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2024/2024-07-10_€unknown_anwb.pdf
+470,2025-11-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_fbto.pdf
+471,2025-11-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-04-01_€unknown_fbto.pdf
+472,2025-11-02,BP,Company Car,Fuel,18.28,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-02_€unknown_bp.jpg
+473,2025-11-04,"Anysphere, Inc.",Office Expenses,,20,USD,0.87,United States,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-11-04_€unknown_anysphere-inc.pdf
+474,2025-11-04,EG Services,Company Car,,53.73,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-04_€unknown_eg-services-netherlands-b-v.jpg
+475,2025-11-04,Gangnam Chicken NDSM,Consumption Expenses,,20.05,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-04_€unknown_gangnam-chicken-ndsm.jpg
+476,2025-11-04,George Kniest,Production Expenses,,954.35,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-04_€unknown_george-kniest-boat-equipment-muiderzand.pdf
+477,2025-11-04,Steve's Maintenance and Services,Office Expenses,,242,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-04_€unknown_steve-s-maintenance-and-services.pdf
+478,2025-11-04,"xAI, LLC",Office Expenses,XAI,30,USD,0.87,United States,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-11-04_€unknown_xai-llc.pdf
+479,2025-11-05,Anthropic,Office Expenses,,90,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-05_€unknown_anthropic-pbc.pdf
+480,2025-11-05,Burrito Boys,Consumption Expenses,,17.4,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-05_€unknown_burrito-boys.jpg
+481,2025-11-06,Amazon,Office Expenses,,49,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-06_€unknown_amazon-eu-sarl.pdf
+482,2025-11-06,Amazon,Office Expenses,,15.49,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-06_€unknown_amazon-eu-sarl.pdf
+483,2025-11-06,Banden Service Raalte,Production Expenses,,32.5,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-06_€unknown_banden-service-raalte.pdf
+484,2025-11-06,bol,Production Expenses,,19.8,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-06_€unknown_bol-1.pdf
+485,2025-11-06,bol,Production Expenses,,10.24,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-06_€unknown_bol-1.pdf
+486,2025-11-06,Yono Commerce,Production Expenses,,10.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-06_€unknown_yono-commerce-b-v.pdf
+487,2025-11-07,Postkantoor Westerstraat,Office Expenses,,11.1,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-07_€unknown_postkantoor-westerstraat.jpg
+488,2025-11-08,De Trek Barefoot,Production Expenses,,230,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-08_€unknown_de-trek-barefoot.jpg
+489,2025-11-08,EG Services,Company Car,,25.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-08_€unknown_eg-services-netherlands-b-v.jpg
+490,2025-11-08,Nous,Consumption Expenses,,7.99,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-08_€unknown_nous.pdf
+491,2025-11-12,ANWB,Consumption Expenses,,12.95,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-12_€unknown_anwb-b-v.pdf
+492,2025-11-12,Burrito Boys,Consumption Expenses,,17.4,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-12_€unknown_burrito-boys.jpg
+493,2025-11-13,ANWB,Consumption Expenses,,12.95,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-13_€unknown_anwb-b-v.pdf
+494,2025-11-13,Burrito Boys,Consumption Expenses,,17.4,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-13_€unknown_burrito-boys.jpg
+495,2025-11-13,Reifier,Production Expenses,,476.78,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-13_€unknown_reifier-meubelmaker.pdf
+496,2025-11-14,NS,Travel & Accommodation,,8.87,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-14_€unknown_ns-reizigers-b-v.pdf
+497,2025-11-15,Amazon,Company Car,,159,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-15_€unknown_amazon-eu.pdf
+498,2025-11-15,BBrood,Consumption Expenses,,7.2,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-15_€unknown_bbrood.jpg
+499,2025-11-17,EG Services,Company Car,,28.17,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-17_€unknown_eg-services-netherlands-b-v.jpg
+500,2025-11-17,Lighteu GmbH,Office Expenses,,17.99,EUR,1.00,Germany,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-17_€unknown_lighteu-gmbh.pdf
+501,2025-11-18,Argos Oostzaan,Company Car,,68.03,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-18_€unknown_argos-oostzaan.jpg
+502,2025-11-21,George Kniest,Company Car,,494.3,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-21_€unknown_george-kniest-boat-equipment-muiderzand.pdf
+503,2025-11-21,George Kniest,Office Expenses,,3185.59,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-21_€unknown_george-kniest-boat-equipment-muiderzand.pdf
+504,2025-11-21,George Kniest,Office Expenses,,157.3,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-21_€unknown_george-kniest-boat-equipment-muiderzand.pdf
+505,2025-11-23,Hego Handel,Office Expenses,,429.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-23_€unknown_hego-handel-b-v.pdf
+506,2025-11-24,Amazon,Office Expenses,,37.55,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-24_€unknown_amazon-eu-sarl.pdf
+507,2025-11-24,Buurs,Production Expenses,,195.15,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-24_€unknown_buurs-b-v.pdf
+508,2025-11-24,Halfords,Company Car,,45.88,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-24_€unknown_halfords.jpg
+509,2025-11-24,Kringloopbedrijf De Lokatie,Miscellaneous Expenses,,7.5,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-24_€unknown_kringloopbedrijf-de-lokatie.jpg
+510,2025-11-25,Amazon,Office Expenses,,17.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-25_€unknown_amazon-eu-sarl.pdf
+511,2025-11-25,BBrood,Consumption Expenses,,6.7,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-25_€unknown_bbrood.jpg
+512,2025-11-26,Burrito Boys,Consumption Expenses,,17.4,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-26_€unknown_burrito-boys.jpg
+513,2025-11-26,ODIDO,Office Expenses,Mobile Subscription - Odido,29.14,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-26_€unknown_odido-netherlands-b-v.pdf
+514,2025-11-27,rhebergen multihullyachts b.v.,Production Expenses,,1980.96,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-27_€unknown_rhebergen-multihullyachts-b-v.pdf
+515,2025-11-28,Karwei,Office Expenses,DIY,38.37,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-28_€unknown_karwai.jpg
+516,2025-11-30,Amazon,Office Expenses,,11.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-11-30_€unknown_amazon-eu-sarl-dutch-branch.pdf
+517,2025-11-30,BBrood,Consumption Expenses,,5.7,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-11-30_€unknown_bbrood.jpg
+518,2025-12-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-12-01_€unknown_george-kniest.pdf
+519,2025-12-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-12-01_€unknown_george-kniest.pdf
+520,2025-12-01,FBTO,Travel and accommodation (other),Motorbike Insurance,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-12-01_€unknown_george-kniest.pdf
+521,2025-12-01,FBTO,Company Car,Car Insurance,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,,receipts/2025/2025-12-01_€unknown_george-kniest.pdf
+522,2025-12-01,George Kniest,Office Expenses,,337.16,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-01_€unknown_george-kniest.pdf
+523,2025-12-02,Primera,Office Expenses,,11.55,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-02_€unknown_primera.jpg
+524,2025-12-03,EG Services,Company Car,,30.04,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-03_€unknown_eg-services-netherlands-b-v.jpg
+525,2025-12-04,BP,Company Car,Fuel,21.51,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-04_€unknown_bp-corn-douwesweg.jpg
+526,2025-12-04,Schröder Watersport,Production Expenses,,44.77,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-04_€unknown_schroder-watersport.jpg
+527,2025-12-04,"xAI, LLC",Office Expenses,XAI,30,USD,0.86,United States,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-04_€unknown_xai-llc.pdf
+528,2025-12-05,Anthropic,Office Expenses,,90,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-05_€unknown_anthropic-pbc.pdf
+529,2025-12-05,Burrito Boys,Consumption Expenses,,17.4,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-05_€unknown_burrito-boys.jpg
+530,2025-12-08,Kringloopbedrijf De Lokatie,Marketing / Sales Expenses,,17,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-08_€unknown_kringloopbedrijf-de-lokatie.jpg
+531,2025-12-08,Ramen-Ya,Consumption Expenses,,42.7,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-08_€unknown_ramen-ya-b-v.jpg
+532,2025-12-09,Reifier,Production Expenses,,101.64,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-09_€unknown_reifier.pdf
+533,2025-12-09,Salsa Shop,Consumption Expenses,,35.8,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-09_€unknown_salsa-shop.jpg
+534,2025-12-10,Deka Supermarkten,Office Expenses,,19.85,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-10_€unknown_deka-supermarkten-b-v.jpg
+535,2025-12-10,EG Services,Company Car,,53.64,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-10_€unknown_eg-services-netherlands-b-v.jpg
+536,2025-12-12,Action,Travel & Accommodation,,23.57,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-12_€unknown_action-nederland-b-v.jpg
+537,2025-12-12,EG Services,Company Car,,22.84,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-12_€unknown_eg-services-netherlands-b-v.jpg
+538,2025-12-12,V.O.F. SAM??S KOFFIE,Consumption Expenses,,7.2,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-12_€unknown_v-o-f-sam-s-koffie.jpg
+539,2025-12-13,Suri-kitchen,Consumption Expenses,,29.5,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-13_€unknown_suri-kitchen.jpg
+540,2025-12-13,Vascobelo,Consumption Expenses,,33.1,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-13_€unknown_vascobelo.jpg
+541,2025-12-15,Flybussen!,Travel & Accommodation,,358,NOK,0.08,Norway,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-15_€unknown_flybussen.pdf
+542,2025-12-16,BI1 BIGÅRD,Consumption Expenses,,400,NOK,0.08,Norway,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-16_€unknown_bi1-bigard.jpg
+543,2025-12-16,UAB J?RININK? TRENIRUO?I? CENTRAS,Other Expenses,Trip for Ecstatic Dance Gig,100,EUR,1.00,Lithuania,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-16_€unknown_uab-jurininku-treniruociu-centras.pdf
+544,2025-12-16,UAB J?RININK? TRENIRUO?I? CENTRAS,Other Expenses,Trip for Ecstatic Dance Gig,100,EUR,1.00,Lithuania,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-16_€unknown_uab-jurininku-treniruociu-centras.pdf
+545,2025-12-16,UAB J?RININK? TRENIRUO?I? CENTRAS,Other Expenses,Trip for Ecstatic Dance Gig,100,EUR,1.00,Lithuania,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-16_€unknown_uab-jurininku-treniruociu-centras.pdf
+546,2025-12-16,UAB J?RININK? TRENIRUO?I? CENTRAS,Other Expenses,Trip for Ecstatic Dance Gig,100,EUR,1.00,Lithuania,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-16_€unknown_uab-jurininku-treniruociu-centras.pdf
+547,2025-12-16,UAB J?RININK? TRENIRUO?I? CENTRAS,Other Expenses,Trip for Ecstatic Dance Gig,100,EUR,1.00,Lithuania,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-16_€unknown_uab-jurininku-treniruociu-centras.pdf
+548,2025-12-19,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-19_€unknown_apple.pdf
+549,2025-12-20,Apotek 1,Marketing / Sales Expenses,,189.9,NOK,0.08,Norway,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-20_€unknown_apotek-1.jpg
+550,2025-12-20,Apple,Office Expenses,iCloud,9.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-20_€unknown_apple.pdf
+551,2025-12-20,Touristshop Tromsø AS,Marketing / Sales Expenses,,203,NOK,0.08,Norway,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-20_€unknown_touristshop-troms-as.jpg
+552,2025-12-21,Arctandria AS,Marketing / Sales Expenses,,197,NOK,0.08,Norway,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-21_€unknown_arctandria-as.jpg
+553,2025-12-23,Enix Sandals,Marketing / Sales Expenses,,84.72,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-23_€unknown_enix-sandals.pdf
+554,2025-12-25,Apple,Travel & Accommodation,,99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12,receipts/2025/2025-12-25_€unknown_apple-distribution-international-ltd.pdf
+555,2025-12-26,ODIDO,Office Expenses,Mobile Subscription - Odido,29.14,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-26_€unknown_odido-netherlands-b-v.pdf
+556,2025-12-27,ODIDO,Office Expenses,Mobile Subscription - Odido,29.14,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12,receipts/2025/2025-12-27_€unknown_odido-netherlands-b-v.pdf
+557,2025-12-28,Espresso House,Consumption Expenses,,156,NOK,0.08,Norway,VAT: Shifted,0,FALSE,2026-01-12,receipts/2025/2025-12-28_€unknown_espresso-house.jpg
+558,2025-12-29,Kalliope Bournia,Personnel Costs,Boat Support,160,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026/01/13,receipts/2025/2025-12-29_€unknown_kalliope-bournia.pdf
+559,2025-12-31,Nautische,Production Expenses,Burner installation,2299.28,EUR,1,Netherlands,VAT: Standard Rate,21,TRUE,2026/02/03,receipts/2025/2025-12-31_€unknown_sjemme-burner-nautischenl.pdf

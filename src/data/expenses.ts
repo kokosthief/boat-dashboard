@@ -70,7 +70,7 @@ function loadExpenses(): Expense[] {
   const expenses: Expense[] = [];
 
   // Try boat-expenses.csv first
-  const boatExpPath = path.join(process.cwd(), '..', 'finance-dashboard', 'public', 'data', 'boat-expenses.csv');
+  const boatExpPath = path.join(process.cwd(), 'public', 'data', 'boat-expenses.csv');
   if (fs.existsSync(boatExpPath)) {
     const rows = parseCSV(fs.readFileSync(boatExpPath, 'utf-8'));
     for (const row of rows) {
@@ -91,7 +91,7 @@ function loadExpenses(): Expense[] {
   }
 
   // Filter 2025-expenses.csv for boat-related
-  const allExpPath = path.join(process.cwd(), '..', 'finance-dashboard', 'public', 'data', '2025-expenses.csv');
+  const allExpPath = path.join(process.cwd(), 'public', 'data', '2025-expenses.csv');
   if (fs.existsSync(allExpPath)) {
     const rows = parseCSV(fs.readFileSync(allExpPath, 'utf-8'));
     for (const row of rows) {
