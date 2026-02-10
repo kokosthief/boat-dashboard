@@ -15,17 +15,21 @@ export interface Expense {
 
 const BOAT_KEYWORDS = [
   'boat', 'timo', 'marine', 'nautical', 'victron', 'anchor', 'hull', 'sail',
-  'deck', 'engine', 'bilge', 'galley', 'mooring', 'harbour', 'marina',
+  'bilge', 'galley', 'mooring', 'harbour', 'marina',
   'mast', 'keel', 'rudder', 'propeller', 'bow thruster', 'antifoul', 'epoxy',
   'anker', 'scheep', 'jachthaven', 'nautic', 'multihull', 'yacht',
   'boat support', 'rhebergen',
 ];
+
+// Exclude false positives
+const BOAT_EXCLUDE = ['decksaver', 'haven hot yoga'];
 
 // The boat purchase entry — adjust this if the actual purchase is identified differently
 const BOAT_PURCHASE_KEYWORDS = ['purchase', 'aankoop', 'boat purchase'];
 
 function isBoatRelated(row: Record<string, string>): boolean {
   const text = `${row['Company']} ${row['Category']} ${row['Comment']}`.toLowerCase();
+  if (BOAT_EXCLUDE.some(ex => text.includes(ex))) return false;
   return BOAT_KEYWORDS.some(kw => text.includes(kw));
 }
 
