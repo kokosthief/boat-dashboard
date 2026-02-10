@@ -1,0 +1,22 @@
+export interface Vendor {
+  name: string;
+  tasks: string;
+  contact: string;
+  phone: string;
+  email: string;
+  notes: string;
+}
+
+export const vendors: Vendor[] = [
+  { name: "Lizzie - Carpenter", tasks: "", contact: "Lizzie", phone: "", email: "", notes: "In harbour. Not sure." },
+  { name: "Dude from Odessa", tasks: "", contact: "", phone: "", email: "", notes: "Carpenter." },
+  { name: "Sjemma", tasks: "Engine maintenance, Start Engine, Diesel Heater", contact: "Sjemma", phone: "(062) 036-6661", email: "", notes: "Kind of wants to help. Scheduled." },
+  { name: "Steve", tasks: "Engine electrics", contact: "Steve", phone: "", email: "", notes: "" },
+  { name: "DAF Specialist Company", tasks: "Engine maintenance, Start Engine", contact: "NA", phone: "(020) 636-0462", email: "", notes: "Amsterdam-Noord, specialise in DAF engines" },
+  { name: "Anjema & Schneiders Auto Elektro", tasks: "Replace Start Motor", contact: "", phone: "", email: "", notes: "" },
+  { name: "Frank van Meegen", tasks: "", contact: "Frank", phone: "+31 6 53590442", email: "", notes: "" },
+  { name: "Eerdmans", tasks: "Obtain insurance", contact: "", phone: "", email: "", notes: "https://www.eerdmans.nl/bootverzekering-offerte-aanvragen/" },
+  { name: "Andres", tasks: "Engine maintenance, Start Engine", contact: "Via Zoe/Paul", phone: "", email: "", notes: "Great guy, likes cash, only paid if he helps." },
+  { name: "Klaas Mulder", tasks: "Remove and clean Bow Thruster", contact: "", phone: "(075) 617-4535", email: "info@klaas-mulder.nl", notes: "" },
+  { name: "Simone", tasks: "Window frame, Make Futon", contact: "Simone", phone: "", email: "", notes: "" },
+];
