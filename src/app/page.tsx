@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { tasks } from '@/data/tasks';
 import { harbours } from '@/data/harbours';
 import { vendors } from '@/data/vendors';
+import { getExpenseData } from '@/data/expenses';
 
 function parseCost(c: string): number {
   const m = c.replace(/[^0-9.]/g, '');
@@ -9,14 +10,15 @@ function parseCost(c: string): number {
 }
 
 export default function Home() {
-  const totalExpenses = tasks.reduce((s, t) => s + parseCost(t.cost), 0);
+  const expenseData = getExpenseData();
+  const totalExpenses = expenseData.grandTotal;
   const activeTasks = tasks.filter(t => t.status !== 'Finished');
   const upcoming = activeTasks
     .filter(t => t.targetDate)
     .sort((a, b) => a.targetDate.localeCompare(b.targetDate))[0];
 
   const cards = [
-    { label: 'Total Expenses', value: `€${totalExpenses.toLocaleString('nl-NL')}`, sub: `${tasks.length} tasks tracked`, color: 'bg-blue-600', href: '/expenses' },
+    { label: 'Total Expenses', value: `€${totalExpenses.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}`, sub: `${expenseData.expenses.length} expenses tracked`, color: 'bg-blue-600', href: '/expenses' },
     { label: 'Current Mooring', value: '€535/mo', sub: 'De Remming, Zaandam', color: 'bg-emerald-600' },
     { label: 'Active Tasks', value: String(activeTasks.length), sub: `${tasks.filter(t => t.status === 'Finished').length} completed`, color: 'bg-amber-600' },
     { label: 'Next Deadline', value: upcoming?.targetDate || 'None', sub: upcoming?.name || '', color: 'bg-purple-600' },
