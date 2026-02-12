@@ -38,12 +38,16 @@ export const tasks: Task[] = [
   { name: "Seal windows", location: "Wheelhouse / Helm", vendor: "", status: "Finished", targetDate: "2025-09-23", cost: "€20", notes: "" },
   { name: "Fix Interior Lights in Forecabin", location: "Forecabin", vendor: "", status: "Finished", targetDate: "2025-09-23", cost: "", notes: "" },
   { name: "Fix Locks", location: "Wheelhouse / Helm", vendor: "", status: "Finished", targetDate: "2025-09-23", cost: "€30", notes: "" },
-  { name: "Start Engine", location: "Engine Room", vendor: "Sjemma, DAF, Andres", status: "Finished", targetDate: "2025-09-23", cost: "€1,000", notes: "" },
+  { name: "Start Engine", location: "Engine Room", vendor: "Sjemmie, DAF, Andres", status: "Finished", targetDate: "2025-09-23", cost: "€1,000", notes: "Sjemmie advised on starting procedure" },
   { name: "Replace Start Motor", location: "Engine Room", vendor: "Anjema & Schneiders", status: "Finished", targetDate: "2025-09-30", cost: "€300", notes: "" },
-  { name: "Engine maintenance", location: "Engine Room", vendor: "Sjemma, DAF, Andres", status: "Finished", targetDate: "2025-10-21", cost: "€200", notes: "" },
-  { name: "Inspect / Fix Diesel Heater", location: "Engine Room", vendor: "Sjemma", status: "Finished", targetDate: "2025-10-22", cost: "€2,000", notes: "" },
+  { name: "Engine maintenance", location: "Engine Room", vendor: "DAF, Andres", status: "Finished", targetDate: "2025-10-21", cost: "€200", notes: "" },
+  { name: "Inspect / Fix Diesel Heater", location: "Engine Room", vendor: "Sjemmie", status: "Finished", targetDate: "2025-10-22", cost: "€2,000", notes: "Sjemmie installed diesel heater" },
   { name: "Frame Jana's Art", location: "Salon", vendor: "", status: "Finished", targetDate: "2025-10-22", cost: "", notes: "" },
   { name: "Change oil of gearbox", location: "Engine Room", vendor: "", status: "Finished", targetDate: "2025-10-22", cost: "€50", notes: "" },
+  { name: "Install Starlink", location: "Deck", vendor: "", status: "Finished", targetDate: "2026-01-28", cost: "", notes: "Starlink installed and working on boat" },
+  { name: "Install Victron Quattro-II", location: "Engine Room", vendor: "George Kniest", status: "Finished", targetDate: "2026-01-15", cost: "€2,200", notes: "Part of Victron energy system" },
+  { name: "Install Victron Cerbo GX + SmartSolar", location: "Engine Room", vendor: "George Kniest", status: "Finished", targetDate: "2026-01-20", cost: "€2,929", notes: "Monitoring + solar charge controller" },
+  { name: "Move to De Remming (Zaandam)", location: "", vendor: "", status: "Finished", targetDate: "2025-11-27", cost: "€535/mo", notes: "Winter berth at De Remming, Zaandam. Excellent deal vs NDSM/Rhebergen." },
 ];
 
 export const statusColumns = ['Started', 'Planning', 'Ideation', 'Researching', 'Finished'] as const;
