@@ -17,9 +17,11 @@ export default function Home() {
     .filter(t => t.targetDate)
     .sort((a, b) => a.targetDate.localeCompare(b.targetDate))[0];
 
+  const totalRecurring = expenseData.recurringCosts.reduce((sum, rc) => sum + rc.monthlyEstimate, 0);
+
   const cards = [
     { label: 'Total Expenses', value: `€${totalExpenses.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}`, sub: `${expenseData.expenses.length} expenses tracked`, color: 'bg-blue-600', href: '/expenses' },
-    { label: 'Current Mooring', value: '€1,680/mo', sub: 'Rhebergen, NDSM', color: 'bg-emerald-600' },
+    { label: 'Recurring Monthly Costs', value: `~€${Math.round(totalRecurring).toLocaleString()}/mo`, sub: 'Mooring + Starlink + Electricity', color: 'bg-emerald-600', href: '/expenses', isRecurring: true },
     { label: 'Active Tasks', value: String(activeTasks.length), sub: `${tasks.filter(t => t.status === 'Finished').length} completed`, color: 'bg-amber-600' },
     { label: 'Next Deadline', value: upcoming?.targetDate || 'None', sub: upcoming?.name || '', color: 'bg-purple-600' },
   ];
@@ -36,7 +38,20 @@ export default function Home() {
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map(c => {
-          const inner = (
+          const inner = c.isRecurring ? (
+            <>
+              <p className="text-sm opacity-80">{c.label}</p>
+              <p className="text-2xl font-bold mt-1">{c.value}</p>
+              <div className="text-xs opacity-70 mt-2 space-y-0.5">
+                {expenseData.recurringCosts.map(rc => (
+                  <div key={rc.vendor} className="flex justify-between">
+                    <span>{rc.vendor === 'Rhebergen' && rc.category === 'Mooring & Berth' ? 'Mooring' : rc.vendor}:</span>
+                    <span>€{Math.round(rc.monthlyEstimate).toLocaleString()}</span>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
             <>
               <p className="text-sm opacity-80">{c.label}</p>
               <p className="text-2xl font-bold mt-1">{c.value}</p>

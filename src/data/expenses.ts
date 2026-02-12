@@ -107,37 +107,33 @@ export function getExpenseData(): ExpenseData {
     categoryTotals[e.category] = (categoryTotals[e.category] || 0) + e.amount;
   }
 
-  // Recurring costs detection
-  const recurringCategories = ['Mooring & Berth', 'Electricity', 'Insurance'];
-  const recurringVendorPatterns = ['nautic jachthaven', 'rhebergen', 'insurance', 'starlink'];
-
-  const recurringMap = new Map<string, Expense[]>();
-  for (const e of expenses) {
-    const isRecurring = recurringCategories.includes(e.category) ||
-      recurringVendorPatterns.some(p => e.vendor.toLowerCase().includes(p));
-    if (isRecurring && e.category !== 'Boat Purchase') {
-      const key = `${e.category}|${e.vendor}`;
-      if (!recurringMap.has(key)) recurringMap.set(key, []);
-      recurringMap.get(key)!.push(e);
+  // Recurring costs - manually curated list
+  const recurringCosts: { description: string; vendor: string; category: string; monthlyEstimate: number; annualEstimate: number; entries: Expense[] }[] = [
+    {
+      description: 'Mooring & Berth',
+      vendor: 'Rhebergen',
+      category: 'Mooring & Berth',
+      monthlyEstimate: 1680,
+      annualEstimate: 1680 * 12,
+      entries: expenses.filter(e => e.vendor.toLowerCase().includes('rhebergen') && e.category === 'Mooring & Berth')
+    },
+    {
+      description: 'Internet',
+      vendor: 'Starlink',
+      category: 'Internet',
+      monthlyEstimate: 100,
+      annualEstimate: 100 * 12,
+      entries: expenses.filter(e => e.vendor.toLowerCase().includes('starlink'))
+    },
+    {
+      description: 'Electricity',
+      vendor: 'Rhebergen',
+      category: 'Electricity',
+      monthlyEstimate: 75,
+      annualEstimate: 75 * 12,
+      entries: expenses.filter(e => e.vendor.toLowerCase().includes('rhebergen') && e.category === 'Electricity')
     }
-  }
-
-  const recurringCosts = Array.from(recurringMap.entries()).map(([key, entries]) => {
-    const total = entries.reduce((s, e) => s + e.amount, 0);
-    const sortedDates = entries.map(e => e.date).sort();
-    const firstDate = new Date(sortedDates[0]);
-    const lastDate = new Date(sortedDates[sortedDates.length - 1]);
-    const monthSpan = Math.max(1, (lastDate.getTime() - firstDate.getTime()) / (1000 * 60 * 60 * 24 * 30.44));
-    const monthlyEstimate = entries.length > 1 ? total / monthSpan : total / 12;
-    return {
-      description: entries[0].category,
-      vendor: entries[0].vendor,
-      category: entries[0].category,
-      monthlyEstimate: Math.round(monthlyEstimate * 100) / 100,
-      annualEstimate: Math.round(monthlyEstimate * 12 * 100) / 100,
-      entries,
-    };
-  });
+  ];
 
   return { expenses, grandTotal, subtotalExPurchase, mumsContributions, henrysNetCost, categoryTotals, recurringCosts };
 }

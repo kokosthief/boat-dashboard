@@ -14,7 +14,16 @@ const statusColors: Record<string, string> = {
 export default function HarboursPage() {
   const [filter, setFilter] = useState('All');
   const statuses = ['All', ...statusOrder];
-  const filtered = filter === 'All' ? harbours : harbours.filter(h => h.status === filter);
+  const baseFiltered = filter === 'All' ? harbours : harbours.filter(h => h.status === filter);
+  
+  // Sort to put Rhebergen at the top
+  const filtered = [...baseFiltered].sort((a, b) => {
+    const aIsCurrent = a.name.toLowerCase().includes('rhebergen');
+    const bIsCurrent = b.name.toLowerCase().includes('rhebergen');
+    if (aIsCurrent && !bIsCurrent) return -1;
+    if (!aIsCurrent && bIsCurrent) return 1;
+    return 0;
+  });
 
   return (
     <div className="space-y-4">
@@ -42,12 +51,12 @@ export default function HarboursPage() {
           </thead>
           <tbody>
             {filtered.map(h => {
-              const isCurrent = h.name.includes('Remming');
+              const isCurrent = h.name.toLowerCase().includes('rhebergen');
               return (
-                <tr key={h.name} className={`border-b border-slate-800/50 ${isCurrent ? 'bg-green-900/20' : ''}`}>
+                <tr key={h.name} className={`border-b border-slate-800/50 ${isCurrent ? 'bg-emerald-900/30 border-l-4 border-l-emerald-500' : ''}`}>
                   <td className="py-2 pr-4 font-medium">
                     {h.website ? <a href={h.website} target="_blank" className="text-blue-400 hover:underline">{h.name}</a> : h.name}
-                    {isCurrent && <span className="ml-2 text-xs bg-green-600 px-1.5 py-0.5 rounded">CURRENT</span>}
+                    {isCurrent && <span className="ml-2 text-xs bg-emerald-600 px-1.5 py-0.5 rounded">★ CURRENT</span>}
                   </td>
                   <td className="py-2 pr-4 text-slate-400">{h.area}</td>
                   <td className="py-2 pr-4"><span className={`px-2 py-0.5 rounded text-xs ${statusColors[h.status] || ''}`}>{h.status}</span></td>
