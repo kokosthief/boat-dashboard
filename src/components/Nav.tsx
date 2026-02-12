@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 const links = [
   { href: '/', label: '🏠 Dashboard' },
   { href: '/kanban', label: '📋 Kanban' },
-  { href: '/harbours', label: '⚓ Harbours' },
-  { href: '/vendors', label: '🔧 Vendors' },
   { href: '/expenses', label: '💰 Expenses' },
+  { href: '/vendors', label: '🔧 Vendors' },
+  { href: '/harbours', label: '⚓ Harbours' },
 ];
 
 export default function Nav() {

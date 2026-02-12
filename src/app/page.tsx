@@ -25,9 +25,9 @@ export default function Home() {
   ];
 
   const sections = [
-    { href: '/kanban', emoji: '📋', title: 'Kanban Board', desc: `${activeTasks.length} active tasks across 4 stages` },
-    { href: '/harbours', emoji: '⚓', title: 'Harbours', desc: `${harbours.length} marinas tracked` },
+    { href: '/kanban', emoji: '📋', title: 'Kanban Board', desc: `${tasks.filter(t => t.status === 'Started').length} started · ${tasks.filter(t => t.status === 'Planning').length} planning · ${tasks.filter(t => t.status === 'Ideation').length} ideation · ${tasks.filter(t => t.status === 'Researching').length} researching` },
     { href: '/vendors', emoji: '🔧', title: 'Vendors', desc: `${vendors.length} contacts` },
+    { href: '/harbours', emoji: '⚓', title: 'Harbours', desc: `${harbours.length} marinas tracked` },
   ];
 
   return (

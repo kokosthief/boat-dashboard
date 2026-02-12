@@ -2,7 +2,7 @@ export interface Task {
   name: string;
   location: string;
   vendor: string;
-  status: 'Ideation' | 'Planning' | 'Started' | 'Research' | 'Finished';
+  status: 'Ideation' | 'Planning' | 'Started' | 'Researching' | 'Finished';
   targetDate: string;
   cost: string;
   notes: string;
@@ -29,8 +29,8 @@ export const tasks: Task[] = [
   { name: "Plumber — install new toilet sink", location: "Head", vendor: "Plumber (TBD)", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "New sink bought, needs installing." },
   { name: "Plumber — replace 80L boiler with 20L", location: "Head", vendor: "Plumber (TBD)", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Swap 80L electric boiler for 20L one (already bought). Don't need the big one." },
   { name: "Fix engine room door hinge", location: "Engine Room", vendor: "", status: "Planning", targetDate: "", cost: "", notes: "One of the hinges needs fixing." },
-  { name: "Have Lock Keys Cut", location: "", vendor: "", status: "Research", targetDate: "2025-09-23", cost: "€10", notes: "" },
-  { name: "Obtain insurance", location: "", vendor: "Eerdmans", status: "Research", targetDate: "2026-06-30", cost: "", notes: "" },
+  { name: "Have Lock Keys Cut", location: "", vendor: "", status: "Researching", targetDate: "2025-09-23", cost: "€10", notes: "" },
+  { name: "Obtain insurance", location: "", vendor: "Eerdmans", status: "Researching", targetDate: "2026-06-30", cost: "", notes: "" },
   { name: "Make clothes rack from a tree", location: "Forecabin", vendor: "", status: "Ideation", targetDate: "", cost: "€0", notes: "" },
   { name: "Call harbours for a new place to berth", location: "", vendor: "", status: "Finished", targetDate: "", cost: "", notes: "Multiple marinas contacted." },
   { name: "New wood for broken window frame", location: "Wheelhouse / Helm", vendor: "Simone", status: "Finished", targetDate: "2025-09-23", cost: "€500", notes: "" },
@@ -46,12 +46,12 @@ export const tasks: Task[] = [
   { name: "Change oil of gearbox", location: "Engine Room", vendor: "", status: "Finished", targetDate: "2025-10-22", cost: "€50", notes: "" },
 ];
 
-export const statusColumns = ['Started', 'Planning', 'Ideation', 'Research', 'Finished'] as const;
+export const statusColumns = ['Started', 'Planning', 'Ideation', 'Researching', 'Finished'] as const;
 
 export const statusColors: Record<string, string> = {
   Ideation: 'bg-purple-500/20 border-purple-500/40 text-purple-300',
   Planning: 'bg-blue-500/20 border-blue-500/40 text-blue-300',
   Started: 'bg-amber-500/20 border-amber-500/40 text-amber-300',
-  Research: 'bg-cyan-500/20 border-cyan-500/40 text-cyan-300',
+  Researching: 'bg-cyan-500/20 border-cyan-500/40 text-cyan-300',
   Finished: 'bg-green-500/20 border-green-500/40 text-green-300',
 };
