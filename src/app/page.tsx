@@ -21,7 +21,7 @@ export default function Home() {
 
   const cards = [
     { label: 'Total Expenses', value: `€${totalExpenses.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}`, sub: `${expenseData.expenses.length} expenses tracked`, color: 'bg-blue-600', href: '/expenses' },
-    { label: 'Recurring Monthly Costs', value: `~€${Math.round(totalRecurring).toLocaleString()}/mo`, sub: 'Mooring + Starlink + Electricity', color: 'bg-emerald-600', href: '/expenses', isRecurring: true },
+    { label: 'Recurring Monthly Costs', value: `~€${Math.round(totalRecurring).toLocaleString()}/mo`, sub: 'Rhebergen mooring + electricity + Starlink', color: 'bg-emerald-600', href: '/expenses', isRecurring: true },
   ];
 
   const sections = [

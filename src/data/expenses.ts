@@ -110,27 +110,27 @@ export function getExpenseData(): ExpenseData {
   // Recurring costs - manually curated list
   const recurringCosts: { description: string; vendor: string; category: string; monthlyEstimate: number; annualEstimate: number; entries: Expense[] }[] = [
     {
-      description: 'Mooring & Berth',
+      description: 'Mooring & Berth (Rhebergen)',
       vendor: 'Rhebergen',
       category: 'Mooring & Berth',
-      monthlyEstimate: 280,
-      annualEstimate: 1680 * 2,
+      monthlyEstimate: 330,
+      annualEstimate: 1980 * 2,
       entries: expenses.filter(e => e.vendor.toLowerCase().includes('rhebergen') && e.category === 'Mooring & Berth')
     },
     {
-      description: 'Internet',
+      description: 'Internet (Starlink)',
       vendor: 'Starlink',
       category: 'Internet',
-      monthlyEstimate: 100,
-      annualEstimate: 100 * 12,
+      monthlyEstimate: 30,
+      annualEstimate: 30 * 12,
       entries: expenses.filter(e => e.vendor.toLowerCase().includes('starlink'))
     },
     {
-      description: 'Electricity',
+      description: 'Electricity (Rhebergen)',
       vendor: 'Rhebergen',
       category: 'Electricity',
-      monthlyEstimate: 75,
-      annualEstimate: 75 * 12,
+      monthlyEstimate: 100,
+      annualEstimate: 100 * 12,
       entries: expenses.filter(e => e.vendor.toLowerCase().includes('rhebergen') && e.category === 'Electricity')
     }
   ];
