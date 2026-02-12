@@ -15,7 +15,6 @@ export const tasks: Task[] = [
   { name: "Remove and clean Bow Thruster", location: "Head", vendor: "Klaas Mulder", status: "Started", targetDate: "2026-03-31", cost: "€20", notes: "Clean corrosion. Short circuit. Maybe buy new solenoid." },
   { name: "Engine electrics", location: "Engine Room", vendor: "Steve", status: "Started", targetDate: "2026-03-31", cost: "€300", notes: "Steve might be the guy." },
   { name: "Bow cabin bed conversion", location: "Forecabin", vendor: "Mees van de Nes", status: "Started", targetDate: "2026-02-16", cost: "", notes: "Converting single bed to collapsible double bed with fold-up section for storage access below. Due in a few days." },
-  { name: "Fix engine room door hinge", location: "Engine Room", vendor: "", status: "Planning", targetDate: "", cost: "", notes: "" },
   { name: "Sand blast boat", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "€1,000", notes: "Fully sand blast whole boat to bare metal." },
   { name: "Paint Exterior", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Hull and Exterior Black" },
   { name: "Antifouling", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Apply coats" },
