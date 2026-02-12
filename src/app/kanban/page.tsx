@@ -28,8 +28,11 @@ export default function KanbanPage() {
                 <span className="text-xs opacity-60">{isCollapsed ? '▶' : '▼'}</span>
               </button>
               {!isCollapsed && colTasks.map(t => (
-                <div key={t.name} className={`rounded-lg border p-3 text-sm space-y-1 ${colors}`}>
-                  <p className="font-medium">{t.name}</p>
+                <div key={t.name} className={`rounded-lg border p-3 text-sm space-y-1 ${colors} ${t.urgent ? 'ring-2 ring-red-500/60' : ''}`}>
+                  <p className="font-medium">
+                    {t.urgent && <span className="inline-block bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded mr-1.5 font-bold">URGENT</span>}
+                    {t.name}
+                  </p>
                   {t.vendor && <p className="text-xs opacity-70">👤 {t.vendor}</p>}
                   {t.cost && <p className="text-xs opacity-70">💰 {t.cost}</p>}
                   {t.targetDate && <p className="text-xs opacity-70">📅 {t.targetDate}</p>}

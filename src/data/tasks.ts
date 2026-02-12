@@ -6,21 +6,21 @@ export interface Task {
   targetDate: string;
   cost: string;
   notes: string;
+  urgent?: boolean;
 }
 
 export const tasks: Task[] = [
-  { name: "Pump water out of salon", location: "Salon", vendor: "", status: "Started", targetDate: "2026-01-01", cost: "€0", notes: "" },
-  { name: "Pump water out of forecabin", location: "Forecabin", vendor: "", status: "Started", targetDate: "2026-01-01", cost: "€0", notes: "" },
+  { name: "Pump water out of salon", location: "Salon", vendor: "", status: "Started", targetDate: "2026-01-01", cost: "€70", notes: "Bought strong water-sucking hoover (~€70) to help.", urgent: true },
+  { name: "Pump water out of forecabin", location: "Forecabin", vendor: "", status: "Started", targetDate: "2026-01-01", cost: "€0", notes: "", urgent: true },
   { name: "Pin and Make schematic for Electrics", location: "Wheelhouse / Helm", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€2", notes: "Pin it to electrical cabinet door." },
-  { name: "Remove and clean Bow Thruster", location: "Head", vendor: "Klaas Mulder", status: "Started", targetDate: "2026-03-31", cost: "€20", notes: "Clean corrosion. Short circuit. Maybe buy new solenoid." },
-  { name: "Engine electrics", location: "Engine Room", vendor: "Steve", status: "Started", targetDate: "2026-03-31", cost: "€300", notes: "Steve might be the guy." },
   { name: "Bow cabin bed conversion", location: "Forecabin", vendor: "Mees van de Nes", status: "Started", targetDate: "2026-02-16", cost: "", notes: "Converting single bed to collapsible double bed with fold-up section for storage access below. Due in a few days." },
+  { name: "Remove and clean Bow Thruster", location: "Head", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€20", notes: "Clean corrosion. Short circuit. Maybe buy new solenoid. DIY." },
+  { name: "Engine electrics", location: "Engine Room", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€300", notes: "DIY first, Steve as backup if needed." },
   { name: "Sand blast boat", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "€1,000", notes: "Fully sand blast whole boat to bare metal." },
   { name: "Paint Exterior", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Hull and Exterior Black" },
   { name: "Antifouling", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Apply coats" },
   { name: "Sand and Paint Salon side wood", location: "Salon", vendor: "", status: "Planning", targetDate: "2026-06-30", cost: "€50", notes: "Prevent rot before winter" },
-  { name: "Make Futon", location: "Salon", vendor: "Simone", status: "Planning", targetDate: "2026-06-30", cost: "€200", notes: "Great way to use the space at the back." },
-  { name: "Make extendable bed", location: "Forecabin", vendor: "", status: "Planning", targetDate: "2026-06-30", cost: "€1,700", notes: "" },
+  { name: "Aft cabin sofa-bed build", location: "Salon", vendor: "Simone", status: "Started", targetDate: "2026-06-30", cost: "€1,700", notes: "Simone currently designing. Sofa that converts to double bed in aft cabin. Construction starts March 1." },
   { name: "Make new Kitchen unit", location: "Salon", vendor: "", status: "Planning", targetDate: "2026-06-30", cost: "€1,000", notes: "" },
   { name: "Steering Wheel Replacement", location: "Wheelhouse / Helm", vendor: "", status: "Planning", targetDate: "2026-06-30", cost: "", notes: "Bought beautiful old wheel but attachment point is bigger than current one. Need to figure out adapter/fitting." },
   { name: "Bathroom tiles — cut & install", location: "Head", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Slate/ceramic tiles bought. Cut to shape and install around toilet area (floor + sides). Replace ugly white plastic surround." },

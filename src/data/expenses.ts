@@ -113,8 +113,8 @@ export function getExpenseData(): ExpenseData {
       description: 'Mooring & Berth',
       vendor: 'Rhebergen',
       category: 'Mooring & Berth',
-      monthlyEstimate: 1680,
-      annualEstimate: 1680 * 12,
+      monthlyEstimate: 280,
+      annualEstimate: 1680 * 2,
       entries: expenses.filter(e => e.vendor.toLowerCase().includes('rhebergen') && e.category === 'Mooring & Berth')
     },
     {

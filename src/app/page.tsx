@@ -22,8 +22,6 @@ export default function Home() {
   const cards = [
     { label: 'Total Expenses', value: `€${totalExpenses.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}`, sub: `${expenseData.expenses.length} expenses tracked`, color: 'bg-blue-600', href: '/expenses' },
     { label: 'Recurring Monthly Costs', value: `~€${Math.round(totalRecurring).toLocaleString()}/mo`, sub: 'Mooring + Starlink + Electricity', color: 'bg-emerald-600', href: '/expenses', isRecurring: true },
-    { label: 'Active Tasks', value: String(activeTasks.length), sub: `${tasks.filter(t => t.status === 'Finished').length} completed`, color: 'bg-amber-600' },
-    { label: 'Next Deadline', value: upcoming?.targetDate || 'None', sub: upcoming?.name || '', color: 'bg-purple-600' },
   ];
 
   const sections = [
