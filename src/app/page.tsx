@@ -32,8 +32,6 @@ export default function Home() {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-2xl font-bold">⛵ Timo</h1>
-
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map(c => {
           const inner = c.isRecurring ? (

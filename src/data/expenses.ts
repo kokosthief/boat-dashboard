@@ -126,7 +126,7 @@ export function getExpenseData(): ExpenseData {
       entries: expenses.filter(e => e.vendor.toLowerCase().includes('starlink'))
     },
     {
-      description: 'Electricity (Rhebergen)',
+      description: 'Electrical Costs (est.)',
       vendor: 'Rhebergen',
       category: 'Electricity',
       monthlyEstimate: 100,
