@@ -12,7 +12,7 @@ export const vendors: Vendor[] = [
   { name: "Simone", tasks: "Window frame, Aft cabin sofa-bed build", contact: "Simone", phone: "+31 6 15897070", email: "contact@reifier.nl", notes: "🟡 UPCOMING — Furniture maker. https://reifier.nl/ — Building sofa that converts to double bed. Construction starts March 1." },
   { name: "Klaas Mulder", tasks: "Bow thruster + Victron equipment supplier", contact: "", phone: "(075) 617-4535", email: "info@klaas-mulder.nl", notes: "Good for Victron and Vetus bow thruster equipment." },
   { name: "Steve", tasks: "Engine electrics", contact: "Steve", phone: "", email: "", notes: "" },
-  { name: "Sjemma", tasks: "Engine maintenance, Start Engine, Diesel Heater", contact: "Sjemma", phone: "(062) 036-6661", email: "", notes: "Kind of wants to help. Scheduled." },
+  { name: "Sjemmie", tasks: "Start Engine, Diesel Heater, Water pump delivery, Heater pump thermostat switch", contact: "Sjemmie", phone: "(062) 036-6661", email: "", notes: "Very keen to help and work together. Has ordered a replacement water pump (for faucets) — ready to deliver. Planning to install a thermostat switch so the diesel heater circulation pump only runs when water reaches temperature. Stay in regular contact." },
   { name: "Tijmon", tasks: "", contact: "Tijmon", phone: "", email: "", notes: "Carpenter. From Odessa crew." },
   { name: "DAF Specialist Company", tasks: "Engine maintenance, Start Engine", contact: "NA", phone: "(020) 636-0462", email: "", notes: "Amsterdam-Noord, specialise in DAF engines" },
   { name: "Anjema & Schneiders Auto Elektro", tasks: "Replace Start Motor", contact: "", phone: "", email: "", notes: "" },
