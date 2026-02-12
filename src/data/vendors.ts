@@ -17,7 +17,6 @@ export const vendors: Vendor[] = [
   { name: "Eerdmans", tasks: "Obtain insurance", contact: "", phone: "", email: "", notes: "https://www.eerdmans.nl/bootverzekering-offerte-aanvragen/" },
   { name: "Andres", tasks: "Engine maintenance, Start Engine", contact: "Via Zoe/Paul", phone: "", email: "", notes: "Great guy, likes cash, only paid if he helps." },
   { name: "Klaas Mulder", tasks: "Bow thruster + Victron equipment supplier", contact: "", phone: "(075) 617-4535", email: "info@klaas-mulder.nl", notes: "Good for Victron and Vetus bow thruster equipment." },
-  { name: "Erikas", tasks: "", contact: "Erikas", phone: "", email: "", notes: "" },
   { name: "Simone", tasks: "Window frame, Aft cabin sofa-bed build", contact: "Simone", phone: "+31 6 15897070", email: "contact@reifier.nl", notes: "Furniture maker. https://reifier.nl/ — Building sofa that converts to double bed. Construction starts March 1." },
-  { name: "Mees van de Nes", tasks: "Bow cabin bed conversion", contact: "Mees", phone: "+31 6 44694355", email: "", notes: "Carpenter. Converting single bed to collapsible double bed in bow (forecabin) with storage access below." },
+  { name: "Mees van de Nes", tasks: "Bow cabin bed conversion", contact: "Mees", phone: "+31 6 44694355", email: "", notes: "Carpenter. Currently converting single bed to collapsible double bed in bow (forecabin) with fold-up section for storage access below. Due in a few days." },
 ];

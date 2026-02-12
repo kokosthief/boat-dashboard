@@ -19,7 +19,7 @@ export default function Home() {
 
   const cards = [
     { label: 'Total Expenses', value: `€${totalExpenses.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}`, sub: `${expenseData.expenses.length} expenses tracked`, color: 'bg-blue-600', href: '/expenses' },
-    { label: 'Current Mooring', value: '€535/mo', sub: 'De Remming, Zaandam', color: 'bg-emerald-600' },
+    { label: 'Current Mooring', value: '€1,680/mo', sub: 'Rhebergen, NDSM', color: 'bg-emerald-600' },
     { label: 'Active Tasks', value: String(activeTasks.length), sub: `${tasks.filter(t => t.status === 'Finished').length} completed`, color: 'bg-amber-600' },
     { label: 'Next Deadline', value: upcoming?.targetDate || 'None', sub: upcoming?.name || '', color: 'bg-purple-600' },
   ];

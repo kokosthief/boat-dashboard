@@ -39,7 +39,7 @@ export const tasks: Task[] = [
   { name: "Change oil of gearbox", location: "Engine Room", vendor: "", status: "Finished", targetDate: "2025-10-22", cost: "€50", notes: "" },
 ];
 
-export const statusColumns = ['Ideation', 'Planning', 'Started', 'Research', 'Finished'] as const;
+export const statusColumns = ['Started', 'Planning', 'Ideation', 'Research', 'Finished'] as const;
 
 export const statusColors: Record<string, string> = {
   Ideation: 'bg-purple-500/20 border-purple-500/40 text-purple-300',
