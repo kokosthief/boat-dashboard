@@ -10,10 +10,8 @@ export interface Task {
 }
 
 export const tasks: Task[] = [
-  { name: "Pump water out of salon", location: "Salon", vendor: "", status: "Started", targetDate: "2026-01-01", cost: "€70", notes: "Bought strong water-sucking hoover (~€70) to help.", urgent: true },
-  { name: "Pump water out of forecabin", location: "Forecabin", vendor: "", status: "Started", targetDate: "2026-01-01", cost: "€0", notes: "", urgent: true },
   { name: "Pin and Make schematic for Electrics", location: "Wheelhouse / Helm", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€2", notes: "Pin it to electrical cabinet door." },
-  { name: "Bow cabin bed conversion", location: "Forecabin", vendor: "Mees van de Nes", status: "Started", targetDate: "2026-02-16", cost: "", notes: "Converting single bed to collapsible double bed with fold-up section for storage access below. Due in a few days." },
+  { name: "Pump water out of boat sections", location: "Various", vendor: "", status: "Planning", targetDate: "2026-02-20", cost: "", notes: "Urgent — pump water from multiple sections of the boat", urgent: true },
   { name: "Remove and clean Bow Thruster", location: "Head", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€20", notes: "Clean corrosion. Short circuit. Maybe buy new solenoid. DIY." },
   { name: "Engine electrics", location: "Engine Room", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€300", notes: "DIY first, Steve as backup if needed." },
   { name: "Sand blast boat", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "€1,000", notes: "Fully sand blast whole boat to bare metal." },
@@ -46,8 +44,11 @@ export const tasks: Task[] = [
   { name: "Change oil of gearbox", location: "Engine Room", vendor: "", status: "Finished", targetDate: "2025-10-22", cost: "€50", notes: "" },
   { name: "Install Starlink", location: "Deck", vendor: "", status: "Finished", targetDate: "2026-01-28", cost: "", notes: "Starlink installed and working on boat" },
   { name: "Install Victron Quattro-II", location: "Engine Room", vendor: "George Kniest", status: "Finished", targetDate: "2026-01-15", cost: "€2,200", notes: "Part of Victron energy system" },
-  { name: "Install Victron Cerbo GX + SmartSolar", location: "Engine Room", vendor: "George Kniest", status: "Finished", targetDate: "2026-01-20", cost: "€2,929", notes: "Monitoring + solar charge controller" },
-  { name: "Winter berth at De Remming (Zaandam)", location: "Harbour", vendor: "De Remming", status: "Finished", targetDate: "2025-11-27", cost: "€535/mo", notes: "Winter berth secured. Excellent deal vs NDSM/Rhebergen." },
+  { name: "Install galvanic isolator", location: "Engine Room", vendor: "", status: "Finished", targetDate: "2026-01-20", cost: "", notes: "Electrical safety for shore power" },
+  { name: "Replace heating burner + fuel filter + temp gauge + remote thermostat", location: "Engine Room", vendor: "Sjemmie", status: "Finished", targetDate: "2026-02-01", cost: "", notes: "Full heating system overhaul — new burner, fuel filter, temperature gauge, and remote thermostat all installed" },
+  { name: "Fix kitchen tap", location: "Salon", vendor: "", status: "Finished", targetDate: "2025-12-01", cost: "", notes: "Fixed when mum was visiting" },
+  { name: "Bow cabin bed build", location: "Forecabin", vendor: "Mees", status: "Finished", targetDate: "2026-02-13", cost: "", notes: "Collapsible double bed with fold-up section for storage access below. Completed by Mees." },
+  { name: "Install power outlets under kitchen sink", location: "Salon", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Switch to turn boiler (hot water) on/off conveniently" },
 ];
 
 export const statusColumns = ['Started', 'Planning', 'Ideation', 'Researching', 'Finished'] as const;
