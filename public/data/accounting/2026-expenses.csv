@@ -1,0 +1,22 @@
+Entry Number,Date,Company,Category,Comment,Amount,Currency,Exchange Rate,Country,Tax Name,Tax %,Tax Incl.,Added
+,2026-01-01,bunq,Office Expenses,Bunq Bank Subscription,3.99,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,
+,2026-01-01,ANWB,Company Car,Roadside Insurance,12.95,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,
+,2026-01-01,FBTO,Travel and accommodation (other),Motorbike Insurance ,28.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,
+,2026-01-01,FBTO,Company Car,Car Insurance ,39.86,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,
+,2026-01-02,HOTEL SUNSHINE,Travel & Accommodation ,Trip for Ecstatic Dance Gig ,3500,INR,0.01,India,VAT: Shifted,0,FALSE,2026-01-12
+,2026-01-04,CAJY BAR,Consumption Expenses,Trip for Ecstatic Dance Gig ,2209.51,INR,0.01,India,VAT: Shifted,0,FALSE,2026-01-12
+,2026-01-04,"xAI, LLC",Office Expenses,XAI,30,USD,0.85,United States,VAT: Shifted,0,FALSE,2026-01-12
+,2026-01-05,Anthropic,Office Expenses,,90,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-07,fabindia,Marketing / Sales Expenses,Trip for Ecstatic Dance Gig ,5278,INR,0.01,India,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-08,JJB Communications,Consumption Expenses,Trip for Ecstatic Dance Gig ,1400,INR,0.01,India,VAT: Shifted,0,FALSE,2026-01-12
+,2026-01-09,NEO TRAVEL,Marketing / Sales Expenses,Trip for Ecstatic Dance Gig ,266.95,INR,0.01,India,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-09,SHIFT NO: 1 ARTJUNA GOX,Consumption Expenses,Trip for Ecstatic Dance Gig ,997.5,INR,0.01,India,VAT: Shifted,0,FALSE,2026-01-12
+,2026-01-10,QATAR AIRWAYS,Travel & Accommodation,Trip for Ecstatic Dance Gig ,42975,INR,0.01,India,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-11,BAGELS,Consumption Expenses,,8.95,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12
+,2026-01-11,HRWILLMOTT,Consumption Expenses,,8,EUR,1.00,Netherlands,VAT: Reduced Rate,9,TRUE,2026-01-12
+,2026-01-11,InterGlobe Aviation Limited,Travel & Accommodation,Trip for Ecstatic Dance Gig ,4723,INR,0.01,India,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-11,Ryanair,Travel & Accommodation,,36.45,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-12,Apple,Production Expenses,,249,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026-01-12
+,2026-01-12,BURRITO BOYS,Consumption Expenses,,17.65,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026/01/12
+,2026-01-13,ALLIANCE AUTOMOTIVE SERVICES,Company Car,,19.35,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026/01/13
+,2026-01-13,Hoochie Mama BV,Consumption Expenses,,23.5,EUR,1.00,Netherlands,VAT: Standard Rate,21,TRUE,2026/01/13

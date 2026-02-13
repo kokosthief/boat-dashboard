@@ -127,7 +127,16 @@ function isBoatRelated(company: string, category: string, comment: string): bool
 }
 
 function findReceipt(year: number, date: string, company: string, accountingDir: string): string | undefined {
-  const receiptsDir = path.join(accountingDir, 'receipts', year.toString());
+  // For receipts, we'll need to access the original accounting directory
+  // In production (Vercel), this won't work - receipts would need to be uploaded to cloud storage
+  // For now, return undefined in production and only work locally
+  const isProduction = process.env.NODE_ENV === 'production' || !accountingDir.includes('openclaw');
+  if (isProduction) {
+    // TODO: Integrate with cloud storage (S3, Cloudflare R2, etc.) for receipt hosting
+    return undefined;
+  }
+  
+  const receiptsDir = path.join('/Users/kokos/.openclaw/workspace/accounting/receipts', year.toString());
   if (!fs.existsSync(receiptsDir)) return undefined;
   
   try {
@@ -162,17 +171,80 @@ function findReceipt(year: number, date: string, company: string, accountingDir:
 }
 
 export function getBoatExpenseData(): BoatExpenseData {
-  const accountingDir = '/Users/kokos/.openclaw/workspace/accounting';
+  // Use public directory for Vercel deployment
+  const accountingDir = path.join(process.cwd(), 'public', 'data', 'accounting');
   const years = [2023, 2024, 2025, 2026];
   const expenses: BoatExpense[] = [];
   const yearTotals: Record<number, { total: number; count: number; boatPurchaseTotal: number; mumsTotal: number }> = {};
   const categoryTotals: Record<string, number> = {};
   
-  for (const year of years) {
+  // First, load from boat-timo-expenses.csv (2024 and earlier)
+  const boatTimoPath = path.join(process.cwd(), 'public', 'data', 'boat-timo-expenses.csv');
+  if (fs.existsSync(boatTimoPath)) {
+    try {
+      const content = fs.readFileSync(boatTimoPath, 'utf-8');
+      const lines = content.split('\n');
+      
+      // Skip first 4 rows (title + blank lines + header)
+      for (let i = 4; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        
+        const cols = parseCSVLine(line);
+        if (cols.length < 5) continue;
+        
+        const date = parseDate(cols[0] || '');
+        if (!date || !date.match(/^\d{4}-\d{2}-\d{2}$/)) continue;
+        
+        const year = parseInt(date.split('-')[0]);
+        if (year > 2024) continue; // Don't include 2025+ from this file
+        
+        const company = (cols[2] || '').trim();
+        const category = (cols[3] || '').trim();
+        const amount = parseAmount(cols[4] || '');
+        
+        if (amount === 0) continue;
+        
+        if (!yearTotals[year]) {
+          yearTotals[year] = { total: 0, count: 0, boatPurchaseTotal: 0, mumsTotal: 0 };
+        }
+        
+        const receiptPath = findReceipt(year, date, company, accountingDir);
+        
+        expenses.push({
+          entryNumber: String(i - 3),
+          date,
+          company,
+          category,
+          comment: (cols[1] || '').trim(),
+          amount,
+          currency: 'EUR',
+          year,
+          receiptPath,
+        });
+        
+        yearTotals[year].total += amount;
+        yearTotals[year].count += 1;
+        
+        if (category.toLowerCase().includes('boat purchase')) {
+          yearTotals[year].boatPurchaseTotal += amount;
+        }
+        
+        categoryTotals[category] = (categoryTotals[category] || 0) + amount;
+      }
+    } catch (err) {
+      console.error('Error reading boat-timo-expenses.csv:', err);
+    }
+  }
+  
+  // Then load from accounting expense files (2025+)
+  for (const year of [2025, 2026]) {
     const csvPath = path.join(accountingDir, `${year}-expenses.csv`);
     if (!fs.existsSync(csvPath)) continue;
     
-    yearTotals[year] = { total: 0, count: 0, boatPurchaseTotal: 0, mumsTotal: 0 };
+    if (!yearTotals[year]) {
+      yearTotals[year] = { total: 0, count: 0, boatPurchaseTotal: 0, mumsTotal: 0 };
+    }
     
     try {
       const content = fs.readFileSync(csvPath, 'utf-8');
