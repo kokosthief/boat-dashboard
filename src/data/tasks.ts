@@ -47,7 +47,7 @@ export const tasks: Task[] = [
   { name: "Install Starlink", location: "Deck", vendor: "", status: "Finished", targetDate: "2026-01-28", cost: "", notes: "Starlink installed and working on boat" },
   { name: "Install Victron Quattro-II", location: "Engine Room", vendor: "George Kniest", status: "Finished", targetDate: "2026-01-15", cost: "€2,200", notes: "Part of Victron energy system" },
   { name: "Install Victron Cerbo GX + SmartSolar", location: "Engine Room", vendor: "George Kniest", status: "Finished", targetDate: "2026-01-20", cost: "€2,929", notes: "Monitoring + solar charge controller" },
-  { name: "Move to De Remming (Zaandam)", location: "", vendor: "", status: "Finished", targetDate: "2025-11-27", cost: "€535/mo", notes: "Winter berth at De Remming, Zaandam. Excellent deal vs NDSM/Rhebergen." },
+  { name: "Winter berth at De Remming (Zaandam)", location: "Harbour", vendor: "De Remming", status: "Finished", targetDate: "2025-11-27", cost: "€535/mo", notes: "Winter berth secured. Excellent deal vs NDSM/Rhebergen." },
 ];
 
 export const statusColumns = ['Started', 'Planning', 'Ideation', 'Researching', 'Finished'] as const;
