@@ -253,7 +253,7 @@ export default function ExpensesClient({ data }: { data: ExpenseData }) {
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis type="number" tick={{ fill: '#94a3b8', fontSize: 12 }} tickFormatter={(v) => `€${v.toLocaleString()}`} />
                 <YAxis type="category" dataKey="name" width={160} tick={{ fill: '#94a3b8', fontSize: 11 }} />
-                <Tooltip formatter={(value) => fmt(Number(value))} contentStyle={{ background: '#1e293b', border: '1px solid #334155', borderRadius: 8 }} />
+                <Tooltip formatter={(value) => fmt(Number(value))} contentStyle={{ background: '#1e293b', border: '1px solid #334155', borderRadius: 8, color: '#e2e8f0' }} labelStyle={{ color: '#e2e8f0' }} itemStyle={{ color: '#e2e8f0' }} />
                 <Bar dataKey="value" radius={[0, 4, 4, 0]}>
                   {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Bar>
@@ -263,7 +263,7 @@ export default function ExpensesClient({ data }: { data: ExpenseData }) {
                 <Pie data={chartData} cx="50%" cy="50%" outerRadius={120} dataKey="value" label={({ name, percent }) => `${name} (${((percent ?? 0) * 100).toFixed(0)}%)`} labelLine={false}>
                   {chartData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                 </Pie>
-                <Tooltip formatter={(value) => fmt(Number(value))} contentStyle={{ background: '#1e293b', border: '1px solid #334155', borderRadius: 8 }} />
+                <Tooltip formatter={(value) => fmt(Number(value))} contentStyle={{ background: '#1e293b', border: '1px solid #334155', borderRadius: 8, color: '#e2e8f0' }} labelStyle={{ color: '#e2e8f0' }} itemStyle={{ color: '#e2e8f0' }} />
               </PieChart>
             )}
           </ResponsiveContainer>
