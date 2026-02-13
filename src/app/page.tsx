@@ -41,7 +41,7 @@ export default function Home() {
               <div className="text-xs opacity-70 mt-2 space-y-0.5">
                 {expenseData.recurringCosts.map(rc => (
                   <div key={rc.vendor} className="flex justify-between">
-                    <span>{rc.vendor === 'Rhebergen' && rc.category === 'Mooring & Berth' ? 'Mooring' : rc.vendor}:</span>
+                    <span>{rc.category === 'Mooring & Berth' ? 'Mooring' : rc.category === 'Electricity' ? 'Electricity (est.)' : rc.description}:</span>
                     <span>€{Math.round(rc.monthlyEstimate).toLocaleString()}</span>
                   </div>
                 ))}

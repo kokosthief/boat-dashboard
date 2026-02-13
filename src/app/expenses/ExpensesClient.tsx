@@ -218,7 +218,7 @@ export default function ExpensesClient({ data }: { data: ExpenseData }) {
             <tbody>
               {data.recurringCosts.map((rc, i) => (
                 <tr key={i} className="border-b border-slate-800/50">
-                  <td className="px-3 py-2">{rc.category}</td>
+                  <td className="px-3 py-2">{rc.description}</td>
                   <td className="px-3 py-2 text-slate-400">{rc.vendor}</td>
                   <td className="px-3 py-2 text-right font-mono">{fmt(rc.monthlyEstimate)}</td>
                   <td className="px-3 py-2 text-right font-mono">{fmt(rc.annualEstimate)}</td>
