@@ -74,7 +74,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
       .filter(e => e.category.toLowerCase().includes('boat purchase'))
       .reduce((s, e) => s + e.amount, 0);
     const mumsTotal = filtered
-      .filter(e => e.comment.toLowerCase().includes('mum') || e.comment.toLowerCase().includes('mom'))
+      .filter(e => e.paidBy === 'MUM')
       .reduce((s, e) => s + e.amount, 0);
     
     return {
@@ -246,6 +246,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                 >
                   Category{arrow('category')}
                 </th>
+                <th className="px-4 py-3 font-medium text-slate-400">Paid By</th>
                 <th className="px-4 py-3 font-medium text-slate-400">Receipt</th>
               </tr>
             </thead>
@@ -275,6 +276,26 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                     </span>
                   </td>
                   <td className="px-4 py-3">
+                    {e.paidBy === 'MUM' && (
+                      <span className="bg-pink-600/20 text-pink-400 border border-pink-600/50 px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap">
+                        💝 Mum
+                      </span>
+                    )}
+                    {e.paidBy === 'HENRY' && (
+                      <span className="bg-blue-600/20 text-blue-400 border border-blue-600/50 px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap">
+                        Henry
+                      </span>
+                    )}
+                    {e.paidBy === 'PARTIAL' && (
+                      <span className="bg-amber-600/20 text-amber-400 border border-amber-600/50 px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap">
+                        Shared
+                      </span>
+                    )}
+                    {!e.paidBy && (
+                      <span className="text-slate-600 text-xs">—</span>
+                    )}
+                  </td>
+                  <td className="px-4 py-3">
                     {e.receiptPath ? (
                       <a
                         href={e.receiptPath}
@@ -292,7 +313,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
               ))}
               {sorted.length === 0 && (
                 <tr>
-                  <td colSpan={5} className="px-4 py-8 text-center text-slate-500">
+                  <td colSpan={6} className="px-4 py-8 text-center text-slate-500">
                     No boat expenses match your filters.
                   </td>
                 </tr>

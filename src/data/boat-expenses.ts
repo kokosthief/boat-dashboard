@@ -11,6 +11,7 @@ export interface BoatExpense {
   currency: string;
   year: number;
   receiptPath?: string;
+  paidBy?: string; // MUM, HENRY, PARTIAL, or undefined
 }
 
 export interface BoatExpenseData {
@@ -23,49 +24,6 @@ export interface BoatExpenseData {
   }>;
   categoryTotals: Record<string, number>;
 }
-
-// Boat-related vendor keywords (case-insensitive)
-const BOAT_VENDORS = [
-  'george kniest',
-  'sjemma',
-  'sjemmie',
-  'rhebergen',
-  'marina',
-  'diesel',
-  'nautic',
-  'mooring',
-  'starlink',
-  'timotheus',
-  'nathalie versluis', // boat seller
-  'klaas mulder', // bow thruster + victron
-  'simone', // furniture maker
-  'reifier',
-  'mees van de nes', // carpenter
-  'tijmon',
-  'steve',
-  'daf specialist',
-  'anjema',
-  'frank van meegen',
-  'eerdmans', // insurance
-  'andres',
-  'bakdekker', // boat type
-  'dieseldokter',
-];
-
-// Boat-related category keywords
-const BOAT_CATEGORIES = [
-  'boat',
-  'mooring',
-  'berth',
-  'marina',
-  'electricity',
-  'diesel',
-  'furnishing',
-  'equipment',
-  'maintenance',
-  'tools',
-  'diy supplies',
-];
 
 function parseCSVLine(line: string): string[] {
   const result: string[] = [];
@@ -108,22 +66,6 @@ function parseDate(raw: string): string {
     }
   }
   return raw;
-}
-
-function isBoatRelated(company: string, category: string, comment: string): boolean {
-  const searchText = `${company} ${category} ${comment}`.toLowerCase();
-  
-  // Check vendors
-  for (const vendor of BOAT_VENDORS) {
-    if (searchText.includes(vendor)) return true;
-  }
-  
-  // Check categories
-  for (const cat of BOAT_CATEGORIES) {
-    if (searchText.includes(cat)) return true;
-  }
-  
-  return false;
 }
 
 function findReceipt(year: number, date: string, company: string, accountingDir: string): string | undefined {
@@ -178,7 +120,7 @@ export function getBoatExpenseData(): BoatExpenseData {
   const yearTotals: Record<number, { total: number; count: number; boatPurchaseTotal: number; mumsTotal: number }> = {};
   const categoryTotals: Record<string, number> = {};
   
-  // First, load from boat-timo-expenses.csv (2024 and earlier)
+  // First, load from boat-timo-expenses.csv (all years)
   const boatTimoPath = path.join(process.cwd(), 'public', 'data', 'boat-timo-expenses.csv');
   if (fs.existsSync(boatTimoPath)) {
     try {
@@ -197,11 +139,11 @@ export function getBoatExpenseData(): BoatExpenseData {
         if (!date || !date.match(/^\d{4}-\d{2}-\d{2}$/)) continue;
         
         const year = parseInt(date.split('-')[0]);
-        if (year > 2024) continue; // Don't include 2025+ from this file
         
         const company = (cols[2] || '').trim();
         const category = (cols[3] || '').trim();
         const amount = parseAmount(cols[4] || '');
+        const paidBy = (cols[5] || '').trim(); // MUM, HENRY, PARTIAL, or empty
         
         if (amount === 0) continue;
         
@@ -221,6 +163,7 @@ export function getBoatExpenseData(): BoatExpenseData {
           currency: 'EUR',
           year,
           receiptPath,
+          paidBy: paidBy || undefined,
         });
         
         yearTotals[year].total += amount;
@@ -228,76 +171,17 @@ export function getBoatExpenseData(): BoatExpenseData {
         
         if (category.toLowerCase().includes('boat purchase')) {
           yearTotals[year].boatPurchaseTotal += amount;
+        }
+        
+        // Track Mum's contributions
+        if (paidBy === 'MUM') {
+          yearTotals[year].mumsTotal += amount;
         }
         
         categoryTotals[category] = (categoryTotals[category] || 0) + amount;
       }
     } catch (err) {
       console.error('Error reading boat-timo-expenses.csv:', err);
-    }
-  }
-  
-  // Then load from accounting expense files (2025+)
-  for (const year of [2025, 2026]) {
-    const csvPath = path.join(accountingDir, `${year}-expenses.csv`);
-    if (!fs.existsSync(csvPath)) continue;
-    
-    if (!yearTotals[year]) {
-      yearTotals[year] = { total: 0, count: 0, boatPurchaseTotal: 0, mumsTotal: 0 };
-    }
-    
-    try {
-      const content = fs.readFileSync(csvPath, 'utf-8');
-      const lines = content.split('\n');
-      
-      // Skip header (first line)
-      for (let i = 1; i < lines.length; i++) {
-        const line = lines[i].trim();
-        if (!line) continue;
-        
-        const cols = parseCSVLine(line);
-        if (cols.length < 6) continue;
-        
-        const entryNumber = cols[0] || '';
-        const date = parseDate(cols[1] || '');
-        const company = (cols[2] || '').trim();
-        const category = (cols[3] || '').trim();
-        const comment = (cols[4] || '').trim();
-        const amount = parseAmount(cols[5] || '');
-        const currency = (cols[6] || 'EUR').trim();
-        
-        if (!date || amount === 0) continue;
-        
-        // Filter for boat-related expenses
-        if (!isBoatRelated(company, category, comment)) continue;
-        
-        const receiptPath = findReceipt(year, date, company, accountingDir);
-        
-        expenses.push({
-          entryNumber,
-          date,
-          company,
-          category,
-          comment,
-          amount,
-          currency,
-          year,
-          receiptPath,
-        });
-        
-        yearTotals[year].total += amount;
-        yearTotals[year].count += 1;
-        
-        // Track boat purchase separately
-        if (category.toLowerCase().includes('boat purchase')) {
-          yearTotals[year].boatPurchaseTotal += amount;
-        }
-        
-        // Track category totals
-        categoryTotals[category] = (categoryTotals[category] || 0) + amount;
-      }
-    } catch (err) {
-      console.error(`Error reading ${csvPath}:`, err);
     }
   }
   
