@@ -15,7 +15,7 @@ export default function KanbanPage() {
       <h1 className="text-2xl font-bold">📋 Kanban Board</h1>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         {statusColumns.map(col => {
-          const colTasks = tasks.filter(t => t.status === col);
+          const colTasks = tasks.filter(t => t.status === col).sort((a, b) => (b.urgent ? 1 : 0) - (a.urgent ? 1 : 0));
           const colors = statusColors[col];
           const isCollapsed = collapsed[col] || false;
           return (
