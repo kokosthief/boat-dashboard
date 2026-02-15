@@ -232,7 +232,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                   className="px-4 py-3 font-medium text-slate-400 cursor-pointer hover:text-white transition-colors select-none"
                   onClick={() => toggleSort('company')}
                 >
-                  Vendor{arrow('company')}
+                  Vendor + Expense{arrow('company')}
                 </th>
                 <th
                   className="px-4 py-3 font-medium text-slate-400 cursor-pointer hover:text-white transition-colors select-none"
@@ -260,10 +260,10 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                     {formatDisplayDate(e.date)}
                   </td>
                   <td className="px-4 py-3">
-                    <div className="max-w-[200px]">
+                    <div>
                       <p className="font-medium">{e.company}</p>
                       {e.comment && (
-                        <p className="text-xs text-slate-500 mt-0.5 line-clamp-1">{e.comment}</p>
+                        <p className="text-xs text-slate-500 mt-0.5">{e.comment}</p>
                       )}
                     </div>
                   </td>
