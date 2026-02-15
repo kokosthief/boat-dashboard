@@ -5,6 +5,9 @@ import Nav from '@/components/Nav'
 export const metadata: Metadata = {
   title: 'Timo',
   description: 'Manage boat tasks, harbours, vendors and expenses',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
