@@ -295,16 +295,19 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                       <span className="text-slate-600 text-xs">—</span>
                     )}
                   </td>
-                  <td className="px-4 py-3">
-                    {e.receiptPath ? (
+                  <td className="px-4 py-3 text-center">
+                    {e.receiptFilename ? (
                       <a
-                        href={e.receiptPath}
+                        href={`/api/receipts/file?path=receipts/${e.year}/${e.receiptFilename}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 hover:text-blue-300 text-xs font-medium"
+                        className="text-blue-400 hover:text-blue-300 transition-colors inline-block text-xl"
+                        title="View receipt"
                       >
-                        📄 View PDF
+                        📄
                       </a>
+                    ) : e.comment.toLowerCase().includes('cash') ? (
+                      <span className="text-green-400 text-xl" title="Cash payment">💵</span>
                     ) : (
                       <span className="text-slate-600 text-xs">—</span>
                     )}

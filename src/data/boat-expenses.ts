@@ -10,7 +10,7 @@ export interface BoatExpense {
   amount: number;
   currency: string;
   year: number;
-  receiptPath?: string;
+  receiptFilename?: string;
   paidBy?: string; // MUM, HENRY, PARTIAL, or undefined
 }
 
@@ -68,50 +68,6 @@ function parseDate(raw: string): string {
   return raw;
 }
 
-function findReceipt(year: number, date: string, company: string, accountingDir: string): string | undefined {
-  // For receipts, we'll need to access the original accounting directory
-  // In production (Vercel), this won't work - receipts would need to be uploaded to cloud storage
-  // For now, return undefined in production and only work locally
-  const isProduction = process.env.NODE_ENV === 'production' || !accountingDir.includes('openclaw');
-  if (isProduction) {
-    // TODO: Integrate with cloud storage (S3, Cloudflare R2, etc.) for receipt hosting
-    return undefined;
-  }
-  
-  const receiptsDir = path.join('/Users/kokos/.openclaw/workspace/accounting/receipts', year.toString());
-  if (!fs.existsSync(receiptsDir)) return undefined;
-  
-  try {
-    const files = fs.readdirSync(receiptsDir);
-    const datePrefix = date.replace(/-/g, '-'); // YYYY-MM-DD format
-    const companySlug = company.toLowerCase().replace(/[^a-z0-9]/g, '-');
-    
-    // Look for files matching the date
-    const matchingFiles = files.filter(f => f.startsWith(datePrefix));
-    
-    if (matchingFiles.length === 1) {
-      return `/accounting/receipts/${year}/${matchingFiles[0]}`;
-    }
-    
-    // If multiple matches, try to find one with matching company name
-    for (const file of matchingFiles) {
-      const fileLower = file.toLowerCase();
-      if (fileLower.includes(companySlug) || companySlug.includes(fileLower.split('_')[2]?.replace('.pdf', ''))) {
-        return `/accounting/receipts/${year}/${file}`;
-      }
-    }
-    
-    // Return first match if no company match
-    if (matchingFiles.length > 0) {
-      return `/accounting/receipts/${year}/${matchingFiles[0]}`;
-    }
-  } catch (err) {
-    console.error(`Error reading receipts dir for ${year}:`, err);
-  }
-  
-  return undefined;
-}
-
 export function getBoatExpenseData(): BoatExpenseData {
   // Use public directory for Vercel deployment
   const accountingDir = path.join(process.cwd(), 'public', 'data', 'accounting');
@@ -144,14 +100,13 @@ export function getBoatExpenseData(): BoatExpenseData {
         const category = (cols[3] || '').trim();
         const amount = parseAmount(cols[4] || '');
         const paidBy = (cols[5] || '').trim(); // MUM, HENRY, PARTIAL, or empty
+        const receiptFilename = (cols[6] || '').trim(); // Receipt filename from CSV
         
         if (amount === 0) continue;
         
         if (!yearTotals[year]) {
           yearTotals[year] = { total: 0, count: 0, boatPurchaseTotal: 0, mumsTotal: 0 };
         }
-        
-        const receiptPath = findReceipt(year, date, company, accountingDir);
         
         expenses.push({
           entryNumber: String(i - 3),
@@ -162,7 +117,7 @@ export function getBoatExpenseData(): BoatExpenseData {
           amount,
           currency: 'EUR',
           year,
-          receiptPath,
+          receiptFilename: receiptFilename || undefined,
           paidBy: paidBy || undefined,
         });
         
