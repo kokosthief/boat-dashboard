@@ -11,7 +11,7 @@ export interface Task {
 
 export const tasks: Task[] = [
   { name: "Pin and Make schematic for Electrics", location: "Wheelhouse / Helm", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€2", notes: "Pin it to electrical cabinet door." },
-  { name: "Pump water out of boat sections", location: "Various", vendor: "", status: "Planning", targetDate: "2026-02-20", cost: "", notes: "Urgent — pump water from multiple sections of the boat", urgent: true },
+  { name: "Pump water out of boat sections", location: "Various", vendor: "", status: "Started", targetDate: "2026-02-20", cost: "", notes: "Urgent — pump water from multiple sections of the boat", urgent: true },
   { name: "Remove and clean Bow Thruster", location: "Head", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€20", notes: "Clean corrosion. Short circuit. Maybe buy new solenoid. DIY." },
   { name: "Engine electrics", location: "Engine Room", vendor: "", status: "Started", targetDate: "2026-03-31", cost: "€300", notes: "DIY first, Steve as backup if needed." },
   { name: "Sand blast boat", location: "Outside Hull", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "€1,000", notes: "Fully sand blast whole boat to bare metal." },
