@@ -158,7 +158,13 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
       )}
 
       {/* Subtotals Section */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="bg-slate-600 rounded-xl p-4 col-span-2 lg:col-span-1">
+          <p className="text-sm opacity-80">Total</p>
+          <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.total)}</p>
+          <p className="text-xs opacity-70 mt-1">{filteredStats.count} expenses</p>
+        </div>
+
         <div className="bg-blue-600 rounded-xl p-4">
           <p className="text-sm opacity-80">Boat Purchase</p>
           <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.boatPurchaseTotal)}</p>
