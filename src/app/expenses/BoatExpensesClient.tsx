@@ -160,31 +160,29 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
       {/* Subtotals Section */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-blue-600 rounded-xl p-4">
-          <p className="text-sm opacity-80">
-            {yearFilter === 'all' ? 'Total Expenses' : `${yearFilter} Total`}
-          </p>
-          <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.total)}</p>
-          <p className="text-xs opacity-70 mt-1">{filteredStats.count} expenses</p>
+          <p className="text-sm opacity-80">Boat Purchase</p>
+          <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.boatPurchaseTotal)}</p>
+          <p className="text-xs opacity-70 mt-1">Timotheus F</p>
         </div>
         
         <div className="bg-emerald-600 rounded-xl p-4">
-          <p className="text-sm opacity-80">Excl. Boat Purchase</p>
+          <p className="text-sm opacity-80">Running Expenses</p>
           <p className="text-xl sm:text-2xl font-bold mt-1">
             {fmt(filteredStats.total - filteredStats.boatPurchaseTotal)}
           </p>
-          <p className="text-xs opacity-70 mt-1">Running costs</p>
+          <p className="text-xs opacity-70 mt-1">{filteredStats.count - (filteredStats.boatPurchaseTotal > 0 ? 1 : 0)} expenses</p>
+        </div>
+        
+        <div className="bg-amber-600 rounded-xl p-4">
+          <p className="text-sm opacity-80">Henry&apos;s Total</p>
+          <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.total - filteredStats.boatPurchaseTotal - filteredStats.mumsTotal)}</p>
+          <p className="text-xs opacity-70 mt-1">Excl. purchase &amp; mum</p>
         </div>
         
         <div className="bg-pink-600 rounded-xl p-4">
           <p className="text-sm opacity-80">Mum&apos;s Contributions</p>
           <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.mumsTotal)}</p>
-          <p className="text-xs opacity-70 mt-1">Family support</p>
-        </div>
-        
-        <div className="bg-amber-600 rounded-xl p-4">
-          <p className="text-sm opacity-80">Net Cost (Henry)</p>
-          <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.netCost)}</p>
-          <p className="text-xs opacity-70 mt-1">Total − Purchase − Mum</p>
+          <p className="text-xs opacity-70 mt-1">💝 Family support</p>
         </div>
       </div>
 
