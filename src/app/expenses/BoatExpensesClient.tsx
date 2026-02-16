@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import type { BoatExpense, BoatExpenseData } from '@/data/boat-expenses';
 
 type SortKey = 'date' | 'company' | 'category' | 'amount';
@@ -96,6 +96,32 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
   }
 
   const arrow = (key: SortKey) => sortKey === key ? (sortDir === 'asc' ? ' ↑' : ' ↓') : '';
+
+  // Receipt modal state
+  const [selectedExpense, setSelectedExpense] = useState<BoatExpense | null>(null);
+
+  const receiptUrl = useMemo(() => {
+    if (!selectedExpense?.receiptFilename) return null;
+    return `/api/receipts/file?path=receipts/${selectedExpense.year}/${selectedExpense.receiptFilename}`;
+  }, [selectedExpense]);
+
+  const isImage = useMemo(() => {
+    if (!selectedExpense?.receiptFilename) return false;
+    return /\.(jpg|jpeg|png|gif|webp)$/i.test(selectedExpense.receiptFilename);
+  }, [selectedExpense]);
+
+  // Close modal on Escape
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedExpense(null);
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
+  const handleRowClick = useCallback((e: BoatExpense) => {
+    setSelectedExpense(e);
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -220,6 +246,80 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
         </p>
       )}
 
+      {/* Receipt Modal */}
+      {selectedExpense && (
+        <div
+          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedExpense(null)}
+        >
+          <div
+            className="bg-slate-900 border border-slate-700 rounded-xl max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Modal header */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-800">
+              <div>
+                <p className="font-semibold text-lg">{selectedExpense.company}</p>
+                <p className="text-sm text-slate-400">
+                  {formatDisplayDate(selectedExpense.date)} · {fmt(selectedExpense.amount)} · {selectedExpense.category}
+                  {selectedExpense.paidBy === 'MUM' && ' · 💝 Mum'}
+                </p>
+                {selectedExpense.comment && (
+                  <p className="text-xs text-slate-500 mt-1">{selectedExpense.comment}</p>
+                )}
+              </div>
+              <button
+                onClick={() => setSelectedExpense(null)}
+                className="text-slate-400 hover:text-white text-2xl leading-none px-2"
+              >
+                ×
+              </button>
+            </div>
+            {/* Modal body */}
+            <div className="flex-1 overflow-auto p-5">
+              {receiptUrl ? (
+                isImage ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={receiptUrl} alt="Receipt" className="max-w-full rounded-lg" />
+                ) : (
+                  <iframe
+                    src={receiptUrl}
+                    className="w-full rounded-lg bg-white"
+                    style={{ height: '70vh' }}
+                    title="Receipt PDF"
+                  />
+                )
+              ) : selectedExpense.comment?.toLowerCase().includes('cash') ? (
+                <div className="text-center py-16 text-slate-500">
+                  <p className="text-5xl mb-4">💵</p>
+                  <p className="text-lg font-medium">Cash Payment</p>
+                  <p className="text-sm mt-1">No digital receipt available</p>
+                </div>
+              ) : (
+                <div className="text-center py-16 text-slate-500">
+                  <p className="text-5xl mb-4">📭</p>
+                  <p className="text-lg font-medium">No Receipt</p>
+                  <p className="text-sm mt-1">No receipt file linked to this expense</p>
+                </div>
+              )}
+            </div>
+            {/* Modal footer */}
+            {receiptUrl && (
+              <div className="px-5 py-3 border-t border-slate-800 flex justify-end">
+                <a
+                  href={receiptUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                >
+                  Open in new tab ↗
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Expense Table */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
         <div className="overflow-x-auto">
@@ -258,7 +358,8 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
               {sorted.map((e, i) => (
                 <tr 
                   key={`${e.year}-${e.entryNumber}-${i}`}
-                  className="border-b border-slate-800/50 hover:bg-slate-800/50 transition-colors"
+                  className="border-b border-slate-800/50 hover:bg-slate-800/50 transition-colors cursor-pointer"
+                  onClick={() => handleRowClick(e)}
                 >
                   <td className="px-4 py-3 text-slate-300 whitespace-nowrap">
                     {formatDisplayDate(e.date)}
