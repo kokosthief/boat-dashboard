@@ -1,3 +1,5 @@
+import HauloutYardsTable from '@/components/HauloutYardsTable';
+
 export default function HauloutPlan() {
   const costs = [
     { item: 'Haulout + lift', cost: '€1,000' },
@@ -10,30 +12,6 @@ export default function HauloutPlan() {
     { item: 'Zinc anodes (International Paint)', cost: '~€200' },
     { item: 'Topcoat (Henry DIY, IJssel Coatings)', cost: '~€500' },
     { item: 'Dry stalling 5 weeks', cost: '€1,750' },
-  ];
-
-  const yards = [
-    {
-      name: 'Zaanhaven/Westhaven',
-      location: 'Zaandam',
-      desc: 'Modern, close — confirm sandblasting capacity',
-      badge: 'Recommended',
-      badgeColor: 'bg-emerald-600',
-    },
-    {
-      name: 'Marina Seaport IJmuiden',
-      location: 'IJmuiden',
-      desc: 'Large facility — confirm sandblasting availability',
-      badge: 'To contact',
-      badgeColor: 'bg-slate-700',
-    },
-    {
-      name: 'OfferteHaven.nl',
-      location: 'Multi-yard network',
-      desc: 'Submit specs, get 3–5 competing quotes in 3–5 days',
-      badge: 'Get quotes',
-      badgeColor: 'bg-blue-700',
-    },
   ];
 
   const timeline = [
@@ -138,25 +116,6 @@ export default function HauloutPlan() {
         </div>
       </div>
 
-      {/* Yards Section */}
-      <div>
-        <h2 className="text-xl font-semibold mb-4">🏗️ Yards to Contact</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          {yards.map(y => (
-            <div key={y.name} className="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-slate-600 transition-colors">
-              <div className="flex items-start justify-between mb-2">
-                <h3 className="font-semibold">{y.name}</h3>
-                <span className={`${y.badgeColor} text-white text-xs px-2 py-1 rounded-full whitespace-nowrap ml-2`}>
-                  {y.badge}
-                </span>
-              </div>
-              <p className="text-sm text-slate-400 mb-2">{y.location}</p>
-              <p className="text-sm text-slate-300">{y.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Timeline */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
         <h2 className="text-xl font-semibold mb-4">📅 Timeline</h2>
@@ -183,6 +142,11 @@ export default function HauloutPlan() {
         </ul>
       </div>
 
+      {/* Yards Research Table */}
+      <div>
+        <h2 className="text-xl font-semibold mb-4">🏗️ Yards Research</h2>
+        <HauloutYardsTable />
+      </div>
     </div>
   );
 }
