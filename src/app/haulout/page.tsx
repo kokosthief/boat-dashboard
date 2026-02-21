@@ -7,7 +7,7 @@ export default function HauloutPlan() {
     { item: 'Sandblasting DIY (16.8m, ~180m²)', cost: '~€1,000' },
     { item: 'Welding — Mike (friend rate)', cost: '~€100' },
     { item: 'Exhaust welding (materials)', cost: '€100–200' },
-    { item: 'Below waterline coating — International Primer 2 Coats', cost: '€1,900' },
+    { item: 'Below waterline coating — International Primer 2 Coats', cost: '€2,500' },
     { item: 'Below waterline coating — Antifouling 2 Coats (Interspeed 340)', cost: '~€1,700' },
     { item: 'Zinc anodes (International Paint)', cost: '~€200' },
     { item: 'Above waterline — IJssel Coatings 2 Coats (Henry DIY)', cost: '~€500' },
