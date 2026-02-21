@@ -9,6 +9,7 @@ const links = [
   { href: '/expenses', label: '💰 Expenses' },
   { href: '/vendors', label: '🔧 Vendors' },
   { href: '/harbours', label: '⚓ Harbours' },
+  { href: '/haulout', label: '🚢 Haulout' },
 ];
 
 export default function Nav() {
