@@ -157,7 +157,7 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
       amount,
       currency: sb.currency || 'EUR',
       year,
-      receiptFilename: sb.receipt || undefined,
+      receiptFilename: sb.receipt ? sb.receipt.split('/').pop() : undefined,
       paidBy: undefined, // Not tracked in Supabase schema yet
     };
 
