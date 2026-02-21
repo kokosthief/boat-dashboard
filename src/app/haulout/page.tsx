@@ -183,18 +183,6 @@ export default function HauloutPlan() {
         </ul>
       </div>
 
-      {/* Key Advantages Section */}
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h2 className="text-xl font-semibold mb-4">✨ Why Scenario B (Hybrid) is Optimal</h2>
-        <ul className="space-y-2 text-sm text-slate-300">
-          <li>✅ <strong>Protects structural integrity:</strong> Critical epoxy primer + antifouling by professionals</li>
-          <li>✅ <strong>Saves €2,500+:</strong> Eliminates €1,750 NDT cost (free), reduces welding cost (Mike), DIYs cosmetics</li>
-          <li>✅ <strong>Manageable risk:</strong> Interior cleaning & topcoat are cosmetic/non-critical; interior rust treatment is proven technique</li>
-          <li>✅ <strong>Hands-on experience:</strong> Build confidence for next maintenance without betting the hull</li>
-          <li>✅ <strong>Budget-friendly:</strong> €12,300–13,500 all-in, under €14k target</li>
-          <li>⚠️ <strong>Timeline:</strong> 5–6 weeks. Book NOW (Feb 27) for March/April slot.</li>
-        </ul>
-      </div>
     </div>
   );
 }
