@@ -25,17 +25,33 @@ export async function PATCH(
     }
 
     if (!data || data.length === 0) {
-      return NextResponse.json(
-        { error: 'Yard not found' },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: 'Yard not found' }, { status: 404 });
     }
 
     return NextResponse.json(data[0]);
   } catch (error) {
-    return NextResponse.json(
-      { error: 'Failed to update yard' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to update yard' }, { status: 500 });
+  }
+}
+
+export async function DELETE(
+  _request: Request,
+  { params }: { params: { id: string } }
+) {
+  try {
+    const id = params.id;
+
+    const { error } = await supabase
+      .from('haulout_yards')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      return NextResponse.json({ error: error.message }, { status: 400 });
+    }
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed to delete yard' }, { status: 500 });
   }
 }
