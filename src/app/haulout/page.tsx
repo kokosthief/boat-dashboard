@@ -1,12 +1,13 @@
 export default function HauloutPlan() {
   const costs = [
     { item: 'Haulout + lift', cost: '€595' },
-    { item: 'NDT ultrasonic survey', cost: '€1,750' },
-    { item: 'Sandblasting (~140m²)', cost: '€3,780' },
-    { item: 'Welding contingency', cost: '€2,400' },
+    { item: 'NDT inspection', cost: '€0 (Henry DIY)' },
+    { item: 'Sandblasting (~140m²)', cost: '€3,780 pro / €400–600 DIY' },
+    { item: 'Welding (Friend Mike)', cost: '€500–800' },
     { item: 'Epoxy primer (pro, 2 coats)', cost: '€1,900' },
-    { item: 'Antifouling (pro)', cost: '€1,700' },
-    { item: 'Topcoat paint (Henry DIY)', cost: '€400' },
+    { item: 'Antifouling (2 coats, Interspeed 340)', cost: '€1,800' },
+    { item: 'Zinc anodes (International Paint)', cost: '€250' },
+    { item: 'Topcoat (Henry DIY, IJssel Coatings)', cost: '€450' },
     { item: 'Dry stalling 5 weeks', cost: '€1,750' },
     { item: 'Environmental fees', cost: '€525' },
   ];
@@ -42,10 +43,36 @@ export default function HauloutPlan() {
     { label: 'Back in water', value: 'May 2026' },
   ];
 
+  const diyTasks = [
+    {
+      title: '🧹 Interior Hull Cleaning',
+      description: 'Pump bilge → wire brush rust → Brunox Epoxy treatment (purple→black cure) → paint',
+      effort: 'Medium',
+      savings: '€800–1,200',
+    },
+    {
+      title: '📏 Waterline Marking',
+      description: 'Score real waterline with kraspen (etching pen) → paint 10cm above for clean reference line',
+      effort: 'Easy',
+      savings: '€200–300',
+    },
+    {
+      title: '🎨 Topcoat Painting',
+      description: 'Apply IJssel Coatings gloss (2–3 coats) — high quality Dutch brand. Contact Niels for cheaper supply.',
+      effort: 'Medium',
+      savings: '€600–900',
+    },
+  ];
+
   const notes = [
     'Spring is peak season — yards book 6–8 weeks out. Call this week.',
-    'NDT first — don\'t commit to welding budget until inspection results',
-    'Sandblasting requires licensed facility with grit containment — cannot DIY at current mooring',
+    'NDT: Henry does it himself via rope access equipment — zero cost',
+    'Sandblasting: May be possible DIY with rented equipment',
+    'Welding: Friend Mike (cheaper than yard rates). Exhaust welding needed: ~€100–200 materials',
+    'Bottom coating: 2x primer + 2x Interspeed 340 antifouling + zinc anodes (International Paint)',
+    'Top coating: 2–3 coats IJssel Coatings paint. Contact Niels for cheaper supply',
+    'Interior hull: Pump, wire brush, Brunox Epoxy rust treatment (purple→black = cured), then paint',
+    'Waterline: Score real waterline with kraspen, paint 10cm above this line',
   ];
 
   return (
@@ -53,7 +80,7 @@ export default function HauloutPlan() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo (Spring 2026)</h1>
-        <p className="text-slate-400">Scenario B: Outsource critical work, DIY topcoat</p>
+        <p className="text-slate-400">Scenario B: Outsource critical work, DIY interior/topcoat/waterline</p>
       </div>
 
       {/* Budget Summary Card */}
@@ -62,19 +89,21 @@ export default function HauloutPlan() {
         <div className="space-y-2">
           <div className="flex justify-between items-baseline">
             <span className="text-sm opacity-90">Total budget:</span>
-            <span className="text-3xl font-bold">~€14,800–15,800</span>
+            <span className="text-3xl font-bold">~€12,300–13,500</span>
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
-            <p>✓ Outsource critical work (blasting, welding, pro finishes)</p>
-            <p>✓ DIY topcoat paint (save €1,300–2,000)</p>
-            <p>✓ 5 weeks dry stalling</p>
+            <p>✓ NDT free (Henry DIY via rope access contacts)</p>
+            <p>✓ Critical work outsourced (sandblasting, primer, antifouling)</p>
+            <p>✓ Friend Mike does welding (cheaper than yard rates)</p>
+            <p>✓ Henry DIYs: interior, topcoat, waterline marking</p>
+            <p>✓ Savings: €2,500–2,800 vs. full professional</p>
           </div>
         </div>
       </div>
 
       {/* Cost Breakdown */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h2 className="text-xl font-semibold mb-4">💵 Cost Breakdown</h2>
+        <h2 className="text-xl font-semibold mb-4">💵 Cost Breakdown (Hybrid Scenario)</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <tbody>
@@ -86,6 +115,24 @@ export default function HauloutPlan() {
               ))}
             </tbody>
           </table>
+        </div>
+        <p className="text-xs text-slate-400 mt-4">Range: €12,300–13,500 depending on exact quotes and contingencies</p>
+      </div>
+
+      {/* DIY Work Plan Section */}
+      <div>
+        <h2 className="text-xl font-semibold mb-4">🛠️ DIY Work Plan — Henry's Tasks</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          {diyTasks.map((task, i) => (
+            <div key={i} className="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-emerald-600 transition-colors">
+              <h3 className="font-semibold text-emerald-400 mb-2">{task.title}</h3>
+              <p className="text-sm text-slate-300 mb-3">{task.description}</p>
+              <div className="flex justify-between text-xs text-slate-400 border-t border-slate-800 pt-3">
+                <span>Effort: <span className="text-slate-200">{task.effort}</span></span>
+                <span>Saves: <span className="text-emerald-400">{task.savings}</span></span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -127,10 +174,23 @@ export default function HauloutPlan() {
         <ul className="space-y-3">
           {notes.map((note, i) => (
             <li key={i} className="flex gap-3">
-              <span className="text-yellow-500 font-bold">⚠️</span>
+              <span className="text-yellow-500 font-bold">ℹ️</span>
               <span className="text-slate-300">{note}</span>
             </li>
           ))}
+        </ul>
+      </div>
+
+      {/* Key Advantages Section */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h2 className="text-xl font-semibold mb-4">✨ Why Scenario B (Hybrid) is Optimal</h2>
+        <ul className="space-y-2 text-sm text-slate-300">
+          <li>✅ <strong>Protects structural integrity:</strong> Critical epoxy primer + antifouling by professionals</li>
+          <li>✅ <strong>Saves €2,500+:</strong> Eliminates €1,750 NDT cost (free), reduces welding cost (Mike), DIYs cosmetics</li>
+          <li>✅ <strong>Manageable risk:</strong> Interior cleaning & topcoat are cosmetic/non-critical; interior rust treatment is proven technique</li>
+          <li>✅ <strong>Hands-on experience:</strong> Build confidence for next maintenance without betting the hull</li>
+          <li>✅ <strong>Budget-friendly:</strong> €12,300–13,500 all-in, under €14k target</li>
+          <li>⚠️ <strong>Timeline:</strong> 5–6 weeks. Book NOW (Feb 27) for March/April slot.</li>
         </ul>
       </div>
     </div>
