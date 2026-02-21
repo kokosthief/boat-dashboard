@@ -7,10 +7,10 @@ export default function HauloutPlan() {
     { item: 'Sandblasting DIY (16.8m, ~180m²)', cost: '~€1,000' },
     { item: 'Welding — Mike (friend rate)', cost: '~€100' },
     { item: 'Exhaust welding (materials)', cost: '€100–200' },
-    { item: 'Epoxy primer (pro, 2 coats)', cost: '€1,900' },
-    { item: 'Antifouling (2 coats, Interspeed 340)', cost: '~€1,700' },
+    { item: 'Below waterline coating — International Primer 2 Coats', cost: '€1,900' },
+    { item: 'Below waterline coating — Antifouling 2 Coats (Interspeed 340)', cost: '~€1,700' },
     { item: 'Zinc anodes (International Paint)', cost: '~€200' },
-    { item: 'Topcoat (Henry DIY, IJssel Coatings)', cost: '~€500' },
+    { item: 'Above waterline — IJssel Coatings 2 Coats (Henry DIY)', cost: '~€500' },
     { item: 'Dry stalling 5 weeks', cost: '€1,750' },
   ];
 
@@ -59,7 +59,6 @@ export default function HauloutPlan() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m (Spring 2026)</h1>
-        <p className="text-slate-400">Scenario B: Outsource critical work, DIY interior/topcoat/waterline</p>
       </div>
 
       {/* Budget Summary Card */}
