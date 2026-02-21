@@ -1,38 +1,38 @@
 export default function HauloutPlan() {
   const costs = [
-    { item: 'Haulout + lift', cost: '€595' },
+    { item: 'Haulout + lift', cost: '€1,000' },
     { item: 'NDT inspection', cost: '€0 (Henry DIY)' },
-    { item: 'Sandblasting (~140m²)', cost: '€3,780 pro / €400–600 DIY' },
-    { item: 'Welding (Friend Mike)', cost: '€500–800' },
+    { item: 'Sandblasting DIY (16.8m, ~180m²)', cost: '~€1,000' },
+    { item: 'Welding — Mike (friend rate)', cost: '~€100' },
+    { item: 'Exhaust welding (materials)', cost: '€100–200' },
     { item: 'Epoxy primer (pro, 2 coats)', cost: '€1,900' },
-    { item: 'Antifouling (2 coats, Interspeed 340)', cost: '€1,800' },
-    { item: 'Zinc anodes (International Paint)', cost: '€250' },
-    { item: 'Topcoat (Henry DIY, IJssel Coatings)', cost: '€450' },
+    { item: 'Antifouling (2 coats, Interspeed 340)', cost: '~€1,700' },
+    { item: 'Zinc anodes (International Paint)', cost: '~€200' },
+    { item: 'Topcoat (Henry DIY, IJssel Coatings)', cost: '~€500' },
     { item: 'Dry stalling 5 weeks', cost: '€1,750' },
-    { item: 'Environmental fees', cost: '€525' },
   ];
 
   const yards = [
     {
-      name: 'Werf Rhebergen',
-      location: 'Raamsdonksveer, ~40km',
-      desc: 'Steel specialist, on-site blasting ⭐',
+      name: 'Zaanhaven/Westhaven',
+      location: 'Zaandam',
+      desc: 'Modern, close — confirm sandblasting capacity',
       badge: 'Recommended',
       badgeColor: 'bg-emerald-600',
     },
     {
-      name: 'Zaanhaven/Westhaven',
-      location: 'Zaandam',
-      desc: 'Modern, close',
+      name: 'Marina Seaport IJmuiden',
+      location: 'IJmuiden',
+      desc: 'Large facility — confirm sandblasting availability',
       badge: 'To contact',
       badgeColor: 'bg-slate-700',
     },
     {
-      name: 'Marina Seaport IJmuiden',
-      location: 'IJmuiden',
-      desc: 'Large facility',
-      badge: 'To contact',
-      badgeColor: 'bg-slate-700',
+      name: 'OfferteHaven.nl',
+      location: 'Multi-yard network',
+      desc: 'Submit specs, get 3–5 competing quotes in 3–5 days',
+      badge: 'Get quotes',
+      badgeColor: 'bg-blue-700',
     },
   ];
 
@@ -65,12 +65,13 @@ export default function HauloutPlan() {
   ];
 
   const notes = [
+    'Boat corrected: 16.8m length × 3.25m width (was estimated 13m)',
     'Spring is peak season — yards book 6–8 weeks out. Call this week.',
     'NDT: Henry does it himself via rope access equipment — zero cost',
-    'Sandblasting: May be possible DIY with rented equipment',
-    'Welding: Friend Mike (cheaper than yard rates). Exhaust welding needed: ~€100–200 materials',
+    'Sandblasting: DIY with rented equipment (~€1,000) for 16.8m boat',
+    'Welding: Friend Mike labour ~€100 (cheap friend rate). Exhaust welding materials: ~€100–200',
     'Bottom coating: 2x primer + 2x Interspeed 340 antifouling + zinc anodes (International Paint)',
-    'Top coating: 2–3 coats IJssel Coatings paint. Contact Niels for cheaper supply',
+    'Top coating: 2–3 coats IJssel Coatings paint. Contact Niels for cheaper supply (note: larger boat may need more paint)',
     'Interior hull: Pump, wire brush, Brunox Epoxy rust treatment (purple→black = cured), then paint',
     'Waterline: Score real waterline with kraspen, paint 10cm above this line',
   ];
@@ -79,7 +80,7 @@ export default function HauloutPlan() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo (Spring 2026)</h1>
+        <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m (Spring 2026)</h1>
         <p className="text-slate-400">Scenario B: Outsource critical work, DIY interior/topcoat/waterline</p>
       </div>
 
@@ -88,15 +89,16 @@ export default function HauloutPlan() {
         <h2 className="text-lg font-semibold mb-3">💰 Budget Summary</h2>
         <div className="space-y-2">
           <div className="flex justify-between items-baseline">
-            <span className="text-sm opacity-90">Total budget:</span>
-            <span className="text-3xl font-bold">~€12,300–13,500</span>
+            <span className="text-sm opacity-90">Total budget (16.8m boat):</span>
+            <span className="text-3xl font-bold">~€8,500–9,500</span>
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
+            <p>✓ Correct boat size: 16.8m × 3.25m (previously estimated 13m)</p>
             <p>✓ NDT free (Henry DIY via rope access contacts)</p>
-            <p>✓ Critical work outsourced (sandblasting, primer, antifouling)</p>
-            <p>✓ Friend Mike does welding (cheaper than yard rates)</p>
+            <p>✓ Sandblasting DIY with rented equipment (~€1,000)</p>
+            <p>✓ Friend Mike does welding (~€100 labour)</p>
             <p>✓ Henry DIYs: interior, topcoat, waterline marking</p>
-            <p>✓ Savings: €2,500–2,800 vs. full professional</p>
+            <p>✓ Environmental fees removed</p>
           </div>
         </div>
       </div>
@@ -116,7 +118,7 @@ export default function HauloutPlan() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-slate-400 mt-4">Range: €12,300–13,500 depending on exact quotes and contingencies</p>
+        <p className="text-xs text-slate-400 mt-4">Range: €8,500–9,500 for 16.8m boat with DIY sandblasting, friend welding, and Henry's topcoat application</p>
       </div>
 
       {/* DIY Work Plan Section */}
