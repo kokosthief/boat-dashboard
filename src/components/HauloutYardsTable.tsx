@@ -253,7 +253,7 @@ export default function HauloutYardsTable() {
                   {/* Location */}
                   <td className="px-3 py-2 text-slate-300 min-w-[160px]">
                     {isEditing
-                      ? <input value={editForm.location} onChange={e => setEditForm({ ...editForm, location: e.target.value })} className={inputClass()} placeholder="Location" />
+                      ? <input value={editForm.location ?? ""} onChange={e => setEditForm({ ...editForm, location: e.target.value })} className={inputClass()} placeholder="Location" />
                       : <span className="text-slate-400 text-xs">{yard.location || '—'}</span>
                     }
                   </td>
@@ -261,7 +261,7 @@ export default function HauloutYardsTable() {
                   {/* Website */}
                   <td className="px-3 py-2 min-w-[140px]">
                     {isEditing
-                      ? <input value={editForm.website} onChange={e => setEditForm({ ...editForm, website: e.target.value })} className={inputClass()} placeholder="website.nl" />
+                      ? <input value={editForm.website ?? ""} onChange={e => setEditForm({ ...editForm, website: e.target.value })} className={inputClass()} placeholder="website.nl" />
                       : yard.website
                         ? <a href={`https://${yard.website}`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline text-xs">{yard.website}</a>
                         : <span className="text-slate-600">—</span>
@@ -271,7 +271,7 @@ export default function HauloutYardsTable() {
                   {/* Phone */}
                   <td className="px-3 py-2 text-slate-300 min-w-[120px]">
                     {isEditing
-                      ? <input value={editForm.phone} onChange={e => setEditForm({ ...editForm, phone: e.target.value })} className={inputClass()} placeholder="Phone" />
+                      ? <input value={editForm.phone ?? ""} onChange={e => setEditForm({ ...editForm, phone: e.target.value })} className={inputClass()} placeholder="Phone" />
                       : <span className="text-xs">{yard.phone || <span className="text-slate-600">—</span>}</span>
                     }
                   </td>
@@ -311,7 +311,7 @@ export default function HauloutYardsTable() {
                   {/* Notes */}
                   <td className="px-3 py-2 text-slate-400 min-w-[200px] max-w-[280px]">
                     {isEditing
-                      ? <textarea value={editForm.notes} onChange={e => setEditForm({ ...editForm, notes: e.target.value })} rows={3} className={inputClass('resize-y')} placeholder="Notes..." />
+                      ? <textarea value={editForm.notes ?? ""} onChange={e => setEditForm({ ...editForm, notes: e.target.value })} rows={3} className={inputClass('resize-y')} placeholder="Notes..." />
                       : <span className="text-xs line-clamp-3">{yard.notes || <span className="text-slate-600 italic">—</span>}</span>
                     }
                   </td>
@@ -381,28 +381,28 @@ function YardFormFields({ form, onChange }: { form: YardForm; onChange: (f: Yard
         <input
           type="text"
           placeholder="Name *"
-          value={form.name}
+          value={form.name ?? ""}
           onChange={e => onChange({ ...form, name: e.target.value })}
           className="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500"
         />
         <input
           type="text"
           placeholder="Location"
-          value={form.location}
+          value={form.location ?? ""}
           onChange={e => onChange({ ...form, location: e.target.value })}
           className="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500"
         />
         <input
           type="text"
           placeholder="Website (e.g. borsch.nl)"
-          value={form.website}
+          value={form.website ?? ""}
           onChange={e => onChange({ ...form, website: e.target.value })}
           className="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500"
         />
         <input
           type="tel"
           placeholder="Phone"
-          value={form.phone}
+          value={form.phone ?? ""}
           onChange={e => onChange({ ...form, phone: e.target.value })}
           className="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500"
         />
@@ -423,7 +423,7 @@ function YardFormFields({ form, onChange }: { form: YardForm; onChange: (f: Yard
       </div>
       <textarea
         placeholder="Notes"
-        value={form.notes}
+        value={form.notes ?? ""}
         onChange={e => onChange({ ...form, notes: e.target.value })}
         rows={2}
         className="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500 resize-y"
