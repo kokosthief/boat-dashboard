@@ -78,7 +78,7 @@ const COMMON_WORDS = new Set([
   'and',
 ]);
 
-const FILTERS = ['All', 'Yes', 'Maybe', 'N/A', 'No'];
+
 
 function normalizeSandblasting(value: string | null | undefined): string {
   if (!value) return '';
@@ -110,7 +110,6 @@ function namesMatch(harbourName: string, yardName: string): boolean {
 }
 
 export default function HarboursPage() {
-  const [filter, setFilter] = useState('All');
   const [expandedNotes, setExpandedNotes] = useState<Set<string>>(new Set());
   const [yards, setYards] = useState<Yard[]>([]);
   const [loading, setLoading] = useState(true);
@@ -194,10 +193,7 @@ export default function HarboursPage() {
     return [...mergedFromHarbours, ...yardOnlyRows];
   }, [yards]);
 
-  const filteredRows = useMemo(() => {
-    if (filter === 'All') return rows;
-    return rows.filter(row => row.livingPermitted === filter);
-  }, [filter, rows]);
+
 
   const toggleNote = (name: string) => {
     setExpandedNotes(prev => {
@@ -214,22 +210,6 @@ export default function HarboursPage() {
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">⚓ Harbours</h1>
-
-      <div className="flex gap-2 flex-wrap">
-        {FILTERS.map(option => (
-          <button
-            key={option}
-            onClick={() => setFilter(option)}
-            className={`px-3 py-1 rounded-lg text-sm ${
-              filter === option
-                ? 'bg-blue-600 text-white'
-                : 'bg-slate-800 text-slate-400 hover:text-white'
-            }`}
-          >
-            {option}
-          </button>
-        ))}
-      </div>
 
       {loading && <div className="text-slate-400 text-sm">Loading...</div>}
 
@@ -251,7 +231,7 @@ export default function HarboursPage() {
             </tr>
           </thead>
           <tbody>
-            {filteredRows.map((row, index) => {
+            {rows.map((row, index) => {
               const isExpanded = expandedNotes.has(row.name);
               const canExpand = row.notes.length > 80;
               const preview = canExpand ? `${row.notes.slice(0, 80)}...` : row.notes;
