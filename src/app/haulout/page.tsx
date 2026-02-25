@@ -137,18 +137,16 @@ export default function HauloutPlan() {
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
         <h2 className="text-xl font-semibold mb-2">🎨 Colour Scheme</h2>
 
-        {/* Reference photos */}
-        <p className="text-slate-400 text-sm mb-3">Current plan — forest green hull · white superstructure · near-black antifouling · gold window frames</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-4">
-          <img src="/colour-ref-1.jpg" alt="Colour reference 1" className="rounded-lg w-full object-cover" />
-          <img src="/colour-ref-2.jpg" alt="Colour reference 2" className="rounded-lg w-full object-cover" />
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm mb-6">
+        {/* Chosen design */}
+        <p className="text-slate-400 text-sm mb-3">Chosen — navy/near-black hull · cream superstructure · white stripe · red horizontal planes (deck) · wood trim</p>
+        <img src="/colour-chosen.png" alt="Chosen colour scheme" className="rounded-lg w-full object-cover mb-4" />
+        <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-3 text-sm mb-6">
           {[
             { zone: 'Below waterline', colour: 'Near-black', note: 'Antifouling base' },
-            { zone: 'Hull (above WL)', colour: 'Forest green', note: '2–3 coats IJssel' },
-            { zone: 'Superstructure', colour: 'White', note: 'Cabin sides & wheelhouse' },
-            { zone: 'Window frames', colour: 'Gold / dark wood', note: 'Varnish or repaint' },
+            { zone: 'Hull (above WL)', colour: 'Navy / near-black', note: '2–3 coats IJssel' },
+            { zone: 'Horizontal planes', colour: 'Red', note: 'Deck surfaces' },
+            { zone: 'Superstructure', colour: 'Cream / off-white', note: 'Cabin sides & wheelhouse' },
+            { zone: 'Window frames', colour: 'Wood / gold', note: 'Varnish or repaint' },
           ].map((r, i) => (
             <div key={i} className="bg-slate-800 rounded-lg p-3">
               <p className="text-slate-400 text-xs mb-1">{r.zone}</p>
@@ -159,7 +157,7 @@ export default function HauloutPlan() {
         </div>
 
         {/* Colour options grid */}
-        <p className="text-slate-400 text-sm mb-3">All colour options for reference</p>
+        <p className="text-slate-400 text-sm mb-3">All colour options explored</p>
         <img src="/colour-options.jpg" alt="Colour options" className="rounded-lg w-full" />
       </div>
 
