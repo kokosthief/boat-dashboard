@@ -142,13 +142,15 @@ export default function HauloutPlan() {
 
       {/* Colour Scheme */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h2 className="text-xl font-semibold mb-2">🎨 Planned Colour Scheme</h2>
-        <p className="text-slate-400 text-sm mb-4">Reference photos — forest green hull · white superstructure · near-black antifouling · gold window frames</p>
-        <div className="grid md:grid-cols-2 gap-4 mb-5">
+        <h2 className="text-xl font-semibold mb-2">🎨 Colour Scheme</h2>
+
+        {/* Reference photos */}
+        <p className="text-slate-400 text-sm mb-3">Current plan — forest green hull · white superstructure · near-black antifouling · gold window frames</p>
+        <div className="grid md:grid-cols-2 gap-4 mb-4">
           <img src="/colour-ref-1.jpg" alt="Colour reference 1" className="rounded-lg w-full object-cover" />
           <img src="/colour-ref-2.jpg" alt="Colour reference 2" className="rounded-lg w-full object-cover" />
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm mb-6">
           {[
             { zone: 'Below waterline', colour: 'Near-black', note: 'Antifouling base' },
             { zone: 'Hull (above WL)', colour: 'Forest green', note: '2–3 coats IJssel' },
@@ -162,6 +164,10 @@ export default function HauloutPlan() {
             </div>
           ))}
         </div>
+
+        {/* Colour options grid */}
+        <p className="text-slate-400 text-sm mb-3">All colour options for reference</p>
+        <img src="/colour-options.jpg" alt="Colour options" className="rounded-lg w-full" />
       </div>
 
       {/* Yards Research Table */}
