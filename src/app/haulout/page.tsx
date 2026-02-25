@@ -6,8 +6,8 @@ export default function HauloutPlan() {
     { item: 'High-pressure wash (exterior)', cost: 'incl.' },
     { item: 'Sandblasting — full boat', cost: 'Quote TBD' },
     { item: 'NDT inspection', cost: '~€100–200', saving: true, savingNote: 'DIY — Henry rents equipment' },
-    { item: 'Hull welding repairs (if needed)', cost: 'Quote TBD', saving: true, savingNote: 'Potentially Mike — friend rate ~€100' },
-    { item: 'New exhaust — weld', cost: 'Quote TBD' },
+    { item: 'Hull welding repairs (if needed)', cost: 'Quote TBD' },
+    { item: 'New exhaust — weld (Mike)', cost: 'Quote TBD', saving: true, savingNote: 'Mike does the welding' },
     { item: '2× International primer — underwater hull', cost: 'Quote TBD' },
     { item: '2× Antifouling coats — underwater hull (Interspeed 340)', cost: '~€2,000–3,000' },
     { item: 'Zinc anodes', cost: '~€200' },
@@ -110,7 +110,7 @@ export default function HauloutPlan() {
       {/* Timeline */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
         <h2 className="text-xl font-semibold mb-4">📅 Timeline</h2>
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-3 gap-4">
           {timeline.map((t, i) => (
             <div key={i} className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
               <span className="text-slate-400 text-sm">{t.label}</span>
@@ -123,7 +123,7 @@ export default function HauloutPlan() {
       {/* Notes */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
         <h2 className="text-xl font-semibold mb-4">📝 Notes</h2>
-        <ul className="space-y-3">
+        <ul className="grid sm:grid-cols-2 gap-3">
           {notes.map((note, i) => (
             <li key={i} className="flex gap-3">
               <span className="text-yellow-500 font-bold">ℹ️</span>
