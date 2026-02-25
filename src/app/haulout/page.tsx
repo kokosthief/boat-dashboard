@@ -3,14 +3,14 @@ import HauloutYardsTable from '@/components/HauloutYardsTable';
 export default function HauloutPlan() {
   const costs = [
     { item: 'Haulout + lift', cost: '€1,000' },
-    { item: 'NDT inspection', cost: '€0 (Henry DIY)' },
+    { item: 'NDT inspection', cost: '€0 (DIY via rope access contacts)' },
     { item: 'Sandblasting DIY (16.8m, ~180m²)', cost: '~€1,000' },
     { item: 'Welding — Mike (friend rate)', cost: '~€100' },
     { item: 'Exhaust welding (materials)', cost: '€100–200' },
     { item: 'Below waterline coating — International Primer 2 Coats', cost: '€2,500' },
     { item: 'Below waterline coating — Antifouling 2 Coats (Interspeed 340)', cost: '~€1,700' },
     { item: 'Zinc anodes (International Paint)', cost: '~€200' },
-    { item: 'Above waterline — IJssel Coatings 2 Coats (Henry DIY)', cost: '~€500' },
+    { item: 'Above waterline — IJssel Coatings 2 Coats (DIY)', cost: '~€500' },
     { item: 'Dry stalling 5 weeks', cost: '€1,750' },
   ];
 
@@ -43,9 +43,9 @@ export default function HauloutPlan() {
   ];
 
   const notes = [
-    'Boat corrected: 16.8m length × 3.25m width (was estimated 13m)',
+    'Timo: 16.8m × 3.25m steel bakdekker, 1928',
     'Spring is peak season — yards book 6–8 weeks out. Call this week.',
-    'NDT: Henry does it himself via rope access equipment — zero cost',
+    'NDT: DIY via rope access equipment — zero cost',
     'Sandblasting: DIY with rented equipment (~€1,000) for 16.8m boat',
     'Welding: Friend Mike labour ~€100 (cheap friend rate). Exhaust welding materials: ~€100–200',
     'Bottom coating: 2x primer + 2x Interspeed 340 antifouling + zinc anodes (International Paint)',
@@ -70,11 +70,10 @@ export default function HauloutPlan() {
             <span className="text-3xl font-bold">~€8,500–9,500</span>
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
-            <p>✓ Correct boat size: 16.8m × 3.25m (previously estimated 13m)</p>
-            <p>✓ NDT free (Henry DIY via rope access contacts)</p>
+            <p>✓ NDT free — DIY via rope access contacts</p>
             <p>✓ Sandblasting DIY with rented equipment (~€1,000)</p>
             <p>✓ Friend Mike does welding (~€100 labour)</p>
-            <p>✓ Henry DIYs: interior, topcoat, waterline marking</p>
+            <p>✓ DIY: interior, topcoat, waterline marking</p>
             <p>✓ Environmental fees removed</p>
           </div>
         </div>
@@ -95,12 +94,12 @@ export default function HauloutPlan() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-slate-400 mt-4">Range: €8,500–9,500 for 16.8m boat with DIY sandblasting, friend welding, and Henry's topcoat application</p>
+        <p className="text-xs text-slate-400 mt-4">Range: €8,500–9,500 for 16.8m boat with DIY sandblasting, friend welding, and DIY topcoat application</p>
       </div>
 
       {/* DIY Work Plan Section */}
       <div>
-        <h2 className="text-xl font-semibold mb-4">🛠️ DIY Work Plan — Henry's Tasks</h2>
+        <h2 className="text-xl font-semibold mb-4">🛠️ DIY Work Plan</h2>
         <div className="grid md:grid-cols-3 gap-4">
           {diyTasks.map((task, i) => (
             <div key={i} className="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-emerald-600 transition-colors">
@@ -130,7 +129,7 @@ export default function HauloutPlan() {
 
       {/* Notes */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h2 className="text-xl font-semibold mb-4">📝 Important Notes</h2>
+        <h2 className="text-xl font-semibold mb-4">📝 Notes</h2>
         <ul className="space-y-3">
           {notes.map((note, i) => (
             <li key={i} className="flex gap-3">
