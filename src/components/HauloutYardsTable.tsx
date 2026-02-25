@@ -320,10 +320,10 @@ export default function HauloutYardsTable() {
                   </td>
 
                   {/* Notes */}
-                  <td className="px-3 py-2 text-slate-400 min-w-[200px] max-w-[280px]">
+                  <td className="px-3 py-2 text-slate-400 min-w-[200px]">
                     {isEditing
                       ? <textarea value={editForm.notes ?? ""} onChange={e => setEditForm({ ...editForm, notes: e.target.value })} rows={3} className={inputClass('resize-y')} placeholder="Notes..." />
-                      : <span className="text-xs line-clamp-3">{yard.notes || <span className="text-slate-600 italic">—</span>}</span>
+                      : <span className="text-xs whitespace-normal break-words">{yard.notes || <span className="text-slate-600 italic">—</span>}</span>
                     }
                   </td>
 
