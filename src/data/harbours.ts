@@ -49,4 +49,4 @@ export const harbours: Harbour[] = [
   { name: "Damen Shiprepair Amsterdam", notes: "Industrial yard since 1920. Docks 140-250m. Steel construction, machine & piping. Contact: Freek van den Eijkel, +31 20 631 8218. Likely expensive for small vessel.", status: "Call", warmth: "Cold", area: "Amsterdam (~5km)", location: "", website: "damen.com/companies/shiprepair/damen-shiprepair-amsterdam", electricityPrice: "", winterMooringPrice: "", carParking: false, services: ["Haulout (large vessels)", "Dry dock", "Steel construction", "Sandblasting", "Welding", "Machine shop"] },
 ];
 
-export const statusOrder = ['Agreed', 'Considering', 'Maybe', 'Second Choice', 'Call', 'Unknown', 'Dropped'];
+export const statusOrder = ["Agreed", "Considering", "Maybe", "Second Choice", "Call", "Unknown", "Dropped"];
