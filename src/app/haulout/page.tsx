@@ -2,56 +2,49 @@ import HauloutYardsTable from '@/components/HauloutYardsTable';
 
 export default function HauloutPlan() {
   const costs = [
-    { item: 'Haulout + lift', cost: '€1,000' },
-    { item: 'NDT equipment rental', cost: '~€100' },
-    { item: 'NDT inspection (DIY)', cost: '€0' },
-    { item: 'Sandblasting DIY (16.8m, ~180m²)', cost: '~€1,000' },
-    { item: 'Welding — Mike (friend rate)', cost: '~€100' },
-    { item: 'Exhaust welding (materials)', cost: '€100–200' },
-    { item: 'Below waterline — 2x primer + 2x antifouling (Interspeed 340)', cost: '~€3,000' },
-    { item: 'Zinc anodes (International Paint)', cost: '~€200' },
-    { item: 'Above waterline — IJssel Coatings (DIY)', cost: '~€1,500' },
-    { item: 'Dry stalling 5 weeks', cost: '€1,750' },
+    { item: 'Lift & haul-out', cost: 'Quote TBD' },
+    { item: 'High-pressure wash (exterior)', cost: 'incl.' },
+    { item: 'Sandblasting — full boat', cost: 'Quote TBD' },
+    { item: 'NDT inspection', cost: '~€100–200', saving: true, savingNote: 'DIY — Henry rents equipment' },
+    { item: 'Hull welding repairs (if needed)', cost: 'Quote TBD', saving: true, savingNote: 'Potentially Mike — friend rate ~€100' },
+    { item: 'New exhaust — weld', cost: 'Quote TBD' },
+    { item: '2× International primer — underwater hull', cost: 'Quote TBD' },
+    { item: '2× Antifouling coats — underwater hull (Interspeed 340)', cost: '~€2,000–3,000' },
+    { item: 'Zinc anodes', cost: '~€200' },
+    { item: '2–3 coats paint — above waterline', cost: 'Quote TBD' },
+    { item: 'Dry stalling (5 weeks)', cost: '~€1,500–2,000' },
   ];
 
   const timeline = [
-    { label: 'Call yards by', value: 'Feb 27, 2026' },
-    { label: 'Target haul-out', value: 'March/April 2026' },
+    { label: 'Target haul-out', value: 'Week 3–4 of March 2026' },
     { label: 'Dry stalling duration', value: '~5 weeks' },
-    { label: 'Back in water', value: 'May 2026' },
+    { label: 'Target back in water', value: 'End of April / Early May 2026' },
   ];
 
-  const diyTasks = [
+  const henryTasks = [
     {
       title: '🧹 Interior Hull Cleaning',
       description: 'Pump bilge → wire brush rust → Brunox Epoxy treatment (purple→black cure) → paint',
       effort: 'Medium',
-      savings: '€800–1,200',
+      when: 'Whilst out of water',
     },
     {
       title: '📏 Waterline Marking',
       description: 'Score real waterline with kraspen (etching pen) → paint 10cm above for clean reference line',
       effort: 'Easy',
-      savings: '€200–300',
-    },
-    {
-      title: '🎨 Topcoat Painting',
-      description: 'Apply IJssel Coatings gloss (2–3 coats) — high quality Dutch brand. Contact Niels for cheaper supply.',
-      effort: 'Medium',
-      savings: '€600–900',
+      when: 'When first taken out',
     },
   ];
 
   const notes = [
     'Timo: 16.8m × 3.25m steel bakdekker, 1928',
-    'Spring is peak season — yards book 6–8 weeks out. Call this week.',
-    'NDT: I do the inspection myself — equipment rental ~€100',
-    'Sandblasting: DIY with rented equipment (~€1,000) for 16.8m boat',
-    'Welding: Friend Mike labour ~€100 (cheap friend rate). Exhaust welding materials: ~€100–200',
-    'Bottom coating: 2x primer + 2x Interspeed 340 antifouling + zinc anodes (International Paint)',
-    'Top coating: 2–3 coats IJssel Coatings paint. Contact Niels for cheaper supply (note: larger boat may need more paint)',
-    'Interior hull: Pump, wire brush, Brunox Epoxy rust treatment (purple→black = cured), then paint',
-    'Waterline: Score real waterline with kraspen, paint 10cm above this line',
+    'Spring is peak season — yards book 6–8 weeks out. Contact yards ASAP.',
+    'NDT: Henry rents equipment and does inspection himself (~€100–200). Potential saving vs. outsourcing.',
+    'Welding: Mike (friend) may do hull repairs at a cheaper rate (~€100 labour). New exhaust welding — ask for quote.',
+    'Bottom coating: 2x International primer + 2x Interspeed 340 antifouling + zinc anodes — all outsourced.',
+    'Top coating: 2–3 coats IJssel Coatings paint — outsourced. Contact Niels for cheaper paint supply.',
+    'Interior hull: Pump, wire brush, Brunox Epoxy rust treatment (purple→black = cured), then paint. Henry does this.',
+    'Waterline: Score real waterline with kraspen, paint 10cm above this line. Henry does this on day 1.',
   ];
 
   return (
@@ -66,48 +59,48 @@ export default function HauloutPlan() {
         <h2 className="text-lg font-semibold mb-3">💰 Budget Summary</h2>
         <div className="space-y-2">
           <div className="flex justify-between items-baseline">
-            <span className="text-sm opacity-90">Total budget (16.8m boat):</span>
-            <span className="text-3xl font-bold">~€9,500–10,500</span>
+            <span className="text-sm opacity-90">Estimated total (awaiting quotes):</span>
+            <span className="text-3xl font-bold">TBD</span>
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
-            <p>✓ NDT free — DIY via rope access contacts</p>
-            <p>✓ Sandblasting DIY with rented equipment (~€1,000)</p>
-            <p>✓ Friend Mike does welding (~€100 labour)</p>
-            <p>✓ DIY: interior, topcoat, waterline marking</p>
-            <p>✓ Environmental fees removed</p>
+            <p>✓ Fully outsourced — yard does all the work</p>
+            <p>💸 Potential saving: NDT done by Henry (~€100–200, rented equipment)</p>
+            <p>💸 Potential saving: welding via Mike (friend rate ~€100)</p>
           </div>
         </div>
       </div>
 
       {/* Cost Breakdown */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-        <h2 className="text-xl font-semibold mb-4">💵 Cost Breakdown (Hybrid Scenario)</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <tbody>
-              {costs.map((row, i) => (
-                <tr key={i} className={`border-b border-slate-800 ${i === costs.length - 1 ? 'font-bold text-base' : ''}`}>
-                  <td className="py-3 px-4">{row.item}</td>
-                  <td className={`py-3 px-4 text-right ${i === costs.length - 1 ? 'text-emerald-400' : ''}`}>{row.cost}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-slate-400 mt-4">Range: €9,500–10,500 for 16.8m boat — DIY sandblasting, friend welding, DIY topcoat. Painting costs updated to realistic market rates.</p>
+        <h2 className="text-xl font-semibold mb-4">💵 Cost Breakdown</h2>
+        <ol className="space-y-2 text-sm">
+          {costs.map((row, i) => (
+            <li key={i} className={`flex justify-between items-start gap-4 py-2.5 px-3 rounded-lg ${row.saving ? 'bg-emerald-900/20 border border-emerald-800/40' : 'border-b border-slate-800'}`}>
+              <div className="flex-1">
+                <span className="text-slate-400 mr-2">{i + 1}.</span>
+                <span className={row.saving ? 'text-emerald-300' : 'text-slate-200'}>{row.item}</span>
+                {row.savingNote && <p className="text-xs text-emerald-500 mt-0.5 ml-5">{row.savingNote}</p>}
+              </div>
+              <span className={`shrink-0 font-semibold ${row.cost === 'Quote TBD' ? 'text-slate-500 italic' : row.saving ? 'text-emerald-400' : 'text-slate-300'}`}>
+                {row.cost}
+              </span>
+            </li>
+          ))}
+        </ol>
+        <p className="text-xs text-slate-500 mt-4">All costs except NDT and welding are fully outsourced — quotes pending from yards.</p>
       </div>
 
-      {/* DIY Work Plan Section */}
+      {/* Henry's Reminders */}
       <div>
-        <h2 className="text-xl font-semibold mb-4">🛠️ DIY Work Plan</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          {diyTasks.map((task, i) => (
+        <h2 className="text-xl font-semibold mb-4">📋 Henry's Reminders</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          {henryTasks.map((task, i) => (
             <div key={i} className="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-emerald-600 transition-colors">
               <h3 className="font-semibold text-emerald-400 mb-2">{task.title}</h3>
               <p className="text-sm text-slate-300 mb-3">{task.description}</p>
               <div className="flex justify-between text-xs text-slate-400 border-t border-slate-800 pt-3">
                 <span>Effort: <span className="text-slate-200">{task.effort}</span></span>
-                <span>Saves: <span className="text-emerald-400">{task.savings}</span></span>
+                <span>When: <span className="text-yellow-400">{task.when}</span></span>
               </div>
             </div>
           ))}

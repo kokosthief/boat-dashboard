@@ -27,6 +27,10 @@ const sandblastingColors: Record<string, string> = {
   'Confirm needed': 'bg-yellow-700 text-white',
 };
 
+const sandblastingDisplay: Record<string, string> = {
+  'Confirm needed': 'Unsure',
+};
+
 const statusColors: Record<string, string> = {
   'Recommended': 'bg-emerald-600 text-white',
   'To contact': 'bg-blue-600 text-white',
@@ -228,8 +232,8 @@ export default function HauloutYardsTable() {
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Location</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Website</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Phone</th>
-              <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Sandblasting</th>
-              <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Status</th>
+              <th className="px-3 py-3 text-center font-semibold text-slate-300 text-xs uppercase tracking-wide">Sandblasting</th>
+              <th className="px-3 py-3 text-center font-semibold text-slate-300 text-xs uppercase tracking-wide">Status</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Notes</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide w-20"></th>
             </tr>
@@ -277,7 +281,7 @@ export default function HauloutYardsTable() {
                   </td>
 
                   {/* Sandblasting */}
-                  <td className="px-3 py-2 min-w-[130px]">
+                  <td className="px-3 py-2 min-w-[130px] text-center">
                     {isEditing
                       ? (
                         <select value={editForm.sandblasting} onChange={e => setEditForm({ ...editForm, sandblasting: e.target.value })} className={inputClass()}>
@@ -285,15 +289,15 @@ export default function HauloutYardsTable() {
                         </select>
                       )
                       : (
-                        <span className={`px-2 py-1 rounded text-xs font-semibold ${sandblastingColors[yard.sandblasting] || 'bg-slate-700 text-slate-300'}`}>
-                          {yard.sandblasting}
+                        <span className={`inline-block px-2 py-1 rounded text-xs font-semibold ${sandblastingColors[yard.sandblasting] || 'bg-slate-700 text-slate-300'}`}>
+                          {sandblastingDisplay[yard.sandblasting] || yard.sandblasting}
                         </span>
                       )
                     }
                   </td>
 
                   {/* Status */}
-                  <td className="px-3 py-2 min-w-[120px]">
+                  <td className="px-3 py-2 min-w-[120px] text-center">
                     {isEditing
                       ? (
                         <select value={editForm.status} onChange={e => setEditForm({ ...editForm, status: e.target.value })} className={inputClass()}>
@@ -301,7 +305,7 @@ export default function HauloutYardsTable() {
                         </select>
                       )
                       : (
-                        <span className={`px-2 py-1 rounded text-xs font-semibold ${statusColors[yard.status] || 'bg-slate-700 text-slate-300'}`}>
+                        <span className={`inline-block px-2 py-1 rounded text-xs font-semibold ${statusColors[yard.status] || 'bg-slate-700 text-slate-300'}`}>
                           {yard.status}
                         </span>
                       )
