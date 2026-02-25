@@ -140,6 +140,30 @@ export default function HauloutPlan() {
         </ul>
       </div>
 
+      {/* Colour Scheme */}
+      <div className="bg-slate-900 border border-slate-800 rounded-xl p-6">
+        <h2 className="text-xl font-semibold mb-2">🎨 Planned Colour Scheme</h2>
+        <p className="text-slate-400 text-sm mb-4">Reference photos — forest green hull · white superstructure · near-black antifouling · gold window frames</p>
+        <div className="grid md:grid-cols-2 gap-4 mb-5">
+          <img src="/colour-ref-1.jpg" alt="Colour reference 1" className="rounded-lg w-full object-cover" />
+          <img src="/colour-ref-2.jpg" alt="Colour reference 2" className="rounded-lg w-full object-cover" />
+        </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+          {[
+            { zone: 'Below waterline', colour: 'Near-black', note: 'Antifouling base' },
+            { zone: 'Hull (above WL)', colour: 'Forest green', note: '2–3 coats IJssel' },
+            { zone: 'Superstructure', colour: 'White', note: 'Cabin sides & wheelhouse' },
+            { zone: 'Window frames', colour: 'Gold / dark wood', note: 'Varnish or repaint' },
+          ].map((r, i) => (
+            <div key={i} className="bg-slate-800 rounded-lg p-3">
+              <p className="text-slate-400 text-xs mb-1">{r.zone}</p>
+              <p className="font-semibold text-white">{r.colour}</p>
+              <p className="text-slate-500 text-xs mt-1">{r.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Yards Research Table */}
       <div>
         <h2 className="text-xl font-semibold mb-4">🏗️ Yards Research</h2>
