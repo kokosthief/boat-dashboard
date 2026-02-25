@@ -3,14 +3,14 @@ import HauloutYardsTable from '@/components/HauloutYardsTable';
 export default function HauloutPlan() {
   const costs = [
     { item: 'Haulout + lift', cost: '€1,000' },
-    { item: 'NDT inspection', cost: '€0 (DIY via rope access contacts)' },
+    { item: 'NDT equipment rental', cost: '~€100' },
+    { item: 'NDT inspection (DIY)', cost: '€0' },
     { item: 'Sandblasting DIY (16.8m, ~180m²)', cost: '~€1,000' },
     { item: 'Welding — Mike (friend rate)', cost: '~€100' },
     { item: 'Exhaust welding (materials)', cost: '€100–200' },
-    { item: 'Below waterline coating — International Primer 2 Coats', cost: '€2,500' },
-    { item: 'Below waterline coating — Antifouling 2 Coats (Interspeed 340)', cost: '~€1,700' },
+    { item: 'Below waterline — 2x primer + 2x antifouling (Interspeed 340)', cost: '~€3,000' },
     { item: 'Zinc anodes (International Paint)', cost: '~€200' },
-    { item: 'Above waterline — IJssel Coatings 2 Coats (DIY)', cost: '~€500' },
+    { item: 'Above waterline — IJssel Coatings (DIY)', cost: '~€1,500' },
     { item: 'Dry stalling 5 weeks', cost: '€1,750' },
   ];
 
@@ -45,7 +45,7 @@ export default function HauloutPlan() {
   const notes = [
     'Timo: 16.8m × 3.25m steel bakdekker, 1928',
     'Spring is peak season — yards book 6–8 weeks out. Call this week.',
-    'NDT: DIY via rope access equipment — zero cost',
+    'NDT: I do the inspection myself — equipment rental ~€100',
     'Sandblasting: DIY with rented equipment (~€1,000) for 16.8m boat',
     'Welding: Friend Mike labour ~€100 (cheap friend rate). Exhaust welding materials: ~€100–200',
     'Bottom coating: 2x primer + 2x Interspeed 340 antifouling + zinc anodes (International Paint)',
@@ -67,7 +67,7 @@ export default function HauloutPlan() {
         <div className="space-y-2">
           <div className="flex justify-between items-baseline">
             <span className="text-sm opacity-90">Total budget (16.8m boat):</span>
-            <span className="text-3xl font-bold">~€8,500–9,500</span>
+            <span className="text-3xl font-bold">~€9,500–10,500</span>
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
             <p>✓ NDT free — DIY via rope access contacts</p>
@@ -94,7 +94,7 @@ export default function HauloutPlan() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-slate-400 mt-4">Range: €8,500–9,500 for 16.8m boat with DIY sandblasting, friend welding, and DIY topcoat application</p>
+        <p className="text-xs text-slate-400 mt-4">Range: €9,500–10,500 for 16.8m boat — DIY sandblasting, friend welding, DIY topcoat. Painting costs updated to realistic market rates.</p>
       </div>
 
       {/* DIY Work Plan Section */}
