@@ -97,9 +97,11 @@ function isBoatRelated(expense: SupabaseExpense): boolean {
 
 async function fetchSupabaseExpenses(): Promise<SupabaseExpense[]> {
   const url = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/expenses`;
+  // Use service key (bypasses RLS) — same as /api/yards. Anon key has expired.
+  const key = process.env.SUPABASE_SERVICE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
   const headers = {
-    apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '',
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''}`,
+    apikey: key,
+    Authorization: `Bearer ${key}`,
   };
 
   try {
@@ -158,7 +160,11 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
       currency: sb.currency || 'EUR',
       year,
       receiptFilename: sb.receipt ? sb.receipt.split('/').pop() : undefined,
-      paidBy: undefined, // Not tracked in Supabase schema yet
+      paidBy: (() => {
+        const c = (sb.comment || '').toUpperCase();
+        if (c.includes('MIUM') || c.includes('MUM') || c.includes('MAMA')) return 'MUM';
+        return undefined;
+      })(),
     };
 
     expenses.push(expense);
