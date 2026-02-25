@@ -87,7 +87,7 @@ export default function HauloutPlan() {
             </li>
           ))}
         </ol>
-        <p className="text-xs text-slate-500 mt-4">All costs except NDT and welding are fully outsourced — quotes pending from yards.</p>
+
       </div>
 
       {/* Henry's Reminders */}
