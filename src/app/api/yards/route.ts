@@ -10,7 +10,9 @@ export async function GET() {
   try {
     const { data, error } = await supabase
       .from('haulout_yards')
-      .select('*')
+      .select(
+        'id,name,location,website,phone,sandblasting,status,notes,living_permitted,mooring_cost,electricity_price,car_parking,services,created_at,updated_at'
+      )
       .order('id', { ascending: true });
 
     if (error) {
@@ -29,7 +31,20 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, location, website, phone, sandblasting, status, notes } = body;
+    const {
+      name,
+      location,
+      website,
+      phone,
+      sandblasting,
+      status,
+      notes,
+      living_permitted,
+      mooring_cost,
+      electricity_price,
+      car_parking,
+      services,
+    } = body;
 
     if (!name) {
       return NextResponse.json(
@@ -49,6 +64,11 @@ export async function POST(request: Request) {
           sandblasting,
           status,
           notes,
+          living_permitted,
+          mooring_cost,
+          electricity_price,
+          car_parking,
+          services,
         },
       ])
       .select();

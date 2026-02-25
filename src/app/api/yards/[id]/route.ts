@@ -13,12 +13,34 @@ export async function PATCH(
   try {
     const body = await request.json();
     const id = params.id;
+    const allowedFields = [
+      'name',
+      'location',
+      'website',
+      'phone',
+      'sandblasting',
+      'status',
+      'notes',
+      'living_permitted',
+      'mooring_cost',
+      'electricity_price',
+      'car_parking',
+      'services',
+    ] as const;
+
+    const payload = Object.fromEntries(
+      allowedFields
+        .filter(field => body[field] !== undefined)
+        .map(field => [field, body[field]])
+    );
 
     const { data, error } = await supabase
       .from('haulout_yards')
-      .update(body)
+      .update(payload)
       .eq('id', id)
-      .select();
+      .select(
+        'id,name,location,website,phone,sandblasting,status,notes,living_permitted,mooring_cost,electricity_price,car_parking,services,created_at,updated_at'
+      );
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 400 });

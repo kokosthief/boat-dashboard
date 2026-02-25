@@ -1,3 +1,4 @@
+// DEPRECATED: data migrated to Supabase haulout_yards table
 export interface Harbour {
   name: string;
   notes: string;

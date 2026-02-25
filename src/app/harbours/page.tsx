@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import { harbours } from '@/data/harbours';
+import { useEffect, useState } from 'react';
 
 interface Yard {
   id?: number;
@@ -12,34 +11,12 @@ interface Yard {
   sandblasting: string;
   status: string;
   notes: string | null;
+  living_permitted: string | null;
+  mooring_cost: string | null;
+  electricity_price: string | null;
+  car_parking: boolean | null;
+  services: string[] | null;
 }
-
-interface UnifiedRow {
-  name: string;
-  area: string;
-  website: string;
-  livingPermitted: string;
-  services: string[];
-  mooringCost: string;
-  electricityPrice: string;
-  carParking: boolean;
-  phone: string;
-  sandblasting: string;
-  hauloutStatus: string;
-  notes: string;
-  source: 'harbour' | 'yard' | 'both';
-}
-
-const livingPermittedMap: Record<string, string> = {
-  Agreed: 'Yes',
-  Considering: 'Maybe',
-  Maybe: 'Maybe',
-  'Second Choice': 'Maybe',
-  Call: 'N/A',
-  Dropped: 'No',
-  Unknown: 'N/A',
-  '': '',
-};
 
 const livingPermittedColors: Record<string, string> = {
   Yes: 'bg-green-700 text-green-200',
@@ -65,21 +42,6 @@ const hauloutStatusColors: Record<string, string> = {
   'Backup only': 'bg-orange-800 text-orange-200',
 };
 
-const COMMON_WORDS = new Set([
-  'jachthaven',
-  'haven',
-  'werf',
-  'de',
-  'het',
-  'van',
-  'den',
-  'der',
-  'the',
-  'and',
-]);
-
-
-
 function normalizeSandblasting(value: string | null | undefined): string {
   if (!value) return '';
   if (value === 'Confirm needed') return 'Unsure';
@@ -89,24 +51,6 @@ function normalizeSandblasting(value: string | null | undefined): string {
 function normalizeUrl(url: string | null | undefined): string {
   if (!url) return '';
   return /^https?:\/\//i.test(url) ? url : `https://${url}`;
-}
-
-function getSignificantWords(value: string): string[] {
-  return value
-    .toLowerCase()
-    .split(/[^a-z0-9]+/)
-    .filter(word => word.length > 5 && !COMMON_WORDS.has(word));
-}
-
-function namesMatch(harbourName: string, yardName: string): boolean {
-  const harbour = harbourName.toLowerCase();
-  const yard = yardName.toLowerCase();
-
-  if (harbour.includes(yard) || yard.includes(harbour)) return true;
-
-  const harbourWords = new Set(getSignificantWords(harbour));
-  const yardWords = getSignificantWords(yard);
-  return yardWords.some(word => harbourWords.has(word));
 }
 
 export default function HarboursPage() {
@@ -141,59 +85,6 @@ export default function HarboursPage() {
       active = false;
     };
   }, []);
-
-  const rows = useMemo<UnifiedRow[]>(() => {
-    const matchedYardIndexes = new Set<number>();
-
-    const mergedFromHarbours: UnifiedRow[] = harbours.map(harbour => {
-      const yardIndex = yards.findIndex((yard, index) => {
-        if (matchedYardIndexes.has(index)) return false;
-        return namesMatch(harbour.name, yard.name);
-      });
-
-      const matchedYard = yardIndex >= 0 ? yards[yardIndex] : null;
-      if (yardIndex >= 0) matchedYardIndexes.add(yardIndex);
-
-      return {
-        name: harbour.name || matchedYard?.name || '',
-        area: harbour.area || matchedYard?.location || '',
-        website: harbour.website || matchedYard?.website || '',
-        livingPermitted: livingPermittedMap[harbour.status] ?? 'N/A',
-        services: harbour.services || [],
-        mooringCost: harbour.winterMooringPrice || '',
-        electricityPrice: harbour.electricityPrice || '',
-        carParking: Boolean(harbour.carParking),
-        phone: matchedYard?.phone || '',
-        sandblasting: normalizeSandblasting(matchedYard?.sandblasting),
-        hauloutStatus: matchedYard?.status || '',
-        notes: harbour.notes || matchedYard?.notes || '',
-        source: matchedYard ? 'both' : 'harbour',
-      };
-    });
-
-    const yardOnlyRows: UnifiedRow[] = yards
-      .map((yard, index) => ({ yard, index }))
-      .filter(({ index }) => !matchedYardIndexes.has(index))
-      .map(({ yard }) => ({
-        name: yard.name || '',
-        area: yard.location || '',
-        website: yard.website || '',
-        livingPermitted: '',
-        services: [],
-        mooringCost: '',
-        electricityPrice: '',
-        carParking: false,
-        phone: yard.phone || '',
-        sandblasting: normalizeSandblasting(yard.sandblasting),
-        hauloutStatus: yard.status || '',
-        notes: yard.notes || '',
-        source: 'yard' as const,
-      }));
-
-    return [...mergedFromHarbours, ...yardOnlyRows];
-  }, [yards]);
-
-
 
   const toggleNote = (name: string) => {
     setExpandedNotes(prev => {
@@ -231,15 +122,19 @@ export default function HarboursPage() {
             </tr>
           </thead>
           <tbody>
-            {rows.map((row, index) => {
-              const isExpanded = expandedNotes.has(row.name);
-              const canExpand = row.notes.length > 80;
-              const preview = canExpand ? `${row.notes.slice(0, 80)}...` : row.notes;
-              const visibleServices = row.services.slice(0, 3);
-              const remainingServices = row.services.length - visibleServices.length;
+            {yards.map((row, index) => {
+              const name = row.name || '';
+              const notes = row.notes || '';
+              const services = Array.isArray(row.services) ? row.services : [];
+              const isExpanded = expandedNotes.has(name);
+              const canExpand = notes.length > 80;
+              const preview = canExpand ? `${notes.slice(0, 80)}...` : notes;
+              const visibleServices = services.slice(0, 3);
+              const remainingServices = services.length - visibleServices.length;
+              const livingPermitted = row.living_permitted || '';
 
               return (
-                <tr key={`${row.name}-${row.source}-${index}`} className="border-b border-slate-800/50">
+                <tr key={`${row.id ?? name}-${index}`} className="border-b border-slate-800/50">
                   <td className="py-2 pr-4 font-medium">
                     {row.website ? (
                       <a
@@ -248,21 +143,21 @@ export default function HarboursPage() {
                         rel="noopener noreferrer"
                         className="text-blue-400 hover:underline"
                       >
-                        {row.name}
+                        {name}
                       </a>
                     ) : (
-                      row.name
+                      name
                     )}
                   </td>
-                  <td className="py-2 pr-4 text-slate-400">{row.area || '—'}</td>
+                  <td className="py-2 pr-4 text-slate-400">{row.location || '—'}</td>
                   <td className="py-2 pr-4">
-                    {row.livingPermitted ? (
+                    {livingPermitted ? (
                       <span
                         className={`px-2 py-0.5 rounded text-xs ${
-                          livingPermittedColors[row.livingPermitted] || ''
+                          livingPermittedColors[livingPermitted] || ''
                         }`}
                       >
-                        {row.livingPermitted}
+                        {livingPermitted}
                       </span>
                     ) : null}
                   </td>
@@ -270,7 +165,7 @@ export default function HarboursPage() {
                     <div className="flex flex-wrap gap-1">
                       {visibleServices.map(service => (
                         <span
-                          key={`${row.name}-${service}`}
+                          key={`${name}-${service}`}
                           className="bg-slate-700 text-slate-300 text-xs px-1.5 py-0.5 rounded"
                         >
                           {service}
@@ -283,31 +178,32 @@ export default function HarboursPage() {
                       )}
                     </div>
                   </td>
-                  <td className="py-2 pr-4">{row.mooringCost || '—'}</td>
-                  <td className="py-2 pr-4">{row.electricityPrice || '—'}</td>
-                  <td className="py-2 pr-4">{row.carParking ? '🅿️' : '—'}</td>
+                  <td className="py-2 pr-4">{row.mooring_cost || '—'}</td>
+                  <td className="py-2 pr-4">{row.electricity_price || '—'}</td>
+                  <td className="py-2 pr-4">{row.car_parking ? '🅿️' : '—'}</td>
                   <td className="py-2 pr-4">{row.phone || '—'}</td>
                   <td className="py-2 pr-4">
-                    {row.sandblasting ? (
+                    {normalizeSandblasting(row.sandblasting) ? (
                       <span
                         className={`px-2 py-0.5 rounded text-xs ${
-                          sandblastingColors[row.sandblasting] || 'bg-slate-700 text-slate-200'
+                          sandblastingColors[normalizeSandblasting(row.sandblasting)] ||
+                          'bg-slate-700 text-slate-200'
                         }`}
                       >
-                        {row.sandblasting}
+                        {normalizeSandblasting(row.sandblasting)}
                       </span>
                     ) : (
                       '—'
                     )}
                   </td>
                   <td className="py-2 pr-4">
-                    {row.hauloutStatus ? (
+                    {row.status ? (
                       <span
                         className={`px-2 py-0.5 rounded text-xs ${
-                          hauloutStatusColors[row.hauloutStatus] || 'bg-slate-700 text-slate-200'
+                          hauloutStatusColors[row.status] || 'bg-slate-700 text-slate-200'
                         }`}
                       >
-                        {row.hauloutStatus}
+                        {row.status}
                       </span>
                     ) : (
                       '—'
@@ -318,15 +214,15 @@ export default function HarboursPage() {
                       isExpanded ? 'whitespace-normal break-words' : 'max-w-xs'
                     }`}
                   >
-                    {row.notes ? (
+                    {notes ? (
                       <>
                         <span className={isExpanded ? '' : 'truncate block'}>
-                          {isExpanded ? row.notes : preview}
+                          {isExpanded ? notes : preview}
                         </span>
                         {canExpand && (
                           <button
                             type="button"
-                            onClick={() => toggleNote(row.name)}
+                            onClick={() => toggleNote(name)}
                             className="text-blue-400/80 hover:text-blue-300 mt-1"
                           >
                             {isExpanded ? 'show less' : 'show more'}
