@@ -18,6 +18,13 @@ interface Yard {
 type YardForm = Omit<Yard, 'id' | 'created_at' | 'updated_at'>;
 
 const SANDBLASTING_OPTIONS = ['Yes', 'No', 'Confirm needed', 'Unknown'];
+
+const sandblastingOrder: Record<string, number> = {
+  'Yes': 0,
+  'Confirm needed': 1,
+  'Unknown': 1,
+  'No': 2,
+};
 const STATUS_OPTIONS = ['Recommended', 'To contact', 'Contacted', 'Quoted', 'Booked', 'Backup only', 'Excluded'];
 
 const sandblastingColors: Record<string, string> = {
@@ -239,7 +246,7 @@ export default function HauloutYardsTable() {
             </tr>
           </thead>
           <tbody>
-            {yards.map((yard) => {
+            {[...yards].sort((a, b) => (sandblastingOrder[a.sandblasting] ?? 1) - (sandblastingOrder[b.sandblasting] ?? 1)).map((yard) => {
               const isEditing = editingId === yard.id;
               return (
                 <tr
