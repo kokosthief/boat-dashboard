@@ -97,7 +97,6 @@ function isBoatRelated(expense: SupabaseExpense): boolean {
 
 async function fetchSupabaseExpenses(): Promise<SupabaseExpense[]> {
   const url = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/rest/v1/expenses`;
-  // Use service key (bypasses RLS) — same as /api/yards. Anon key has expired.
   const key = process.env.SUPABASE_SERVICE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
   const headers = {
     apikey: key,
@@ -105,9 +104,10 @@ async function fetchSupabaseExpenses(): Promise<SupabaseExpense[]> {
   };
 
   try {
-    const response = await fetch(`${url}?select=*&order=date.desc`, {
+    // Filter directly in DB: only expenses tagged 'boat'
+    const response = await fetch(`${url}?select=*&tags=cs.%7Bboat%7D&order=date.desc`, {
       headers,
-      cache: 'no-store', // Always fetch fresh data
+      cache: 'no-store',
     });
 
     if (!response.ok) {
@@ -133,8 +133,8 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
   > = {};
   const categoryTotals: Record<string, number> = {};
 
-  // Filter and process boat-related expenses
-  const boatExpenses = supabaseExpenses.filter(isBoatRelated);
+  // Already filtered at DB level (tags contains 'boat')
+  const boatExpenses = supabaseExpenses;
 
   for (let index = 0; index < boatExpenses.length; index++) {
     const sb = boatExpenses[index];
