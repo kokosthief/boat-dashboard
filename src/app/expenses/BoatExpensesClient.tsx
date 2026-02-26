@@ -35,7 +35,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
   }, [data.expenses, yearFilter]);
 
   const filtered = useMemo(() => {
-    let result = data.expenses as BoatExpenseWithAccountingType[];
+    let result = data.expenses as BoatExpense[];
     
     if (yearFilter !== 'all') {
       result = result.filter(e => e.year === yearFilter);
