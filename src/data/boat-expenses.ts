@@ -36,6 +36,7 @@ export interface BoatExpense {
   year: number;
   receiptFilename?: string;
   paidBy?: string; // MUM, HENRY, PARTIAL, or undefined
+  accountingType?: string; // 'expense' | 'capital_investment' | 'depreciation'
 }
 
 export interface BoatExpenseData {
@@ -104,8 +105,8 @@ async function fetchSupabaseExpenses(): Promise<SupabaseExpense[]> {
   };
 
   try {
-    // Filter directly in DB: only expenses tagged 'boat'
-    const response = await fetch(`${url}?select=*&tags=cs.%7Bboat%7D&order=date.desc`, {
+    // Filter: boat-tagged + not depreciation entries (those are accounting-only)
+    const response = await fetch(`${url}?select=*&tags=cs.%7Bboat%7D&accounting_type=neq.depreciation&order=date.desc`, {
       headers,
       cache: 'no-store',
     });
@@ -160,6 +161,7 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
       currency: sb.currency || 'EUR',
       year,
       receiptFilename: sb.receipt ? sb.receipt.split('/').pop() : undefined,
+      accountingType: (sb as any).accounting_type || 'expense',
       paidBy: (() => {
         const c = (sb.comment || '').toUpperCase();
         if (c.includes('MIUM') || c.includes('MUM') || c.includes('MAMA')) return 'MUM';
