@@ -102,7 +102,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
 
   const receiptUrl = useMemo(() => {
     if (!selectedExpense?.receiptFilename) return null;
-    return `/api/receipts/file?path=receipts/${selectedExpense.year}/${selectedExpense.receiptFilename}`;
+    return `https://accounting.hrwillmott.com/api/receipts/file?path=receipts/${selectedExpense.year}/${selectedExpense.receiptFilename}`;
   }, [selectedExpense]);
 
   const isImage = useMemo(() => {
@@ -403,7 +403,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                   <td className="px-4 py-3 text-center">
                     {e.receiptFilename ? (
                       <a
-                        href={`/api/receipts/file?path=receipts/${e.year}/${e.receiptFilename}`}
+                        href={`https://accounting.hrwillmott.com/api/receipts/file?path=receipts/${e.year}/${e.receiptFilename}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-400 hover:text-blue-300 transition-colors inline-block text-xl"
