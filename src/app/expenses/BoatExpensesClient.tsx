@@ -4,10 +4,6 @@ import { useState, useMemo, useCallback, useEffect } from 'react';
 import type { BoatExpense, BoatExpenseData } from '@/data/boat-expenses';
 
 type SortKey = 'date' | 'company' | 'category' | 'amount';
-type ExpenseAccountingType = 'expense' | 'capital_investment';
-type BoatExpenseWithAccountingType = Omit<BoatExpense, 'accountingType'> & {
-  accountingType?: ExpenseAccountingType;
-};
 
 function fmt(n: number) {
   return '€' + n.toLocaleString('nl-NL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -74,8 +70,6 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
 
   const filteredStats = useMemo(() => {
     const total = filtered.reduce((s, e) => s + e.amount, 0);
-    const capitalExpenses = filtered.filter(e => e.accountingType === 'capital_investment');
-    const capitalTotal = capitalExpenses.reduce((s, e) => s + e.amount, 0);
     const boatPurchaseTotal = filtered
       .filter(e => e.category.toLowerCase().includes('boat purchase'))
       .reduce((s, e) => s + e.amount, 0);
@@ -85,8 +79,6 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
     
     return {
       total,
-      capitalTotal,
-      capitalCount: capitalExpenses.length,
       boatPurchaseTotal,
       mumsTotal,
       netCost: total - boatPurchaseTotal - mumsTotal,
@@ -197,12 +189,6 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
           <p className="text-sm opacity-80">Total</p>
           <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.total)}</p>
           <p className="text-xs opacity-70 mt-1">{filteredStats.count} expenses</p>
-        </div>
-
-        <div className="bg-amber-900/70 border border-amber-700/60 rounded-xl p-4">
-          <p className="text-sm text-amber-200/90">Capital Invested</p>
-          <p className="text-xl sm:text-2xl font-bold mt-1 text-amber-200">{fmt(filteredStats.capitalTotal)}</p>
-          <p className="text-xs text-amber-200/70 mt-1">{filteredStats.capitalCount} assets</p>
         </div>
 
         <div className="bg-blue-600 rounded-xl p-4">
@@ -380,14 +366,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                   </td>
                   <td className="px-4 py-3">
                     <div>
-                      <p className="font-medium flex items-center flex-wrap">
-                        <span>{e.company}</span>
-                        {e.accountingType === 'capital_investment' && (
-                          <span className="bg-amber-900/60 text-amber-300 text-[10px] px-1.5 py-0.5 rounded ml-1.5">
-                            💰 Asset
-                          </span>
-                        )}
-                      </p>
+                      <p className="font-medium">{e.company}</p>
                       {e.comment && (
                         <p className="text-xs text-slate-500 mt-0.5">{e.comment}</p>
                       )}
