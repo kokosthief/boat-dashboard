@@ -16,9 +16,30 @@ export default function HauloutPlan() {
   ];
 
   const timeline = [
-    { label: 'Target haul-out', value: 'Week 3–4 of March 2026' },
+    { label: 'Status', value: '3 days overdue' },
+    { label: 'Henry away from', value: 'June 11, 2026' },
+    { label: 'Immediate deadline', value: 'Book a yard before June 11' },
+  ];
+
+  const callOrder = [
+    'IJwerf',
+    'AYS',
+    'Van Laar',
+    'Borsch',
+    'Brouwer',
+    'Schouten',
+  ];
+
+  const yardBookingFacts = [
+    { label: 'Yard booked', value: 'No' },
+    { label: 'Current risk', value: 'Critical' },
+    { label: 'Next action', value: 'Henry calls yards now' },
+  ];
+
+  const yardPlan = [
+    { label: 'Haul-out timing', value: 'Immediate — already overdue' },
     { label: 'Dry stalling duration', value: '~5 weeks' },
-    { label: 'Target back in water', value: 'End of April / Early May 2026' },
+    { label: 'Back in water', value: 'After yard slot + ~5 weeks dry' },
   ];
 
   const henryTasks = [
@@ -38,7 +59,10 @@ export default function HauloutPlan() {
 
   const notes = [
     'Timo: 16.8m × 3.25m steel bakdekker, 1928',
-    'Spring is peak season — yards book 6–8 weeks out. Contact yards ASAP.',
+    'Critical: the haulout is 3 days overdue and no yard is booked.',
+    'Henry is away from June 11, 2026 — a yard must be contacted and booked before then.',
+    'Call order stays: IJwerf → AYS → Van Laar → Borsch → Brouwer → Schouten.',
+    'Spring is peak season — yards book 6–8 weeks out. Henry needs to contact yards immediately.',
     'NDT: Henry rents equipment and does inspection himself (~€100–200). Potential saving vs. outsourcing.',
     'Welding: Mike (friend) may do hull repairs at a cheaper rate (~€100 labour). New exhaust welding — ask for quote.',
     'Bottom coating: 2x International primer + 2x Interspeed 340 antifouling + zinc anodes — all outsourced.',
@@ -51,7 +75,39 @@ export default function HauloutPlan() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m (Spring 2026)</h1>
+        <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m</h1>
+        <p className="text-red-300 font-semibold">Critical: 3 days overdue, no yard booked, Henry away from June 11.</p>
+      </div>
+
+      {/* Critical Booking Alert */}
+      <div className="bg-red-950/60 border border-red-700 rounded-xl p-6">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-red-300">Urgent booking required</p>
+            <h2 className="text-2xl font-bold text-white mt-1">Henry needs to contact yards before June 11</h2>
+            <p className="text-red-100 mt-3 max-w-3xl">
+              The haulout is critical and already 3 days overdue. There is still no yard booked, so the priority is to secure any viable haulout slot before Henry goes away on June 11, 2026.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:min-w-64">
+            {yardBookingFacts.map((fact) => (
+              <div key={fact.label} className="bg-red-900/50 border border-red-800 rounded-lg p-3">
+                <p className="text-xs text-red-200">{fact.label}</p>
+                <p className="font-semibold text-white mt-1">{fact.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-5 border-t border-red-800 pt-4">
+          <p className="text-sm text-red-200 mb-2">Recommended call order</p>
+          <div className="flex flex-wrap gap-2">
+            {callOrder.map((yard, index) => (
+              <span key={yard} className="rounded-lg bg-red-900/60 border border-red-700 px-3 py-2 text-sm font-semibold text-white">
+                {index + 1}. {yard}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Budget Summary Card */}
@@ -112,6 +168,14 @@ export default function HauloutPlan() {
         <h2 className="text-xl font-semibold mb-4">📅 Timeline</h2>
         <div className="grid sm:grid-cols-3 gap-4">
           {timeline.map((t, i) => (
+            <div key={i} className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
+              <span className="text-slate-400 text-sm">{t.label}</span>
+              <span className="font-semibold">{t.value}</span>
+            </div>
+          ))}
+        </div>
+        <div className="grid sm:grid-cols-3 gap-4 mt-4">
+          {yardPlan.map((t, i) => (
             <div key={i} className="flex justify-between items-center p-3 bg-slate-800 rounded-lg">
               <span className="text-slate-400 text-sm">{t.label}</span>
               <span className="font-semibold">{t.value}</span>
