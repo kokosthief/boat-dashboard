@@ -10,12 +10,15 @@ interface Yard {
   phone: string | null;
   sandblasting: string;
   status: string;
+  rating: number | null;
   notes: string | null;
   created_at?: string;
   updated_at?: string;
 }
 
 type YardForm = Omit<Yard, 'id' | 'created_at' | 'updated_at'>;
+type SortKey = 'rating' | 'name' | 'sandblasting' | 'status';
+type SortDirection = 'asc' | 'desc';
 
 const SANDBLASTING_OPTIONS = ['Yes', 'No', 'Confirm needed', 'Unknown'];
 
@@ -55,8 +58,17 @@ const emptyForm: YardForm = {
   phone: '',
   sandblasting: 'Confirm needed',
   status: 'To contact',
+  rating: 0,
   notes: '',
 };
+
+function getRating(value: number | null | undefined) {
+  return Number.isFinite(Number(value)) ? Number(value) : 0;
+}
+
+function compareText(a: string | null | undefined, b: string | null | undefined) {
+  return String(a || '').localeCompare(String(b || ''), undefined, { sensitivity: 'base' });
+}
 
 function inputClass(extra = '') {
   return `bg-slate-900 border border-slate-600 rounded px-2 py-1 text-white text-xs focus:outline-none focus:border-emerald-500 w-full ${extra}`;
@@ -77,6 +89,8 @@ export default function HauloutYardsTable() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState<number | null>(null);
+  const [sortKey, setSortKey] = useState<SortKey>('rating');
+  const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
 
   useEffect(() => {
     fetchYards();
@@ -105,6 +119,7 @@ export default function HauloutYardsTable() {
       phone: yard.phone || '',
       sandblasting: yard.sandblasting,
       status: yard.status,
+      rating: getRating(yard.rating),
       notes: yard.notes || '',
     });
     setDeleteConfirm(null);
@@ -124,6 +139,7 @@ export default function HauloutYardsTable() {
         location: editForm.location || null,
         website: editForm.website || null,
         phone: editForm.phone || null,
+        rating: getRating(editForm.rating),
         notes: editForm.notes || null,
       };
       const res = await fetch(`/api/yards/${yardId}`, {
@@ -168,6 +184,7 @@ export default function HauloutYardsTable() {
         location: newYardForm.location || null,
         website: newYardForm.website || null,
         phone: newYardForm.phone || null,
+        rating: getRating(newYardForm.rating),
         notes: newYardForm.notes || null,
       };
       const res = await fetch('/api/yards', {
@@ -187,6 +204,42 @@ export default function HauloutYardsTable() {
       setIsSubmitting(false);
     }
   };
+
+  const handleSort = (key: SortKey) => {
+    if (sortKey === key) {
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+      return;
+    }
+    setSortKey(key);
+    setSortDirection(key === 'rating' ? 'desc' : 'asc');
+  };
+
+  const sortedYards = [...yards].sort((a, b) => {
+    let result = 0;
+
+    if (sortKey === 'rating') {
+      result = getRating(a.rating) - getRating(b.rating);
+    } else if (sortKey === 'sandblasting') {
+      result = (sandblastingOrder[a.sandblasting] ?? 1) - (sandblastingOrder[b.sandblasting] ?? 1);
+    } else if (sortKey === 'status') {
+      result = compareText(a.status, b.status);
+    } else {
+      result = compareText(a.name, b.name);
+    }
+
+    if (sortDirection === 'desc') result *= -1;
+    return result || getRating(b.rating) - getRating(a.rating) || compareText(a.name, b.name);
+  });
+
+  const SortHeader = ({ label, column, align = 'left' }: { label: string; column: SortKey; align?: 'left' | 'center' }) => (
+    <button
+      type="button"
+      onClick={() => handleSort(column)}
+      className={`w-full ${align === 'center' ? 'text-center' : 'text-left'} font-semibold text-slate-300 text-xs uppercase tracking-wide hover:text-white transition-colors`}
+    >
+      {label}{sortKey === column ? (sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}
+    </button>
+  );
 
   if (loading) return <div className="text-slate-400 py-4">Loading yards...</div>;
   if (error) return (
@@ -235,24 +288,33 @@ export default function HauloutYardsTable() {
         <table className="w-full text-sm">
           <thead className="bg-slate-800 border-b border-slate-700">
             <tr>
-              <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Name</th>
+              <th className="px-3 py-3 text-left"><SortHeader label="Rating" column="rating" /></th>
+              <th className="px-3 py-3 text-left"><SortHeader label="Name" column="name" /></th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Location</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Website</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Phone</th>
-              <th className="px-3 py-3 text-center font-semibold text-slate-300 text-xs uppercase tracking-wide">Sandblasting</th>
-              <th className="px-3 py-3 text-center font-semibold text-slate-300 text-xs uppercase tracking-wide">Status</th>
+              <th className="px-3 py-3 text-center"><SortHeader label="Sandblasting" column="sandblasting" align="center" /></th>
+              <th className="px-3 py-3 text-center"><SortHeader label="Status" column="status" align="center" /></th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide">Notes</th>
               <th className="px-3 py-3 text-left font-semibold text-slate-300 text-xs uppercase tracking-wide w-20"></th>
             </tr>
           </thead>
           <tbody>
-            {[...yards].sort((a, b) => (sandblastingOrder[a.sandblasting] ?? 1) - (sandblastingOrder[b.sandblasting] ?? 1)).map((yard) => {
+            {sortedYards.map((yard) => {
               const isEditing = editingId === yard.id;
               return (
                 <tr
                   key={yard.id}
                   className={`border-b border-slate-800 transition-colors ${isEditing ? 'bg-slate-800/80' : 'hover:bg-slate-800/40'}`}
                 >
+                  {/* Rating */}
+                  <td className="px-3 py-2 min-w-[80px]">
+                    {isEditing
+                      ? <input type="number" min={0} max={100} value={editForm.rating ?? 0} onChange={e => setEditForm({ ...editForm, rating: Number(e.target.value) })} className={inputClass('font-semibold text-center')} />
+                      : <span className="inline-block min-w-10 rounded bg-slate-800 px-2 py-1 text-center text-xs font-semibold text-emerald-300">{getRating(yard.rating)}</span>
+                    }
+                  </td>
+
                   {/* Name */}
                   <td className="px-3 py-2 font-semibold text-white min-w-[140px]">
                     {isEditing
@@ -431,6 +493,15 @@ function YardFormFields({ form, onChange }: { form: YardForm; onChange: (f: Yard
         >
           {STATUS_OPTIONS.map(o => <option key={o}>{o}</option>)}
         </select>
+        <input
+          type="number"
+          min={0}
+          max={100}
+          placeholder="Rating"
+          value={form.rating ?? 0}
+          onChange={e => onChange({ ...form, rating: Number(e.target.value) })}
+          className="bg-slate-900 border border-slate-700 rounded px-3 py-2 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+        />
       </div>
       <textarea
         placeholder="Notes"

@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS public.haulout_yards (
   phone TEXT,
   sandblasting TEXT DEFAULT 'Unknown',
   status TEXT DEFAULT 'To contact',
+  rating INTEGER DEFAULT 0,
   notes TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
@@ -15,6 +16,7 @@ CREATE TABLE IF NOT EXISTS public.haulout_yards (
 -- Create index on name for faster lookups
 CREATE INDEX IF NOT EXISTS haulout_yards_name_idx ON public.haulout_yards(name);
 CREATE INDEX IF NOT EXISTS haulout_yards_status_idx ON public.haulout_yards(status);
+CREATE INDEX IF NOT EXISTS haulout_yards_rating_idx ON public.haulout_yards(rating DESC);
 
 -- Enable RLS
 ALTER TABLE public.haulout_yards ENABLE ROW LEVEL SECURITY;
@@ -33,12 +35,12 @@ CREATE POLICY "Allow authenticated delete" ON public.haulout_yards
   FOR DELETE USING (true);
 
 -- Insert initial data
-INSERT INTO public.haulout_yards (name, location, website, phone, sandblasting, status, notes)
+INSERT INTO public.haulout_yards (name, location, website, phone, sandblasting, status, rating, notes)
 VALUES
-  ('Zaanhaven/Westhaven', 'Zaandam', 'zaanhaven.nl', NULL, 'Confirm needed', 'Recommended', NULL),
-  ('Marina Seaport IJmuiden', 'IJmuiden', 'marinaseaport.nl', '0255 560300', 'Confirm needed', 'To contact', NULL),
-  ('OfferteHaven.nl', 'Multi-yard network (NL)', 'offertehaven.nl', NULL, 'Yes', 'To contact', 'Submit specs online, get 3–5 competing quotes in 3–5 days'),
-  ('Jachthaven Bouwmeester', 'Noord-Holland', 'jachthavenbouwmeester.nl', NULL, 'Confirm needed', 'To contact', NULL),
-  ('Kadoelenwerf Jachtservice', 'Amsterdam', 'kadoelenwerf.nl', '020-6314052', 'No', 'Backup only', 'Max ~10–11m lift — check if 16.8m Timo fits. Backup if closer yards booked.'),
-  ('Werf Rhebergen', 'Raamsdonksveer, ~40km', 'werfrhebergen.nl', NULL, 'No', 'Excluded', 'Current mooring location. Does NOT allow sandblasting on-site.')
+  ('Zaanhaven/Westhaven', 'Zaandam', 'zaanhaven.nl', NULL, 'Confirm needed', 'Recommended', 55, NULL),
+  ('Marina Seaport IJmuiden', 'IJmuiden', 'marinaseaport.nl', '0255 560300', 'Confirm needed', 'To contact', 50, NULL),
+  ('OfferteHaven.nl', 'Multi-yard network (NL)', 'offertehaven.nl', NULL, 'Yes', 'To contact', 45, 'Submit specs online, get 3–5 competing quotes in 3–5 days'),
+  ('Jachthaven Bouwmeester', 'Noord-Holland', 'jachthavenbouwmeester.nl', NULL, 'Confirm needed', 'To contact', 15, NULL),
+  ('Kadoelenwerf Jachtservice', 'Amsterdam', 'kadoelenwerf.nl', '020-6314052', 'No', 'Backup only', 20, 'Max ~10–11m lift — check if 16.8m Timo fits. Backup if closer yards booked.'),
+  ('Werf Rhebergen', 'Raamsdonksveer, ~40km', 'werfrhebergen.nl', NULL, 'No', 'Excluded', 5, 'Current mooring location. Does NOT allow sandblasting on-site.')
 ON CONFLICT DO NOTHING;

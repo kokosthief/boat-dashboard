@@ -22,6 +22,59 @@ const livingPermittedMap = {
   Unknown: 'N/A',
 };
 
+const ratingByName = {
+  'schouten': 100,
+  'schouten scheepswerf': 100,
+  'multiship holland': 96,
+  'amsterdam yacht service': 94,
+  'waterland': 88,
+  'straalbedrijf waterland': 88,
+  'braspenning': 86,
+  'scheepswerf van laar': 82,
+  'van laar': 82,
+  'jachtwerf weesp': 78,
+  'scheepswerf de ijwerf': 76,
+  'ijwerf': 76,
+  'werf brouwer': 74,
+  'brouwer': 74,
+  'overwijk metaalbewerking': 72,
+  'scheepswerf borsch': 68,
+  'teerenstra': 60,
+  'zaanhaven/westhaven': 55,
+  'marina seaport ijmuiden': 50,
+  'offertehaven.nl': 45,
+  'nautisch centrum nicolaas witsen': 42,
+  'nauticadam / werf twellegea': 40,
+  'scheepswerf de rietpol': 38,
+  'scheepswerf stella maris': 35,
+  'kalfsvel': 34,
+  'nautix marina': 30,
+  'marina realeneiland': 28,
+  'jachtwerf kokernoot': 26,
+  'damen shiprepair amsterdam': 25,
+  'kadoelenwerf jachtservice': 20,
+  'kadoelen wharf': 20,
+  'coöp werf de zuiderzee': 18,
+  "jachthaven d' anckerplaets": 18,
+  'jachthaven het jacht': 16,
+  'jachthaven bouwmeester': 15,
+  'port entrepot': 14,
+  'stichting botenloods de levant': 14,
+  'jachthaven de vlonder': 12,
+  'jachthaven schellingwoude': 12,
+  'sloepdelen loosdrecht': 12,
+  'watersportvereniging de remming': 12,
+  'boatcaptain jachtservice': 10,
+  "jachthaven 't einde": 10,
+  'jachthaven de vioolsleutel': 8,
+  'jachthaven nauerna': 8,
+  'klaas mulder jachtbouw b.v.': 8,
+  'jachthaven bovendiep (+ mb jachtservice)': 6,
+  'bijdam watersport': 6,
+  'werf rhebergen': 5,
+  'rhebergen': 5,
+};
+
 function normalizeName(value) {
   return String(value || '').trim().toLowerCase();
 }
@@ -88,6 +141,7 @@ async function main() {
       electricity_price: harbour.electricityPrice || '',
       car_parking: Boolean(harbour.carParking),
       services: Array.isArray(harbour.services) ? harbour.services : [],
+      rating: ratingByName[key] ?? 0,
     };
 
     if (existing) {

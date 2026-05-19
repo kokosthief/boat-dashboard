@@ -17,6 +17,7 @@ async function setupTable() {
         phone: null,
         sandblasting: 'Confirm needed',
         status: 'Recommended',
+        rating: 55,
         notes: null
       },
       {
@@ -26,6 +27,7 @@ async function setupTable() {
         phone: '0255 560300',
         sandblasting: 'Confirm needed',
         status: 'To contact',
+        rating: 50,
         notes: null
       },
       {
@@ -35,6 +37,7 @@ async function setupTable() {
         phone: null,
         sandblasting: 'Yes',
         status: 'To contact',
+        rating: 45,
         notes: 'Submit specs online, get 3–5 competing quotes in 3–5 days'
       },
       {
@@ -44,6 +47,7 @@ async function setupTable() {
         phone: null,
         sandblasting: 'Confirm needed',
         status: 'To contact',
+        rating: 15,
         notes: null
       },
       {
@@ -53,6 +57,7 @@ async function setupTable() {
         phone: '020-6314052',
         sandblasting: 'No',
         status: 'Backup only',
+        rating: 20,
         notes: 'Max ~10–11m lift — check if 16.8m Timo fits. Backup if closer yards booked.'
       },
       {
@@ -62,6 +67,7 @@ async function setupTable() {
         phone: null,
         sandblasting: 'No',
         status: 'Excluded',
+        rating: 5,
         notes: 'Current mooring location. Does NOT allow sandblasting on-site.'
       }
     ];
@@ -84,6 +90,7 @@ CREATE TABLE IF NOT EXISTS haulout_yards (
   phone TEXT,
   sandblasting TEXT DEFAULT 'Unknown',
   status TEXT DEFAULT 'To contact',
+  rating INTEGER DEFAULT 0,
   notes TEXT,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()

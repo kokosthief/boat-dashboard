@@ -20,6 +20,7 @@ export async function PATCH(
       'phone',
       'sandblasting',
       'status',
+      'rating',
       'notes',
       'living_permitted',
       'mooring_cost',
@@ -39,7 +40,7 @@ export async function PATCH(
       .update(payload)
       .eq('id', id)
       .select(
-        'id,name,location,website,phone,sandblasting,status,notes,living_permitted,mooring_cost,electricity_price,car_parking,services,created_at,updated_at'
+        'id,name,location,website,phone,sandblasting,status,rating,notes,living_permitted,mooring_cost,electricity_price,car_parking,services,created_at,updated_at'
       );
 
     if (error) {

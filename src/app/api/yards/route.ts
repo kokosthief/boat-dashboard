@@ -11,8 +11,9 @@ export async function GET() {
     const { data, error } = await supabase
       .from('haulout_yards')
       .select(
-        'id,name,location,website,phone,sandblasting,status,notes,living_permitted,mooring_cost,electricity_price,car_parking,services,created_at,updated_at'
+        'id,name,location,website,phone,sandblasting,status,rating,notes,living_permitted,mooring_cost,electricity_price,car_parking,services,created_at,updated_at'
       )
+      .order('rating', { ascending: false })
       .order('id', { ascending: true });
 
     if (error) {
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
       phone,
       sandblasting,
       status,
+      rating,
       notes,
       living_permitted,
       mooring_cost,
@@ -63,6 +65,7 @@ export async function POST(request: Request) {
           phone,
           sandblasting,
           status,
+          rating,
           notes,
           living_permitted,
           mooring_cost,
