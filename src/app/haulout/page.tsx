@@ -5,7 +5,7 @@ export default function HauloutPlan() {
     { item: 'Lift & haul-out', cost: 'Quote TBD' },
     { item: 'High-pressure wash (exterior)', cost: 'incl.' },
     { item: 'Sandblasting — full boat', cost: 'Quote TBD' },
-    { item: 'NDT inspection', cost: '~€100–200', saving: true, savingNote: 'DIY — Henry rents equipment' },
+    { item: 'Insurance survey / hull check (if required)', cost: 'Via insurer / quote TBD' },
     { item: 'Hull welding repairs (if needed)', cost: 'Quote TBD' },
     { item: 'New exhaust — weld (Mike)', cost: 'Quote TBD', saving: true, savingNote: 'Mike does the welding' },
     { item: '2× International primer — underwater hull', cost: 'Quote TBD' },
@@ -16,7 +16,7 @@ export default function HauloutPlan() {
   ];
 
   const timeline = [
-    { label: 'Status', value: '3 days overdue' },
+    { label: 'Status', value: '14 days overdue' },
     { label: 'Henry away from', value: 'June 11, 2026' },
     { label: 'Immediate deadline', value: 'Book a yard before June 11' },
   ];
@@ -45,7 +45,7 @@ export default function HauloutPlan() {
   const henryTasks = [
     {
       title: '🧹 Interior Hull Cleaning',
-      description: 'Pump bilge → wire brush rust → Brunox Epoxy treatment (purple→black cure) → paint',
+      description: 'Clean interior hull → brush/treat rust → Owatrol Oil on vertical parts → paint where needed → heated grease on horizontal areas, mostly above the concrete',
       effort: 'Medium',
       when: 'Whilst out of water',
     },
@@ -59,15 +59,15 @@ export default function HauloutPlan() {
 
   const notes = [
     'Timo: 16.8m × 3.25m steel bakdekker, 1928',
-    'Critical: the haulout is 3 days overdue and no yard is booked.',
+    'Critical: the haulout is 14 days overdue and no yard is booked.',
     'Henry is away from June 11, 2026 — a yard must be contacted and booked before then.',
     'Call order stays: IJwerf → AYS → Van Laar → Borsch → Brouwer → Schouten.',
     'Spring is peak season — yards book 6–8 weeks out. Henry needs to contact yards immediately.',
-    'NDT: Henry rents equipment and does inspection himself (~€100–200). Potential saving vs. outsourcing.',
+    'Insurance/survey: if hull-thickness measurement or inspection is needed, arrange it through the insurer or surveyor rather than DIY NDT.',
     'Welding: Mike (friend) may do hull repairs at a cheaper rate (~€100 labour). New exhaust welding — ask for quote.',
     'Bottom coating: 2x International primer + 2x Interspeed 340 antifouling + zinc anodes — all outsourced.',
     'Top coating: 2–3 coats IJssel Coatings paint — outsourced. Contact Niels for cheaper paint supply.',
-    'Interior hull: Pump, wire brush, Brunox Epoxy rust treatment (purple→black = cured), then paint. Henry does this.',
+    'Interior hull: clean and treat rust by brush, use Owatrol Oil on vertical parts, paint where useful, and use heated grease on horizontal areas, mostly above the concrete. Henry does this.',
     'Waterline: Score real waterline with kraspen, paint 10cm above this line. Henry does this on day 1.',
   ];
 
@@ -76,7 +76,7 @@ export default function HauloutPlan() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m</h1>
-        <p className="text-red-300 font-semibold">Critical: 3 days overdue, no yard booked, Henry away from June 11.</p>
+        <p className="text-red-300 font-semibold">Critical: 14 days overdue, no yard booked, Henry away from June 11.</p>
       </div>
 
       {/* Critical Booking Alert */}
@@ -86,7 +86,7 @@ export default function HauloutPlan() {
             <p className="text-sm font-semibold uppercase tracking-wide text-red-300">Urgent booking required</p>
             <h2 className="text-2xl font-bold text-white mt-1">Henry needs to contact yards before June 11</h2>
             <p className="text-red-100 mt-3 max-w-3xl">
-              The haulout is critical and already 3 days overdue. There is still no yard booked, so the priority is to secure any viable haulout slot before Henry goes away on June 11, 2026.
+              The haulout is critical and already 14 days overdue. There is still no yard booked, so the priority is to secure any viable haulout slot before Henry goes away on June 11, 2026.
             </p>
           </div>
           <div className="grid sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:min-w-64">
@@ -120,7 +120,6 @@ export default function HauloutPlan() {
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
             <p>✓ Fully outsourced — yard does all the work</p>
-            <p>💸 Potential saving: NDT done by Henry (~€100–200, rented equipment)</p>
             <p>💸 Potential saving: welding via Mike (friend rate ~€100)</p>
           </div>
         </div>
