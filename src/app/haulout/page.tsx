@@ -16,7 +16,7 @@ export default function HauloutPlan() {
   ];
 
   const timeline = [
-    { label: 'Status', value: '14 days overdue' },
+    { label: 'Status', value: '16 days overdue' },
     { label: 'Henry away from', value: 'June 11, 2026' },
     { label: 'Immediate deadline', value: 'Book a yard before June 11' },
   ];
@@ -59,7 +59,7 @@ export default function HauloutPlan() {
 
   const notes = [
     'Timo: 16.8m × 3.25m steel bakdekker, 1928',
-    'Critical: the haulout is 14 days overdue and no yard is booked.',
+    'Critical: the haulout is 16 days overdue and no yard is booked.',
     'Henry is away from June 11, 2026 — a yard must be contacted and booked before then.',
     'Call order stays: IJwerf → AYS → Van Laar → Borsch → Brouwer → Schouten.',
     'Spring is peak season — yards book 6–8 weeks out. Henry needs to contact yards immediately.',
@@ -76,7 +76,7 @@ export default function HauloutPlan() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m</h1>
-        <p className="text-red-300 font-semibold">Critical: 14 days overdue, no yard booked, Henry away from June 11.</p>
+        <p className="text-red-300 font-semibold">Critical: 16 days overdue, no yard booked, Henry away from June 11.</p>
       </div>
 
       {/* Critical Booking Alert */}
@@ -86,7 +86,7 @@ export default function HauloutPlan() {
             <p className="text-sm font-semibold uppercase tracking-wide text-red-300">Urgent booking required</p>
             <h2 className="text-2xl font-bold text-white mt-1">Henry needs to contact yards before June 11</h2>
             <p className="text-red-100 mt-3 max-w-3xl">
-              The haulout is critical and already 14 days overdue. There is still no yard booked, so the priority is to secure any viable haulout slot before Henry goes away on June 11, 2026.
+              The haulout is critical and already 16 days overdue. There is still no yard booked, so the priority is to secure any viable haulout slot before Henry goes away on June 11, 2026.
             </p>
           </div>
           <div className="grid sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:min-w-64">
