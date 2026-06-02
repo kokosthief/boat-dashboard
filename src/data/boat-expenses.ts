@@ -35,9 +35,11 @@ export interface BoatExpense {
   currency: string;
   year: number;
   receiptFilename?: string;
-  paidBy?: string; // MUM, HENRY, PARTIAL, or undefined
+  paidBy?: BoatExpensePaidBy;
   accountingType?: string; // 'expense' | 'capital_investment' | 'depreciation'
 }
+
+export type BoatExpensePaidBy = 'MUM' | 'HENRY' | 'PARTIAL';
 
 export interface BoatExpenseData {
   expenses: BoatExpense[];
@@ -60,6 +62,18 @@ interface SupabaseExpense {
   currency: string;
   year: number;
   receipt?: string;
+  paid_by?: string | null;
+  paidBy?: string | null;
+  accounting_type?: string | null;
+}
+
+function normalizePaidBy(value?: string | null): BoatExpensePaidBy | undefined {
+  const normalized = value?.trim().toUpperCase().replace(/[\s-]+/g, '_');
+  if (!normalized) return undefined;
+  if (normalized === 'MUM' || normalized === 'MAMA' || normalized === 'MIUM') return 'MUM';
+  if (normalized === 'HENRY') return 'HENRY';
+  if (normalized === 'PARTIAL' || normalized === 'SHARED' || normalized === 'SPLIT') return 'PARTIAL';
+  return undefined;
 }
 
 function isBoatRelated(expense: SupabaseExpense): boolean {
@@ -141,6 +155,7 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
     const sb = boatExpenses[index];
     const year = sb.year || new Date(sb.date).getFullYear();
     const amount = typeof sb.amount === 'string' ? parseFloat(sb.amount) : sb.amount;
+    const paidBy = normalizePaidBy(sb.paid_by ?? sb.paidBy);
 
     if (!yearTotals[year]) {
       yearTotals[year] = {
@@ -161,12 +176,8 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
       currency: sb.currency || 'EUR',
       year,
       receiptFilename: sb.receipt ? sb.receipt.split('/').pop() : undefined,
-      accountingType: (sb as any).accounting_type || 'expense',
-      paidBy: (() => {
-        const c = (sb.comment || '').toUpperCase();
-        if (c.includes('MIUM') || c.includes('MUM') || c.includes('MAMA')) return 'MUM';
-        return undefined;
-      })(),
+      accountingType: sb.accounting_type || 'expense',
+      paidBy,
     };
 
     expenses.push(expense);
@@ -182,8 +193,7 @@ export async function getBoatExpenseData(): Promise<BoatExpenseData> {
       yearTotals[year].boatPurchaseTotal += amount;
     }
 
-    // Try to detect MUM from comment or category
-    if ((sb.comment || '').includes('MUM') || (sb.comment || '').includes('Mum')) {
+    if (paidBy === 'MUM') {
       yearTotals[year].mumsTotal += amount;
     }
 

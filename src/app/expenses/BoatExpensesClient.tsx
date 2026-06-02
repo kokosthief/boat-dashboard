@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
-import type { BoatExpense, BoatExpenseData } from '@/data/boat-expenses';
+import type { BoatExpense, BoatExpenseData, BoatExpensePaidBy } from '@/data/boat-expenses';
 
-type SortKey = 'date' | 'company' | 'category' | 'amount';
+type SortKey = 'date' | 'company' | 'category' | 'amount' | 'paidBy';
+type PaidByFilter = 'All' | BoatExpensePaidBy | 'UNASSIGNED';
 
 function fmt(n: number) {
   return '€' + n.toLocaleString('nl-NL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -15,9 +16,17 @@ function formatDisplayDate(iso: string) {
   return `${d}/${m}/${y}`;
 }
 
+function paidByLabel(paidBy?: BoatExpensePaidBy) {
+  if (paidBy === 'MUM') return 'Mum';
+  if (paidBy === 'HENRY') return 'Henry';
+  if (paidBy === 'PARTIAL') return 'Shared';
+  return '';
+}
+
 export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) {
   const [yearFilter, setYearFilter] = useState<number | 'all'>('all');
   const [categoryFilter, setCategoryFilter] = useState('All');
+  const [paidByFilter, setPaidByFilter] = useState<PaidByFilter>('All');
   const [search, setSearch] = useState('');
   const [sortKey, setSortKey] = useState<SortKey>('date');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
@@ -44,6 +53,12 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
     if (categoryFilter !== 'All') {
       result = result.filter(e => e.category === categoryFilter);
     }
+
+    if (paidByFilter === 'UNASSIGNED') {
+      result = result.filter(e => !e.paidBy);
+    } else if (paidByFilter !== 'All') {
+      result = result.filter(e => e.paidBy === paidByFilter);
+    }
     
     if (search) {
       const q = search.toLowerCase();
@@ -55,7 +70,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
     }
     
     return result;
-  }, [data.expenses, yearFilter, categoryFilter, search]);
+  }, [data.expenses, yearFilter, categoryFilter, paidByFilter, search]);
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
@@ -64,6 +79,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
       if (sortKey === 'date') return a.date.localeCompare(b.date) * mult;
       if (sortKey === 'company') return a.company.localeCompare(b.company) * mult;
       if (sortKey === 'category') return a.category.localeCompare(b.category) * mult;
+      if (sortKey === 'paidBy') return (a.paidBy || '').localeCompare(b.paidBy || '') * mult;
       return 0;
     });
   }, [filtered, sortKey, sortDir]);
@@ -76,11 +92,15 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
     const mumsTotal = filtered
       .filter(e => e.paidBy === 'MUM')
       .reduce((s, e) => s + e.amount, 0);
+    const partialTotal = filtered
+      .filter(e => e.paidBy === 'PARTIAL')
+      .reduce((s, e) => s + e.amount, 0);
     
     return {
       total,
       boatPurchaseTotal,
       mumsTotal,
+      partialTotal,
       netCost: total - boatPurchaseTotal - mumsTotal,
       count: filtered.length,
     };
@@ -130,7 +150,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
         <h1 className="text-2xl font-bold">⚓ Boat Expenses</h1>
         <div className="flex gap-1">
           <button
-            onClick={() => { setYearFilter('all'); setCategoryFilter('All'); }}
+            onClick={() => { setYearFilter('all'); setCategoryFilter('All'); setPaidByFilter('All'); }}
             className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-colors ${
               yearFilter === 'all'
                 ? 'bg-blue-600 text-white'
@@ -142,7 +162,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
           {availableYears.map(yr => (
             <button
               key={yr}
-              onClick={() => { setYearFilter(yr); setCategoryFilter('All'); }}
+              onClick={() => { setYearFilter(yr); setCategoryFilter('All'); setPaidByFilter('All'); }}
               className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-colors ${
                 yearFilter === yr
                   ? 'bg-blue-600 text-white'
@@ -165,7 +185,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
               return (
                 <button
                   key={yr}
-                  onClick={() => { setYearFilter(yr); setCategoryFilter('All'); }}
+                  onClick={() => { setYearFilter(yr); setCategoryFilter('All'); setPaidByFilter('All'); }}
                   className="bg-slate-800/50 hover:bg-slate-800 rounded-lg p-4 text-left transition-colors"
                 >
                   <p className="text-lg font-bold">{yr}</p>
@@ -216,6 +236,12 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
           <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.mumsTotal)}</p>
           <p className="text-xs opacity-70 mt-1">💝 Family support</p>
         </div>
+
+        <div className="bg-violet-600 rounded-xl p-4">
+          <p className="text-sm opacity-80">Shared / Partial</p>
+          <p className="text-xl sm:text-2xl font-bold mt-1">{fmt(filteredStats.partialTotal)}</p>
+          <p className="text-xs opacity-70 mt-1">Structured paid_by</p>
+        </div>
       </div>
 
       {/* Search & Filter Controls */}
@@ -236,10 +262,21 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
             <option key={c} value={c}>{c}</option>
           ))}
         </select>
+        <select
+          value={paidByFilter}
+          onChange={e => setPaidByFilter(e.target.value as PaidByFilter)}
+          className="bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-blue-500"
+        >
+          <option value="All">All paid by</option>
+          <option value="HENRY">Henry</option>
+          <option value="MUM">Mum</option>
+          <option value="PARTIAL">Shared</option>
+          <option value="UNASSIGNED">Unassigned</option>
+        </select>
       </div>
 
       {/* Filtered summary */}
-      {(yearFilter !== 'all' || categoryFilter !== 'All' || search) && (
+      {(yearFilter !== 'all' || categoryFilter !== 'All' || paidByFilter !== 'All' || search) && (
         <p className="text-sm text-slate-400">
           Showing {filtered.length} of {data.expenses.length} expenses — 
           Filtered total: <span className="text-white font-semibold">{fmt(filteredStats.total)}</span>
@@ -262,7 +299,7 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                 <p className="font-semibold text-lg">{selectedExpense.company}</p>
                 <p className="text-sm text-slate-400">
                   {formatDisplayDate(selectedExpense.date)} · {fmt(selectedExpense.amount)} · {selectedExpense.category}
-                  {selectedExpense.paidBy === 'MUM' && ' · 💝 Mum'}
+                  {selectedExpense.paidBy && ` · ${paidByLabel(selectedExpense.paidBy)}`}
                 </p>
                 {selectedExpense.comment && (
                   <p className="text-xs text-slate-500 mt-1">{selectedExpense.comment}</p>
@@ -350,7 +387,12 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
                 >
                   Category{arrow('category')}
                 </th>
-                <th className="px-4 py-3 font-medium text-slate-400">Paid By</th>
+                <th
+                  className="px-4 py-3 font-medium text-slate-400 cursor-pointer hover:text-white transition-colors select-none"
+                  onClick={() => toggleSort('paidBy')}
+                >
+                  Paid By{arrow('paidBy')}
+                </th>
                 <th className="px-4 py-3 font-medium text-slate-400">Receipt</th>
               </tr>
             </thead>
