@@ -13,7 +13,7 @@ export default function VendorsPage() {
   }, []);
 
   // Define recency order for mobile
-  const recencyOrder = ['Mees van de Nes', 'Simone'];
+  const recencyOrder = ['Jai', 'Multiship Holland', 'Mees van de Nes', 'Réifier (Simone)', 'Simone'];
   
   const sortedVendors = isMobile ? [...vendors].sort((a, b) => {
     const aIndex = recencyOrder.indexOf(a.name);

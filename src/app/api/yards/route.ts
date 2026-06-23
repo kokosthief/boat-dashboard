@@ -1,13 +1,9 @@
-import { createClient } from '@supabase/supabase-js';
 import { NextResponse } from 'next/server';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.SUPABASE_SERVICE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+import { getSupabaseServerClient } from '@/lib/supabase-server';
 
 export async function GET() {
   try {
+    const supabase = getSupabaseServerClient();
     const { data, error } = await supabase
       .from('haulout_yards')
       .select(
@@ -31,6 +27,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const supabase = getSupabaseServerClient();
     const body = await request.json();
     const {
       name,
