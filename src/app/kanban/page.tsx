@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { type DragEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { statusColumns, statusColors, type Task } from '@/data/tasks';
 
 type Status = Task['status'];
@@ -43,6 +43,8 @@ export default function KanbanPage() {
   const [isAdding, setIsAdding] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [draggedId, setDraggedId] = useState<string | null>(null);
+  const [dropTargetStatus, setDropTargetStatus] = useState<Status | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const loadTasks = useCallback(async () => {
@@ -133,22 +135,55 @@ export default function KanbanPage() {
   }
 
   async function updateTaskStatus(id: string, status: Status) {
-    const current = boardTasks.find(task => task.id === id);
-    if (!current || current.status === status) return;
+    await moveTaskToStatus(id, status);
+  }
 
-    setBoardTasks(prev => prev.map(task => task.id === id ? { ...task, status } : task));
+  async function moveTaskToStatus(id: string, status: Status) {
+    const current = boardTasks.find(task => task.id === id);
+    if (!current) return;
+
+    const sameColumnTasks = boardTasks.filter(task => task.status === status && task.id !== id);
+    const nextSortOrder = sameColumnTasks.reduce((max, task) => Math.max(max, task.sortOrder ?? 0), -1) + 1;
+    const updatedTask = { ...current, status, sortOrder: nextSortOrder };
+
+    setBoardTasks(prev => prev.map(task => task.id === id ? updatedTask : task));
     setError(null);
     try {
       const json = await parseApiResponse<{ task: EditableTask }>(await fetch(`/api/kanban/tasks/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status }),
+        body: JSON.stringify({ status, sortOrder: nextSortOrder }),
       }));
       setBoardTasks(prev => prev.map(task => task.id === id ? json.task : task));
     } catch (err) {
       setBoardTasks(prev => prev.map(task => task.id === id ? current : task));
-      setError(err instanceof Error ? err.message : 'Failed to update status');
+      setError(err instanceof Error ? err.message : 'Failed to move task');
     }
+  }
+
+  function handleDragStart(event: DragEvent<HTMLDivElement>, id: string) {
+    event.dataTransfer.effectAllowed = 'move';
+    event.dataTransfer.setData('text/plain', id);
+    setDraggedId(id);
+  }
+
+  function handleDragEnd() {
+    setDraggedId(null);
+    setDropTargetStatus(null);
+  }
+
+  function handleDragOver(event: DragEvent<HTMLDivElement>, status: Status) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+    setDropTargetStatus(status);
+  }
+
+  async function handleDrop(event: DragEvent<HTMLDivElement>, status: Status) {
+    event.preventDefault();
+    const id = event.dataTransfer.getData('text/plain') || draggedId;
+    handleDragEnd();
+    if (!id) return;
+    await moveTaskToStatus(id, status);
   }
 
   async function deleteTask(id: string) {
@@ -171,7 +206,7 @@ export default function KanbanPage() {
         <div>
           <h1 className="text-2xl font-bold">📋 Kanban Board</h1>
           <p className="mt-1 text-sm text-slate-400">
-            Supabase-backed: add/edit/delete tasks, move status, mark urgent, and changes sync across devices.
+            Supabase-backed: drag cards between columns or use the status dropdown; changes sync across devices.
           </p>
         </div>
         <button
@@ -248,7 +283,14 @@ export default function KanbanPage() {
             const colors = statusColors[col];
             const isCollapsed = collapsed[col] || false;
             return (
-              <div key={col} className="space-y-3">
+              <div
+                key={col}
+                onDragOver={(event) => handleDragOver(event, col)}
+                onDragLeave={() => setDropTargetStatus(prev => prev === col ? null : prev)}
+                onDrop={(event) => void handleDrop(event, col)}
+                className={`space-y-3 rounded-xl transition-colors ${dropTargetStatus === col ? 'bg-blue-950/30 ring-2 ring-blue-500/50' : ''}`}
+                data-kanban-column={col}
+              >
                 <button
                   onClick={() => toggle(col)}
                   className={`w-full rounded-lg px-3 py-2 border text-sm font-semibold ${colors} flex items-center justify-between cursor-pointer hover:opacity-80 transition-opacity`}
@@ -264,8 +306,16 @@ export default function KanbanPage() {
                   + Add task
                 </button>
                 {!isCollapsed && colTasks.map(t => (
-                  <div key={t.id} className={`rounded-lg border p-3 text-sm space-y-2 ${colors} ${t.urgent ? 'ring-2 ring-red-500/60' : ''}`}>
+                  <div
+                    key={t.id}
+                    draggable
+                    onDragStart={(event) => handleDragStart(event, t.id)}
+                    onDragEnd={handleDragEnd}
+                    className={`rounded-lg border p-3 text-sm space-y-2 cursor-grab active:cursor-grabbing transition-opacity ${colors} ${t.urgent ? 'ring-2 ring-red-500/60' : ''} ${draggedId === t.id ? 'opacity-50' : ''}`}
+                    data-kanban-card={t.id}
+                  >
                     <p className="font-medium">
+                      <span className="mr-1.5 text-xs opacity-50" aria-label="Drag handle">⠿</span>
                       {t.urgent && <span className="inline-block bg-red-600 text-white text-[10px] px-1.5 py-0.5 rounded mr-1.5 font-bold">URGENT</span>}
                       {t.name}
                     </p>
