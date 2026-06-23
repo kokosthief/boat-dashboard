@@ -53,6 +53,15 @@ export default function ExpensesClient({ data }: { data: ExpenseData }) {
   const [showChart, setShowChart] = useState<'pie' | 'bar'>('bar');
   const [yearFilter, setYearFilter] = useState('All');
 
+  const hasActiveFilters = yearFilter !== 'All' || categoryFilter !== 'All' || paidByFilter !== 'All' || Boolean(search);
+
+  function showAllExpenses() {
+    setYearFilter('All');
+    setCategoryFilter('All');
+    setPaidByFilter('All');
+    setSearch('');
+  }
+
   const years = useMemo(() => {
     const yrs = Array.from(new Set(data.expenses.map(e => e.date.split('-')[0]))).sort();
     return ['All', ...yrs];
@@ -305,9 +314,25 @@ export default function ExpensesClient({ data }: { data: ExpenseData }) {
       </div>
 
       {/* Filtered total */}
-      {(yearFilter !== 'All' || categoryFilter !== 'All' || paidByFilter !== 'All' || search) && (
+      {hasActiveFilters && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-sm text-slate-300">
+          <p>
+            Filtered view: {filtered.length} matching {filtered.length === 1 ? 'expense' : 'expenses'} from {data.expenses.length} total —
+            {' '}Filtered total: <span className="text-white font-semibold">{fmt(filteredTotal)}</span>
+          </p>
+          <button
+            type="button"
+            onClick={showAllExpenses}
+            className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-500"
+          >
+            Show all {data.expenses.length} expenses
+          </button>
+        </div>
+      )}
+
+      {!hasActiveFilters && (
         <p className="text-sm text-slate-400">
-          Showing {filtered.length} of {data.expenses.length} expenses — Filtered total: <span className="text-white font-semibold">{fmt(filteredTotal)}</span>
+          Showing the full list: <span className="text-white font-semibold">{data.expenses.length} expenses</span>
         </p>
       )}
 

@@ -31,6 +31,15 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
   const [sortKey, setSortKey] = useState<SortKey>('date');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
+  const hasActiveFilters = yearFilter !== 'all' || categoryFilter !== 'All' || paidByFilter !== 'All' || Boolean(search);
+
+  function showAllExpenses() {
+    setYearFilter('all');
+    setCategoryFilter('All');
+    setPaidByFilter('All');
+    setSearch('');
+  }
+
   const availableYears = useMemo(() => {
     return Object.keys(data.yearTotals).map(Number).sort((a, b) => b - a);
   }, [data.yearTotals]);
@@ -276,10 +285,25 @@ export default function BoatExpensesClient({ data }: { data: BoatExpenseData }) 
       </div>
 
       {/* Filtered summary */}
-      {(yearFilter !== 'all' || categoryFilter !== 'All' || paidByFilter !== 'All' || search) && (
+      {hasActiveFilters && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-blue-500/30 bg-blue-500/10 px-3 py-2 text-sm text-slate-300">
+          <p>
+            Filtered view: {filtered.length} matching {filtered.length === 1 ? 'expense' : 'expenses'} from {data.expenses.length} total —
+            {' '}Filtered total: <span className="text-white font-semibold">{fmt(filteredStats.total)}</span>
+          </p>
+          <button
+            type="button"
+            onClick={showAllExpenses}
+            className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-500"
+          >
+            Show all {data.expenses.length} expenses
+          </button>
+        </div>
+      )}
+
+      {!hasActiveFilters && (
         <p className="text-sm text-slate-400">
-          Showing {filtered.length} of {data.expenses.length} expenses — 
-          Filtered total: <span className="text-white font-semibold">{fmt(filteredStats.total)}</span>
+          Showing the full list: <span className="text-white font-semibold">{data.expenses.length} expenses</span>
         </p>
       )}
 
