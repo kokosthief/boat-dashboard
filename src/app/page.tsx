@@ -28,7 +28,7 @@ export default function Home() {
     { href: '/kanban', emoji: '📋', title: 'Kanban Board', desc: `${tasks.filter(t => t.status === 'Started').length} started · ${tasks.filter(t => t.status === 'Planning').length} planning · ${tasks.filter(t => t.status === 'Ideation').length} ideation · ${tasks.filter(t => t.status === 'Researching').length} researching` },
     { href: '/vendors', emoji: '🔧', title: 'Vendors', desc: `${vendors.length} contacts` },
     { href: '/harbours', emoji: '⚓', title: 'Harbours', desc: `${harbours.length} marinas tracked` },
-    { href: '/haulout', emoji: '🚢', title: 'Haulout Plan', desc: 'Critical · 16 days overdue · book before June 11' },
+    { href: '/haulout', emoji: '🚢', title: 'Haulout Plan', desc: 'Booked · Multiship Holland · August 2026' },
   ];
 
   return (

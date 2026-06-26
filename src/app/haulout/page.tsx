@@ -2,44 +2,47 @@ import HauloutYardsTable from '@/components/HauloutYardsTable';
 
 export default function HauloutPlan() {
   const costs = [
-    { item: 'Lift & haul-out', cost: 'Quote TBD' },
-    { item: 'High-pressure wash (exterior)', cost: 'incl.' },
-    { item: 'Sandblasting — full boat', cost: 'Quote TBD' },
+    { item: 'Multiship Holland August haulout package', cost: 'Booked — quote/final scope TBD' },
+    { item: 'Lift, haul-out, dry standing and launch', cost: 'Confirm in booked scope' },
+    { item: 'High-pressure wash / clean down', cost: 'Confirm in booked scope' },
+    { item: 'Sandblasting — full boat / hull', cost: 'Booked work — confirm exact coverage' },
     { item: 'Insurance survey / hull check (if required)', cost: 'Via insurer / quote TBD' },
     { item: 'Hull welding repairs (if needed)', cost: 'Quote TBD' },
-    { item: 'New exhaust — weld (Mike)', cost: 'Quote TBD', saving: true, savingNote: 'Mike does the welding' },
-    { item: '2× International primer — underwater hull', cost: 'Quote TBD' },
-    { item: '2× Antifouling coats — underwater hull (Interspeed 340)', cost: '~€2,000–3,000' },
+    { item: 'New exhaust — weld (Mike)', cost: 'Quote TBD', saving: true, savingNote: 'Mike may still save money if allowed alongside yard work' },
+    { item: '2× International primer — underwater hull', cost: 'Confirm materials/labour' },
+    { item: '2× Antifouling coats — underwater hull (Interspeed 340)', cost: '~€2,000–3,000 fallback allowance' },
     { item: 'Zinc anodes', cost: '~€200' },
     { item: '2–3 coats paint — above waterline', cost: 'Quote TBD' },
-    { item: 'Dry stalling (5 weeks)', cost: '~€1,500–2,000' },
+    { item: 'Fallback budget if switching yard', cost: '~€6k–12k + welding surprises' },
   ];
 
   const timeline = [
-    { label: 'Status', value: '16 days overdue' },
-    { label: 'Henry away from', value: 'June 11, 2026' },
-    { label: 'Immediate deadline', value: 'Book a yard before June 11' },
+    { label: 'Status', value: 'Booked' },
+    { label: 'Booked yard', value: 'Multiship Holland' },
+    { label: 'Planned haulout', value: 'August 2026' },
   ];
 
   const callOrder = [
-    'IJwerf',
-    'AYS',
-    'Van Laar',
-    'Borsch',
-    'Brouwer',
     'Schouten',
+    'Amsterdam Yacht Service',
+    'Braspenning / Waterland Coatings',
+    'Jachtwerf Weesp',
+    'Scheepswerf Van Laar',
+    'Scheepswerf de IJwerf',
+    'Werf Brouwer',
+    'Zaanhaven / Westhaven',
   ];
 
   const yardBookingFacts = [
-    { label: 'Yard booked', value: 'No' },
-    { label: 'Current risk', value: 'Critical' },
-    { label: 'Next action', value: 'Henry calls yards now' },
+    { label: 'Yard booked', value: 'Yes — Multiship Holland' },
+    { label: 'Slot', value: 'August 2026' },
+    { label: 'Next action', value: 'Confirm quote, scope, dates and payment terms' },
   ];
 
   const yardPlan = [
-    { label: 'Haul-out timing', value: 'Immediate — already overdue' },
-    { label: 'Dry stalling duration', value: '~5 weeks' },
-    { label: 'Back in water', value: 'After yard slot + ~5 weeks dry' },
+    { label: 'Haul-out timing', value: 'August 2026 booked slot' },
+    { label: 'Dry stalling duration', value: '~5 weeks assumption — confirm' },
+    { label: 'Back in water', value: 'After yard slot + confirmed dry period' },
   ];
 
   const henryTasks = [
@@ -59,14 +62,14 @@ export default function HauloutPlan() {
 
   const notes = [
     'Timo: 16.8m × 3.25m steel bakdekker, 1928',
-    'Critical: the haulout is 16 days overdue and no yard is booked.',
-    'Henry is away from June 11, 2026 — a yard must be contacted and booked before then.',
-    'Call order stays: IJwerf → AYS → Van Laar → Borsch → Brouwer → Schouten.',
-    'Spring is peak season — yards book 6–8 weeks out. Henry needs to contact yards immediately.',
+    'Booked plan: Multiship Holland in August 2026 for the whole works.',
+    'Still keep fallback yards warm until the Multiship quote/scope/date/payment terms are written down.',
+    'Fallback call order: Schouten → Amsterdam Yacht Service → Braspenning/Waterland → Jachtwerf Weesp → Van Laar → IJwerf → Brouwer → Zaanhaven/Westhaven.',
+    'Fallback budget: keep ~€6k–12k available before unknown welding/survey surprises; exact Multiship quote still needs confirming.',
     'Insurance/survey: if hull-thickness measurement or inspection is needed, arrange it through the insurer or surveyor rather than DIY NDT.',
-    'Welding: Mike (friend) may do hull repairs at a cheaper rate (~€100 labour). New exhaust welding — ask for quote.',
-    'Bottom coating: 2x International primer + 2x Interspeed 340 antifouling + zinc anodes — all outsourced.',
-    'Top coating: 2–3 coats IJssel Coatings paint — outsourced. Contact Niels for cheaper paint supply.',
+    'Welding: Mike (friend) may still be cheaper for the exhaust/hull repairs if the booked yard allows outside welding or separate prep.',
+    'Bottom coating: 2x International primer + 2x Interspeed 340 antifouling + zinc anodes — confirm whether Multiship supplies or Henry supplies materials.',
+    'Top coating: 2–3 coats IJssel Coatings paint — confirm whether included. Contact Niels for cheaper paint supply if Henry supplies materials.',
     'Interior hull: clean and treat rust by brush, use Owatrol Oil on vertical parts, paint where useful, and use heated grease on horizontal areas, mostly above the concrete. Henry does this.',
     'Waterline: Score real waterline with kraspen, paint 10cm above this line. Henry does this on day 1.',
   ];
@@ -76,33 +79,33 @@ export default function HauloutPlan() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold mb-1">🚢 Haulout Plan — Timo 16.8m × 3.25m</h1>
-        <p className="text-red-300 font-semibold">Critical: 16 days overdue, no yard booked, Henry away from June 11.</p>
+        <p className="text-emerald-300 font-semibold">Booked: Multiship Holland in August 2026. Keep fallback yard calls and budget visible until scope/quote are confirmed.</p>
       </div>
 
-      {/* Critical Booking Alert */}
-      <div className="bg-red-950/60 border border-red-700 rounded-xl p-6">
+      {/* Booking Status */}
+      <div className="bg-emerald-950/50 border border-emerald-700 rounded-xl p-6">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-red-300">Urgent booking required</p>
-            <h2 className="text-2xl font-bold text-white mt-1">Henry needs to contact yards before June 11</h2>
-            <p className="text-red-100 mt-3 max-w-3xl">
-              The haulout is critical and already 16 days overdue. There is still no yard booked, so the priority is to secure any viable haulout slot before Henry goes away on June 11, 2026.
+            <p className="text-sm font-semibold uppercase tracking-wide text-emerald-300">Booked yard</p>
+            <h2 className="text-2xl font-bold text-white mt-1">Multiship Holland is the booked August plan</h2>
+            <p className="text-emerald-100 mt-3 max-w-3xl">
+              The main plan is now booked for August 2026. This page keeps the backup call list and fallback budget visible so Henry can still check availability/pricing elsewhere if Multiship's final quote or scope changes.
             </p>
           </div>
           <div className="grid sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:min-w-64">
             {yardBookingFacts.map((fact) => (
-              <div key={fact.label} className="bg-red-900/50 border border-red-800 rounded-lg p-3">
-                <p className="text-xs text-red-200">{fact.label}</p>
+              <div key={fact.label} className="bg-emerald-900/50 border border-emerald-800 rounded-lg p-3">
+                <p className="text-xs text-emerald-200">{fact.label}</p>
                 <p className="font-semibold text-white mt-1">{fact.value}</p>
               </div>
             ))}
           </div>
         </div>
-        <div className="mt-5 border-t border-red-800 pt-4">
-          <p className="text-sm text-red-200 mb-2">Recommended call order</p>
+        <div className="mt-5 border-t border-emerald-800 pt-4">
+          <p className="text-sm text-emerald-200 mb-2">Fallback call order / availability checks</p>
           <div className="flex flex-wrap gap-2">
             {callOrder.map((yard, index) => (
-              <span key={yard} className="rounded-lg bg-red-900/60 border border-red-700 px-3 py-2 text-sm font-semibold text-white">
+              <span key={yard} className="rounded-lg bg-slate-900/60 border border-emerald-700 px-3 py-2 text-sm font-semibold text-white">
                 {index + 1}. {yard}
               </span>
             ))}
@@ -115,12 +118,12 @@ export default function HauloutPlan() {
         <h2 className="text-lg font-semibold mb-3">💰 Budget Summary</h2>
         <div className="space-y-2">
           <div className="flex justify-between items-baseline">
-            <span className="text-sm opacity-90">Estimated total (awaiting quotes):</span>
-            <span className="text-3xl font-bold">TBD</span>
+            <span className="text-sm opacity-90">Fallback budget if changing yards:</span>
+            <span className="text-3xl font-bold">€6k–12k+</span>
           </div>
           <div className="text-sm opacity-80 space-y-1 mt-3 border-t border-emerald-500 pt-3">
-            <p>✓ Fully outsourced — yard does all the work</p>
-            <p>💸 Potential saving: welding via Mike (friend rate ~€100)</p>
+            <p>✓ Booked route: Multiship Holland, August 2026</p>
+            <p>💸 Keep backup quotes warm until Multiship scope/price is written down</p>
           </div>
         </div>
       </div>
@@ -226,7 +229,7 @@ export default function HauloutPlan() {
 
       {/* Yards Research Table */}
       <div>
-        <h2 className="text-xl font-semibold mb-4">🏗️ Yards Research</h2>
+        <h2 className="text-xl font-semibold mb-4">🏗️ Yard Research / Backup Options</h2>
         <HauloutYardsTable />
       </div>
     </div>
