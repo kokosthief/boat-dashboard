@@ -51,7 +51,7 @@ export const tasks: Task[] = [
   { name: "Install power outlets under kitchen sink", location: "Salon", vendor: "", status: "Planning", targetDate: "2026-03-31", cost: "", notes: "Switch to turn boiler (hot water) on/off conveniently" },
 ];
 
-export const statusColumns = ['Started', 'Planning', 'Ideation', 'Researching', 'Finished'] as const;
+export const statusColumns = ['Researching', 'Ideation', 'Planning', 'Started', 'Finished'] as const;
 
 export const statusColors: Record<string, string> = {
   Ideation: 'bg-purple-500/20 border-purple-500/40 text-purple-300',
