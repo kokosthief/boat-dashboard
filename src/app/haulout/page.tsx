@@ -82,6 +82,12 @@ export default function HauloutPlan() {
         <p className="text-emerald-300 font-semibold">Booked: Multiship Holland in August 2026. Keep fallback yard calls and budget visible until scope/quote are confirmed.</p>
       </div>
 
+      <img
+        src="/haulout-timo.jpg"
+        alt="Timo hauled out in the yard with the planned black and cream hull finish"
+        className="rounded-xl border border-slate-800 w-full max-h-[520px] object-cover object-center shadow-lg"
+      />
+
       {/* Booking Status */}
       <div className="bg-emerald-950/50 border border-emerald-700 rounded-xl p-6">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
